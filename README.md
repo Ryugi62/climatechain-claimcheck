@@ -56,11 +56,11 @@ Input: the offset sentence from the report. Result: one verdict with the registr
 ## Similar tools
 | Tool | What it does | What it does not do |
 |---|---|---|
-| Verra Registry (registry.verra.org) | Search units and retirements by serial | Does not read a report sentence or compare quantities with a claim |
-| Gold Standard Registry (registry.goldstandard.org) | Same for Gold Standard | Same |
-| CarbonPlan OffsetsDB (carbonplan.org/research/offsets-db) | Harmonised project and credit database for research | Project level; no sentence-to-serial check, no on-chain refusal |
-| Toucan / KlimaDAO style on-chain carbon tokens | Bring credits on chain as tokens | Token and trading focus; do not check an ESG sentence |
-| Climate Action Data Trust | Cross-registry unit metadata | Data layer; no claim reading |
+| Verra Registry (https://registry.verra.org) | Search units and retirements by serial | Does not read a report sentence or compare quantities with a claim |
+| Gold Standard Registry (https://registry.goldstandard.org) | Same for Gold Standard | Same |
+| CarbonPlan OffsetsDB (https://carbonplan.org/research/offsets-db) | Harmonised project and credit database for research | Project level; no sentence-to-serial check, no on-chain refusal |
+| Toucan (https://toucan.earth) and similar on-chain carbon tokens | Bring credits on chain as tokens | Token and trading focus; do not check an ESG sentence |
+| Climate Action Data Trust (https://climateactiondata.org) | Cross-registry unit metadata | Data layer; no claim reading |
 ClaimCheck's own part: it reads the sentence, ties it to the serial and quantity, and has a contract that refuses reuse.
 
 ## Limits
