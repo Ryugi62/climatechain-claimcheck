@@ -45,6 +45,9 @@ npm run build:site      # copy code and data into docs/
 ```
 No RPC URL, no private key and no paid service is used anywhere.
 
+## Procedure and cost for an ESG reviewer
+Input: the offset sentence from the report. Result: one verdict with the registry URL and fetch time, plus one line for the report: "Retirement of <n> t verified against <registry> record <serial>, <date>". Cost per claim: one free read request to the registry, and, if the claim is recorded on chain, one transaction of about 162k gas (first range of a batch) to about 223k gas (40th range of the same batch). Fee in USD = gas x gas price x token price of the chosen network, so it depends on the network; the contract has no fee of its own.
+
 ## Where the data comes from
 - Gold Standard registry, public read endpoint `https://public-api.goldstandard.org/credits` (the endpoint the registry's own web app uses; it answers CORS `*`). The sample is 7 requests of 20 rows, 5 s apart. Live lookup sends one request per serial.
 - The registry's website terms forbid "spider, crawl, or scrape". We therefore keep to single read requests, store only serial facts (serial, status, quantity, project name) with source URL and date, and do not mirror the registry.

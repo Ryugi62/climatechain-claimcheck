@@ -6,12 +6,12 @@
 <title>ClaimCheck - carbon offset claims vs public retirement records</title>
 <meta name="description" content="Paste one carbon-offset sentence from an ESG report. ClaimCheck checks the credit serial against public Gold Standard retirement records and shows how an on-chain registry refuses double use.">
 <style>
-:root{--bg:#f6f7f9;--card:#fff;--ink:#191f28;--sub:#6b7684;--line:#e5e8eb;--blue:#1b64da;--btn:#1b64da;--btnink:#fff;--ok:#0b7a43;--bad:#c9252d}
+:root{--bg:#f6f7f9;--card:#fff;--ink:#191f28;--sub:#586270;--line:#e5e8eb;--blue:#1b64da;--btn:#1b64da;--btnink:#fff;--ok:#0b7a43;--bad:#c9252d}
 @media (prefers-color-scheme:dark){:root{--bg:#101114;--card:#1b1d22;--ink:#f2f4f6;--sub:#9aa3af;--line:#2b2e35;--blue:#7db0ff;--btn:#7db0ff;--btnink:#0b0d10;--ok:#34c47c;--bad:#ff6369}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
 main{max-width:760px;margin:0 auto;padding:24px 16px 64px}
 h1{font-size:28px;margin:8px 0 4px}h2{font-size:18px;margin:0 0 8px}p{margin:8px 0}
-.sub{color:var(--sub)}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:16px 0}
+.sub{color:var(--sub)}.card{overflow-wrap:anywhere;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:16px 0}
 textarea,input[type=text]{width:100%;font:inherit;color:inherit;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px}
 textarea{min-height:92px;resize:vertical}
 button{font:inherit;border:0;border-radius:12px;min-height:52px;padding:12px 24px;cursor:pointer;background:var(--btn);color:var(--btnink);font-weight:600}
@@ -21,7 +21,7 @@ button.ghost{background:var(--bg);color:var(--ink);border:1px solid var(--line);
 .MATCH{color:var(--ok)}.MISMATCH{color:var(--bad)}.NOT_FOUND{color:var(--bad)}.DUPLICATE{color:var(--blue)}.NO_SERIAL{color:var(--sub)}
 .line{border-top:1px solid var(--line);padding:10px 0;font-size:14px;word-break:break-all}
 code{font:13px ui-monospace,Menlo,monospace}
-table{width:100%;border-collapse:collapse;font-size:14px}td,th{text-align:left;padding:6px 4px;border-top:1px solid var(--line)}
+table{width:100%;table-layout:auto;border-collapse:collapse;font-size:14px}td,th{text-align:left;padding:6px 4px;border-top:1px solid var(--line)}
 .tag{display:inline-block;border-radius:8px;padding:2px 8px;font-size:12px;font-weight:700;border:1px solid currentColor}
 label{font-size:14px}.small{font-size:13px}
 </style>
