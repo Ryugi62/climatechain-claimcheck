@@ -1,0 +1,12 @@
+[
+ {"id":"h01","text":"During the reporting year Northfield Foods extinguished 2,750 VCUs (6101-310200001-310202750-VCU-034-MER-ID-14-2210-01012022-31122022-0) in the Verra registry.","serials":["6101-310200001-310202750-VCU-034-MER-ID-14-2210-01012022-31122022-0"],"quantity":2750},
+ {"id":"h02","text":"Cancelled credits: 1,800 tonnes CO2-equivalent, GS1-1-IN-GS5500-16-2025-30010-1001-2800.","serials":["GS1-1-IN-GS5500-16-2025-30010-1001-2800"],"quantity":1800},
+ {"id":"h03","text":"Our 2025 offset of 90 000 tonnes is backed by serial GS1-1-ZA-GS2200-16-2025-30500-1-90000.","serials":["GS1-1-ZA-GS2200-16-2025-30500-1-90000"],"quantity":90000},
+ {"id":"h04","text":"We retired credits equal to our footprint of 0.5 MtCO2e.","serials":[],"quantity":500000},
+ {"id":"h05","text":"Retirement certificate no. GS1-1-GT-GS3300-16-2025-31001-1-120 (120 tCO2).","serials":["GS1-1-GT-GS3300-16-2025-31001-1-120"],"quantity":120},
+ {"id":"h06","text":"Offsetting: GS1-1-LA-GS6100-16-2023-28002-1-40 + GS1-1-LA-GS6100-16-2023-28002-41-100 = 100 carbon credits.","serials":["GS1-1-LA-GS6100-16-2023-28002-1-40","GS1-1-LA-GS6100-16-2023-28002-41-100"],"quantity":100},
+ {"id":"h07","text":"A total of 12.5k tonnes was offset in 2025.","serials":[],"quantity":12500},
+ {"id":"h08","text":"We purchased and retired 3,000 t of CO2e (serial: GS1-1-CN-GS7001-16-2024-29502-10-3009).","serials":["GS1-1-CN-GS7001-16-2024-29502-10-3009"],"quantity":3000},
+ {"id":"h09","text":"100% of our flights are offset through retired Gold Standard credits.","serials":[],"quantity":null},
+ {"id":"h10","text":"Retired 600 t CO2e on 2025-12-01 (GS1-1-TD-GS4000-16-2022-27001-1-600).","serials":["GS1-1-TD-GS4000-16-2022-27001-1-600"],"quantity":600}
+]

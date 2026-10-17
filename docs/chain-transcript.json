@@ -1,0 +1,59 @@
+{
+  "network": "hardhat (local, in-process)",
+  "contract": "RetirementRegistry",
+  "batchKey": "GOLD_STANDARD:GS7643:2025:31135",
+  "steps": [
+    {
+      "label": "Company A registers its retirement",
+      "claimant": "Company A",
+      "serialRange": [
+        1059,
+        34189
+      ],
+      "outcome": "REGISTERED",
+      "gasUsed": 161857,
+      "block": 3
+    },
+    {
+      "label": "Company B claims the same credits",
+      "claimant": "Company B",
+      "serialRange": [
+        1059,
+        34189
+      ],
+      "outcome": "REVERTED",
+      "error": "RangeOverlap",
+      "args": [
+        "0xe5364fb59c22493c57c6b33ea2d3cb0942f656ade531b49e02bb06327e1b2d5e",
+        "1059",
+        "34189"
+      ]
+    },
+    {
+      "label": "Company B claims a partly overlapping range",
+      "claimant": "Company B",
+      "serialRange": [
+        30000,
+        40000
+      ],
+      "outcome": "REVERTED",
+      "error": "RangeOverlap",
+      "args": [
+        "0xe5364fb59c22493c57c6b33ea2d3cb0942f656ade531b49e02bb06327e1b2d5e",
+        "1059",
+        "34189"
+      ]
+    },
+    {
+      "label": "Company B claims the next free range",
+      "claimant": "Company B",
+      "serialRange": [
+        34190,
+        40000
+      ],
+      "outcome": "REGISTERED",
+      "gasUsed": 130122,
+      "block": 6
+    }
+  ]
+}

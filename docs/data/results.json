@@ -1,0 +1,88 @@
+{
+  "generated_at": "2026-10-17",
+  "records": {
+    "total": 140,
+    "retired": 120,
+    "issued": 20,
+    "sources": 7,
+    "fetched_at": [
+      "2026-10-17T20:27Z",
+      "2026-10-17T20:28Z"
+    ]
+  },
+  "claims": {
+    "total": 320,
+    "accuracy": 1,
+    "by_kind": {
+      "match": {
+        "n": 120,
+        "ok": 120,
+        "verdicts": {
+          "MATCH": 120
+        }
+      },
+      "quantity_inflated": {
+        "n": 120,
+        "ok": 120,
+        "verdicts": {
+          "MISMATCH": 120
+        }
+      },
+      "issued_not_retired": {
+        "n": 20,
+        "ok": 20,
+        "verdicts": {
+          "MISMATCH": 20
+        }
+      },
+      "unknown_serial": {
+        "n": 40,
+        "ok": 40,
+        "verdicts": {
+          "NOT_FOUND": 40
+        }
+      },
+      "no_serial": {
+        "n": 20,
+        "ok": 20,
+        "verdicts": {
+          "NO_SERIAL": 20
+        }
+      }
+    },
+    "verdict_totals": {
+      "MATCH": 120,
+      "MISMATCH": 140,
+      "NOT_FOUND": 40,
+      "NO_SERIAL": 20
+    }
+  },
+  "double_use": {
+    "pairs": 60,
+    "first_match": 60,
+    "second_duplicate": 60,
+    "partial_overlap_tried": 23,
+    "partial_overlap_duplicate": 23
+  },
+  "extraction": {
+    "set1_after_fixes": {
+      "phrasings": 16,
+      "serial_recall": "14/14",
+      "quantity_recall": "15/15",
+      "misses": []
+    },
+    "set2_heldout": {
+      "phrasings": 10,
+      "serial_recall": "8/8",
+      "quantity_recall": "8/9",
+      "misses": [
+        {
+          "id": "h07",
+          "what": "quantity",
+          "want": 12500,
+          "got": null
+        }
+      ]
+    }
+  }
+}

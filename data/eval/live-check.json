@@ -1,0 +1,73 @@
+{
+  "checked_at": "2026-10-17T20:33Z",
+  "n": 11,
+  "agree": 11,
+  "rows": [
+    {
+      "serial": "GS1-1-MZ-GS7643-16-2025-31135-1059-34189",
+      "sample_status": "RETIRED",
+      "live_status": "RETIRED",
+      "agree": true
+    },
+    {
+      "serial": "GS1-1-IN-GS7572-2-2022-24457-133580-133581",
+      "sample_status": "RETIRED",
+      "live_status": "RETIRED",
+      "agree": true
+    },
+    {
+      "serial": "GS1-1-TD-GS3445-3-2018-20018-2079-2080",
+      "sample_status": "RETIRED",
+      "live_status": "RETIRED",
+      "agree": true
+    },
+    {
+      "serial": "GS1-1-CN-GS949-16-2014-5070-50527-58931",
+      "sample_status": "RETIRED",
+      "live_status": "RETIRED",
+      "agree": true
+    },
+    {
+      "serial": "GS1-1-GT-GS1321-16-2020-22609-66212-66395",
+      "sample_status": "RETIRED",
+      "live_status": "RETIRED",
+      "agree": true
+    },
+    {
+      "serial": "GS1-1-MZ-GS11029-16-2024-31152-1-2585",
+      "sample_status": "ISSUED",
+      "live_status": "ISSUED",
+      "agree": true
+    },
+    {
+      "serial": "GS1-1-MZ-GS11029-16-2023-31151-1-6400",
+      "sample_status": "ISSUED",
+      "live_status": "ISSUED",
+      "agree": true
+    },
+    {
+      "serial": "GS1-1-KE-GS11970-16-2025-31150-1-64",
+      "sample_status": "ISSUED",
+      "live_status": "ISSUED",
+      "agree": true
+    },
+    {
+      "serial": "GS1-1-MZ-GS7643-16-2025-931135-1059-34189",
+      "sample_status": "ABSENT",
+      "live_status": null,
+      "agree": true
+    },
+    {
+      "serial": "GS1-1-MZ-GS7642-16-2025-931134-901-45041",
+      "sample_status": "ABSENT",
+      "live_status": null,
+      "agree": true
+    },
+    {
+      "serial": "GS1-1-MZ-GS7641-16-2025-931133-760-37972",
+      "sample_status": "ABSENT",
+      "live_status": null,
+      "agree": true
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClaimCheck - carbon offset claims vs public retirement records</title>
+<meta name="description" content="Paste one carbon-offset sentence from an ESG report. ClaimCheck checks the credit serial against public Gold Standard retirement records and shows how an on-chain registry refuses double use.">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#191f28;--sub:#6b7684;--line:#e5e8eb;--blue:#1b64da;--btn:#1b64da;--btnink:#fff;--ok:#0b7a43;--bad:#c9252d}
+@media (prefers-color-scheme:dark){:root{--bg:#101114;--card:#1b1d22;--ink:#f2f4f6;--sub:#9aa3af;--line:#2b2e35;--blue:#7db0ff;--btn:#7db0ff;--btnink:#0b0d10;--ok:#34c47c;--bad:#ff6369}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:24px 16px 64px}
+h1{font-size:28px;margin:8px 0 4px}h2{font-size:18px;margin:0 0 8px}p{margin:8px 0}
+.sub{color:var(--sub)}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:16px 0}
+textarea,input[type=text]{width:100%;font:inherit;color:inherit;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px}
+textarea{min-height:92px;resize:vertical}
+button{font:inherit;border:0;border-radius:12px;min-height:52px;padding:12px 24px;cursor:pointer;background:var(--btn);color:var(--btnink);font-weight:600}
+button.ghost{background:var(--bg);color:var(--ink);border:1px solid var(--line);font-weight:500;padding:8px 16px;min-height:44px;font-size:14px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}
+.verdict{font-size:32px;font-weight:700;margin:4px 0}
+.MATCH{color:var(--ok)}.MISMATCH{color:var(--bad)}.NOT_FOUND{color:var(--bad)}.DUPLICATE{color:var(--blue)}.NO_SERIAL{color:var(--sub)}
+.line{border-top:1px solid var(--line);padding:10px 0;font-size:14px;word-break:break-all}
+code{font:13px ui-monospace,Menlo,monospace}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{text-align:left;padding:6px 4px;border-top:1px solid var(--line)}
+.tag{display:inline-block;border-radius:8px;padding:2px 8px;font-size:12px;font-weight:700;border:1px solid currentColor}
+label{font-size:14px}.small{font-size:13px}
+</style>
+</head>
+<body>
+<main>
+  <h1>ClaimCheck</h1>
+  <p class="sub">Paste one carbon-offset sentence from an ESG report. We check the credit serial in it against <b>public Gold Standard retirement records</b>, and an on-chain registry refuses to count the same credits twice.</p>
+  <p class="small sub">Data note: lookups use a stored sample of <span id="n-records">140</span> real registry records (fetched <span id="fetched">2026-10-17</span>). Tick "live lookup" to ask the registry's public read endpoint for your own serial. No wallet, no login. Chain part: recorded real run on a local test chain (below).</p>
+
+  <section class="card" aria-label="Check a claim">
+    <h2>1. Check a claim</h2>
+    <textarea id="claim" aria-label="Claim sentence"></textarea>
+    <div class="row">
+      <input type="text" id="claimant" value="Company A" aria-label="Claimant" style="max-width:200px">
+      <label><input type="checkbox" id="live"> live lookup</label>
+      <label><input type="checkbox" id="commit" checked> record it in this page's ledger if it matches</label>
+    </div>
+    <div class="row"><button id="go">Check claim</button><span class="sub small">Examples:</span>
+      <span id="examples" class="row" style="margin:0"></span></div>
+    <div id="result" aria-live="polite"></div>
+  </section>
+
+  <section class="card">
+    <h2>2. What the contract does with double use</h2>
+    <p class="small sub">Replay of a real run of <code>RetirementRegistry.sol</code> on a local Hardhat chain (<code>npm run chain-demo</code>). Same batch, overlapping serial numbers are refused.</p>
+    <div id="chain"></div>
+  </section>
+
+  <section class="card">
+    <h2>3. Measured, not promised</h2>
+    <details><summary>Show the numbers</summary><div id="metrics" class="small"></div></details>
+    <p class="small sub">Claims in this experiment are templated sentences built from real registry rows, so expected verdicts are known by construction. It tests the pipeline, not real reports. Read the limits in the README.</p>
+  </section>
+  <p class="small sub"><a href="https://github.com/ryugi62/climatechain-claimcheck">Source code</a> &middot; MIT license</p>
+</main>
+<script type="module" src="./app.js"></script>
+</body>
+</html>

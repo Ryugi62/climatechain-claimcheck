@@ -1,0 +1,18 @@
+[
+ {"id":"p01","text":"Throughout FY2025 the group cancelled 12,500 tCO2e of Gold Standard VERs (GS1-1-IN-GS5500-16-2025-30001-1-12500).","serials":["GS1-1-IN-GS5500-16-2025-30001-1-12500"],"quantity":12500},
+ {"id":"p02","text":"Our remaining scope 1 emissions were neutralised through the retirement of 3,200 carbon credits, serial no. GS1-1-CN-GS7001-16-2024-29500-201-3400.","serials":["GS1-1-CN-GS7001-16-2024-29500-201-3400"],"quantity":3200},
+ {"id":"p03","text":"Offsets: 800 t CO2e (GS1-1-LA-GS6100-16-2023-28000-1-800) retired on behalf of the company.","serials":["GS1-1-LA-GS6100-16-2023-28000-1-800"],"quantity":800},
+ {"id":"p04","text":"We compensate with 45 ktCO2e of high-quality credits.","serials":[],"quantity":45000},
+ {"id":"p05","text":"The company retired 1.2 million tonnes of CO2e in 2025 using VCUs: 7456-198346632-198348830-VCU-044-MER-IN-14-1788-01012019-31122019-0.","serials":["7456-198346632-198348830-VCU-044-MER-IN-14-1788-01012019-31122019-0"],"quantity":1200000},
+ {"id":"p06","text":"Credit serials GS1-1-TD-GS4000-16-2022-27000-1-100 and GS1-1-TD-GS4000-16-2022-27000-101-300 were retired, 300 tCO2e in total.","serials":["GS1-1-TD-GS4000-16-2022-27000-1-100","GS1-1-TD-GS4000-16-2022-27000-101-300"],"quantity":300},
+ {"id":"p07","text":"Carbon neutral certified: all 2025 emissions (950 tonnes) are covered by retired Gold Standard credits (see GS1‑1‑GT‑GS3300‑16‑2025‑31000‑1‑950).","serials":["GS1-1-GT-GS3300-16-2025-31000-1-950"],"quantity":950},
+ {"id":"p08","text":"We have retired approximately 33 thousand tonnes of CO2 equivalent.","serials":[],"quantity":33000},
+ {"id":"p09","text":"Retired: 2,000 t CO₂e, ref. GS1-1-ZA-GS2200-16-2025-30500-5001-7000.","serials":["GS1-1-ZA-GS2200-16-2025-30500-5001-7000"],"quantity":2000},
+ {"id":"p10","text":"As of 31 December 2025 we hold 0 outstanding offset obligations.","serials":[],"quantity":null},
+ {"id":"p11","text":"Net-zero statement: 6,400 metric tons CO2e offset; registry link https://registry.goldstandard.org/credit-blocks/details/123 and serial GS1-1-MZ-GS11029-16-2023-31151-1-6400.","serials":["GS1-1-MZ-GS11029-16-2023-31151-1-6400"],"quantity":6400},
+ {"id":"p12","text":"1.234,5 tCO2e were retired (GS1-1-KE-GS11970-16-2025-31150-1-64).","serials":["GS1-1-KE-GS11970-16-2025-31150-1-64"],"quantity":1234.5},
+ {"id":"p13","text":"Wir haben 750 Tonnen CO2e stillgelegt (GS1-1-IN-GS5500-16-2025-30002-1-750).","serials":["GS1-1-IN-GS5500-16-2025-30002-1-750"],"quantity":750},
+ {"id":"p14","text":"Offset purchase of 4 000 tCO2e, serial GS1-1-LA-GS6100-16-2023-28001-1-4000, retired 2025-11-30.","serials":["GS1-1-LA-GS6100-16-2023-28001-1-4000"],"quantity":4000},
+ {"id":"p15","text":"The ticket GS1-1-IN-GS5500 is ours and we retired 15,000 tCO2e last year.","serials":[],"quantity":15000},
+ {"id":"p16","text":"Total retired 5,600 VERs; serials: GS1-1-CN-GS7001-16-2024-29501-1-2600, GS1-1-CN-GS7001-16-2024-29501-2601-5600.","serials":["GS1-1-CN-GS7001-16-2024-29501-1-2600","GS1-1-CN-GS7001-16-2024-29501-2601-5600"],"quantity":5600}
+]

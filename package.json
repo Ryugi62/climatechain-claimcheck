@@ -1,0 +1,21 @@
+{
+  "name": "climatechain-claimcheck",
+  "version": "0.1.0",
+  "description": "Check an ESG carbon-offset sentence against public retirement records; an on-chain registry refuses double use.",
+  "license": "MIT",
+  "scripts": {
+    "test": "npm run test:domain && npm run test:contract",
+    "test:domain": "node --test tests/domain/*.test.mjs",
+    "test:contract": "hardhat test",
+    "eval": "node scripts/eval.mjs",
+    "chain-demo": "hardhat run scripts/chain_demo.cjs",
+    "build:site": "node scripts/build_site.mjs"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.1.2",
+    "@nomicfoundation/hardhat-ethers": "^3.1.3",
+    "chai": "^4.5.0",
+    "ethers": "^6.17.0",
+    "hardhat": "2.22.17"
+  }
+}
