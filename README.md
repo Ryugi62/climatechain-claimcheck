@@ -24,6 +24,11 @@ Built for the IEEE ClimateChain Global Hackathon, Track 1 (Carbon Markets and Em
 | Contract tests | 30 pass (`npm run test:contract`) |
 | Gas for one registration | about 162k first, about 223k at the 40th range of one batch |
 
+## Testnet status
+Not deployed yet. `scripts/deploy_testnet.cjs` is ready (deploys, registers one real Commerzbank retirement range, shows a second claimant refused, writes `docs/testnet.json`); the local dry run passes (deploy 591,764 gas). The remaining step is test ETH on the deployer address: five free faucet routes were tried on 2026-10-19 and each needs something we do not have (Alchemy and QuickNode: 0.001 ETH on mainnet; pk910 PoW, Gnosis and Apothem: captcha; Google Cloud and Optimism: sign-in plus reCAPTCHA). Run: `IEEE_TESTNET_KEY_FILE=<keyfile> npx hardhat run --network testnet scripts/deploy_testnet.cjs`.
+
+Cost in USD per operation and the zero-cost parts: [docs/COST.md](docs/COST.md).
+
 ## How it works
 1. `domain/` parses serials (Gold Standard, Verra format) and quantities ("33,131 tCO2e", "2.5 ktCO2e", "1.2 million tonnes", "4 000 t").
 2. `judge` compares the claim with the registry record: Match, Mismatch (not retired, quantity differs), Not found, Double use, No serial.
@@ -51,6 +56,9 @@ No RPC URL, no private key and no paid service is used anywhere.
 
 ## Procedure and cost for an ESG reviewer
 Input: the offset sentence from the report. Result: one verdict with the registry URL and fetch time, plus one line for the report: "Retirement of <n> t verified against <registry> record <serial>, <date>". Cost per claim: one free read request to the registry, and, if the claim is recorded on chain, one transaction of about 162k gas (first range of a batch) to about 223k gas (40th range of the same batch). Fee in USD = gas x gas price x token price of the chosen network, so it depends on the network; the contract has no fee of its own.
+
+## Real documents behind the extractor numbers
+24 sentences from certificates that six organisations post on their own sustainability or investor pages (the documents are retirement certificates, not whole sustainability reports): Dolomiti Energia (46 certificates in one PDF, 11 used), Storebrand (3), Commerzbank (1), easyJet (1 + a 6-page Madre de Dios file used as the held-out set), AIXTRON (1), Southampton Airport (1, Gold Standard). Source URLs are in `data/real/samples.json` and `heldout.json`. Truth (serial, quantity) was read by hand and cross-checked: for every labelled serial the range size equals the stated quantity. 6 of the 18 main sentences are text typed from a rendered PDF because the PDF hides its values from text extraction; the rest are the PDF text layer. The extractor is deterministic rules, not a language model.
 
 ## Where the data comes from
 - Gold Standard registry, public read endpoint `https://public-api.goldstandard.org/credits` (the endpoint the registry's own web app uses; it answers CORS `*`). The sample is 7 requests of 20 rows, 5 s apart. Live lookup sends one request per serial.
