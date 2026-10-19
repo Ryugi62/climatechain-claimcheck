@@ -1,0 +1,56 @@
+[
+ {
+  "id": "easyjet-madre-p0",
+  "company": "easyJet (Madre de Dios, 2020)",
+  "url": "https://s203.q4cdn.com/522538739/files/carbon_offsets/2020/Madre-de-Dios-certificate-2020.pdf",
+  "mode": "text-layer (PDF text extraction as-is, held-out: extractor frozen before labelling)",
+  "text": "1 Marion Kurdej De: environmental@markit.com Envoyé: vendredi 17 janvier 2020 11:30 À: Marion Kurdej Objet: Markit Environmental Registry - Unit Retirement Retirement Notification Dear Marion Kurdej, The following retirement has been completed in the Registry: Retirement Details: Account Name: easyJet Account ID: 103000000026410 Contact Name: NULL Contact Email: NULL Project Name: Madre de Dios Amazon REDD Project Vintage Year: 2017 Quantity: 804199 Credit Type: VCU (tCO2e) Serial Number: 7658-417705522-418509720-VCU-006-MER-PE-14-844-01012017-31122017-1 Retirement Certificate: Not Required Beneficial Owner: easyJet Domicile of Beneficial Owner: United Kingdom ",
+  "truth_serial": "7658-417705522-418509720-VCU-006-MER-PE-14-844-01012017-31122017-1",
+  "truth_qty": 804199
+ },
+ {
+  "id": "easyjet-madre-p2",
+  "company": "easyJet (Madre de Dios, 2020)",
+  "url": "https://s203.q4cdn.com/522538739/files/carbon_offsets/2020/Madre-de-Dios-certificate-2020.pdf",
+  "mode": "text-layer (PDF text extraction as-is, held-out: extractor frozen before labelling)",
+  "text": "EasyJet Airline Company Ltd This is to certify that has offset 804 199 tCO₂e related to Madre de Dios Amazon REDD Project, based on VCS VM0007 methodology Location: Vilcabamba-Amboró Corridor, Amazon, Peru Retired on behalf of easyJet for the emissions period 19/11/19 – 31/12/19 REF: A2020 - 3241 Signed by: Gerald Maradan, CEO EcoAct www.eco-act.com Date: 17/01/2020",
+  "truth_serial": null,
+  "truth_qty": 804199
+ },
+ {
+  "id": "easyjet-madre-p3",
+  "company": "easyJet (Madre de Dios, 2020)",
+  "url": "https://s203.q4cdn.com/522538739/files/carbon_offsets/2020/Madre-de-Dios-certificate-2020.pdf",
+  "mode": "text-layer (PDF text extraction as-is, held-out: extractor frozen before labelling)",
+  "text": "This is to certify that easyJet Airline Company Ltd has offset 327 947 tCO₂e related to Madre de Dios Amazon REDD Project, based on VCS VM0007 methodology Location: Vilcabamba-Amboró Corridor, Amazon, Peru Retired on behalf of easyJet for the aviation emissions, period 01/01/2020 – 31/03/2020 Signed by: Gerald Maradan, CEO EcoAct Date: 10/06/2020 www.eco-act.com REF: A2020 – 3781 REF: A2020 - 3782",
+  "truth_serial": null,
+  "truth_qty": 327947
+ },
+ {
+  "id": "easyjet-madre-p4",
+  "company": "easyJet (Madre de Dios, 2020)",
+  "url": "https://s203.q4cdn.com/522538739/files/carbon_offsets/2020/Madre-de-Dios-certificate-2020.pdf",
+  "mode": "text-layer (PDF text extraction as-is, held-out: extractor frozen before labelling)",
+  "text": "Certificate of Verified Carbon Unit (VCU) Retirement Additional Certifications: Additional details on this retirement can be found on the Verra Registry. Project name: VCU serial number: Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 09 Jun 2020, 80,131 Verified Carbon Units (VCUs) were retired on behalf of: EasyJet Airline Company Ltd Madre de Dios Amazon REDD Project 7658-418509721-418589851-VCU-006-MER-PE -14-844-01012017-31122017-1 Gold",
+  "truth_serial": "7658-418509721-418589851-VCU-006-MER-PE-14-844-01012017-31122017-1",
+  "truth_qty": 80131
+ },
+ {
+  "id": "easyjet-madre-p5",
+  "company": "easyJet (Madre de Dios, 2020)",
+  "url": "https://s203.q4cdn.com/522538739/files/carbon_offsets/2020/Madre-de-Dios-certificate-2020.pdf",
+  "mode": "text-layer (PDF text extraction as-is, held-out: extractor frozen before labelling)",
+  "text": "Certificate of Verified Carbon Unit (VCU) Retirement Additional Certifications: Additional details on this retirement can be found on the Verra Registry. Project name: VCU serial number: Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 09 Jun 2020, 115,670 Verified Carbon Units (VCUs) were retired on behalf of: EasyJet Airline Company Ltd Madre de Dios Amazon REDD Project 7659-418589852-418705521-VCU-006-MER-PE -14-844-01012018-31122018-1 Gold",
+  "truth_serial": "7659-418589852-418705521-VCU-006-MER-PE-14-844-01012018-31122018-1",
+  "truth_qty": 115670
+ },
+ {
+  "id": "easyjet-madre-p6",
+  "company": "easyJet (Madre de Dios, 2020)",
+  "url": "https://s203.q4cdn.com/522538739/files/carbon_offsets/2020/Madre-de-Dios-certificate-2020.pdf",
+  "mode": "text-layer (PDF text extraction as-is, held-out: extractor frozen before labelling)",
+  "text": "Certificate of Verified Carbon Unit (VCU) Retirement Additional Certifications: Additional details on this retirement can be found on the Verra Registry. Project name: VCU serial number: Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 09 Jun 2020, 132,146 Verified Carbon Units (VCUs) were retired on behalf of: EasyJet Airline Company Ltd Madre de Dios Amazon REDD Project 7659-418711737-418843882-VCU-006-MER-PE -14-844-01012018-31122018-1 Gold",
+  "truth_serial": "7659-418711737-418843882-VCU-006-MER-PE-14-844-01012018-31122018-1",
+  "truth_qty": 132146
+ }
+]

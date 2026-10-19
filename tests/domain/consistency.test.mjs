@@ -20,7 +20,7 @@ test('README numbers equal results.json', () => {
 });
 
 test('README test counts equal the number of tests in the files', () => {
-  const domain = ['serial', 'claim', 'reconcile', 'ledger', 'check', 'consistency'].map((n) => count(read(`tests/domain/${n}.test.mjs`), /^test\(/gm)).reduce((a, b) => a + b, 0);
+  const domain = ['serial', 'claim', 'reconcile', 'ledger', 'check', 'consistency', 'real-samples'].map((n) => count(read(`tests/domain/${n}.test.mjs`), /^test\(/gm)).reduce((a, b) => a + b, 0);
   const contract = count(read('tests/contract/registry.test.cjs'), /^\s+it\(/gm);
   assert.ok(readme.includes(`${domain} pass`), `domain tests: ${domain}`);
   assert.ok(readme.includes(`${contract} pass`), `contract tests: ${contract}`);

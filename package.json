@@ -8,6 +8,7 @@
     "test:domain": "node --test tests/domain/*.test.mjs",
     "test:contract": "hardhat test",
     "eval": "node scripts/eval.mjs",
+    "eval:real": "node scripts/eval_real.mjs",
     "chain-demo": "hardhat run scripts/chain_demo.cjs",
     "build:site": "node scripts/build_site.mjs"
   },

@@ -2,7 +2,7 @@ import { findSerials, stripSerials } from './serial.mjs';
 
 // number + unit. Units: t, tCO2(e), tonnes, tons, kt, Mt, credits, VCUs, VERs, "million tonnes"
 const NUM = '(\\d{1,3}(?:\\.\\d{3})+,\\d+|\\d{1,3}(?:,\\d{3})+(?:\\.\\d+)?|\\d{1,3}(?:[ \\u00a0\\u202f]\\d{3})+|\\d{1,3}(?:\\.\\d{3})+(?!\\d)|\\d+(?:[.,]\\d+)?)';
-const UNIT = '(?:\\s*(million|thousand|m)\\b)?\\s*(mtco2e?|ktco2e?|tco2e?|tonnes?|tons?|tonnen|metric\\s+tons?|mt|kt|t|(?:carbon\\s+)?credits?|vcus?|vers?)(?![a-z])';
+const UNIT = '(?:\\s*(million|thousand|m)\\b)?\\s*(verified\\s+carbon\\s+units?|verified\\s+emission\\s+reductions?|mtco2e?|ktco2e?|tco2e?|tonnes?|tons?|tonnen|metric\\s+tons?|mt|kt|t|(?:carbon\\s+)?credits?|vcus?|vers?)(?![a-z])';
 const QTY_RE = new RegExp(`${NUM}${UNIT}`, 'i');
 
 function parseNumber(t) {

@@ -2,9 +2,10 @@
 const DASHES = /[‐‑‒–—−]/g;
 
 const GS_RE = /\bGS1-\d+-([A-Z]{2})-(GS\d+)-\d+-(\d{4})-(\d+)-(\d+)-(\d+)\b/i;
-const VCU_RE = /\b(\d+)-(\d+)-(\d+)-VCU-\d+-[A-Z]+-[A-Z]{2}-\d+-(\d+)-(\d{2})(\d{2})(\d{4})-(\d{2})(\d{2})(\d{4})-\d+\b/i;
+const VCU_RE = /\b(\d+)-(\d+)-(\d+)-(?:[A-Z]{2,4}-)?VCU-\d+-[A-Z]+-[A-Z]{2,3}-\d+-(\d+)-(\d{2})(\d{2})(\d{4})-(\d{2})(\d{2})(\d{4})-\d+\b/i;
 
-const normalise = (s) => String(s).replace(DASHES, '-').toUpperCase();
+// PDF text extraction can leave a space before a dash at a line break ("PE -14"): close it inside identifiers.
+const normalise = (s) => String(s).replace(DASHES, '-').toUpperCase().replace(/([A-Z0-9])[ \t]+-(?=\d)/g, '$1-');
 
 function build(registry, project, vintage, batch, start, end, raw, country) {
   if (!(end >= start)) return null;

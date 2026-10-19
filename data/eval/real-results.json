@@ -1,0 +1,25 @@
+{
+ "extractor": "/Users/ryugi62/dev/climatechain-claimcheck/src/domain",
+ "publishers": [
+  "Dolomiti Energia S.p.A.",
+  "Storebrand ASA",
+  "Commerzbank AG",
+  "easyJet",
+  "AIXTRON SE",
+  "Southampton International Airport Ltd"
+ ],
+ "main": {
+  "n": 18,
+  "serial": 18,
+  "quantity": 18,
+  "both": 18,
+  "miss": []
+ },
+ "heldout": {
+  "n": 6,
+  "serial": 6,
+  "quantity": 6,
+  "both": 6,
+  "miss": []
+ }
+}

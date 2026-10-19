@@ -17,7 +17,10 @@ Built for the IEEE ClimateChain Global Hackathon, Track 1 (Carbon Markets and Em
 | Second claimant refused by the ledger (same credits) | 60/60 full overlap, 23/23 partial overlap |
 | Live endpoint agrees with the stored sample | 11/11 (`data/eval/live-check.json`) |
 | Extraction on 10 held-out phrasings | serial 8/8, quantity 8/9 (miss: "12.5k tonnes") |
-| Domain tests | 52 pass (`npm run test:domain`) |
+| Real publisher documents (hand-labelled) | 24 retirement sentences from 6 publishers (Dolomiti Energia, Storebrand, Commerzbank, easyJet, AIXTRON, Southampton Airport); `data/real/` |
+| Extractor on those real sentences (`npm run eval:real`) | serial 18/18, quantity 18/18 after fixes; before fixes (the extractor as built in round 1): serial 8/18, quantity 1/18 |
+| Held-out set (6 sentences, collected after the extractor was frozen) | first run serial 3/6 (PDF line-break artefact "PE -14"), quantity 6/6; after the fix 6/6. In-sample after fixing, so treat the 100% as a regression guard, not an estimate |
+| Domain tests | 56 pass (`npm run test:domain`) |
 | Contract tests | 30 pass (`npm run test:contract`) |
 | Gas for one registration | about 162k first, about 223k at the 40th range of one batch |
 
@@ -38,7 +41,8 @@ docs/          static demo page, THREAT_MODEL.md
 ## Run it
 ```
 npm install
-npm test                # 52 domain + 30 contract tests
+npm test                # 56 domain + 30 contract tests
+npm run eval:real       # extractor accuracy on real certificates -> data/eval/real-results.json
 npm run eval            # regenerate data/eval/results.json
 npm run chain-demo      # real run on a local chain -> docs/chain-transcript.json
 npm run build:site      # copy code and data into docs/
