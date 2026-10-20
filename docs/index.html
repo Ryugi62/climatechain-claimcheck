@@ -30,7 +30,7 @@ label{font-size:14px}.small{font-size:13px}
 <main>
   <h1>ClaimCheck</h1>
   <p class="sub">Paste one carbon-offset sentence from an ESG report. We check the credit serial in it against <b>public Gold Standard retirement records</b>, and an on-chain registry refuses to count the same credits twice.</p>
-  <p class="small sub">Data note: lookups use a stored sample of <span id="n-records">140</span> real registry records (fetched <span id="fetched">2026-10-17</span>). Tick "live lookup" to ask the registry's public read endpoint for your own serial. No wallet, no login. Chain part: recorded real run on a local test chain (below).</p>
+  <p class="small sub">Data note: lookups use a stored sample of <span id="n-records">140</span> real registry records (fetched <span id="fetched">2026-10-17</span>). Tick "live lookup" to ask the registry's public read endpoint for your own serial. No wallet, no login. Chain part: the registry contract is deployed on the Sepolia testnet (below).</p>
 
   <section class="card" aria-label="Check a claim">
     <h2>1. Check a claim</h2>
@@ -47,7 +47,7 @@ label{font-size:14px}.small{font-size:13px}
 
   <section class="card">
     <h2>2. What the contract does with double use</h2>
-    <p class="small sub">Replay of a real run of <code>RetirementRegistry.sol</code> on a local Hardhat chain (<code>npm run chain-demo</code>). Same batch, overlapping serial numbers are refused.</p>
+    <p class="small sub">Deployed on Sepolia testnet: <a href="https://sepolia.etherscan.io/address/0xbBC97a57c7f81F77dbA1b1b2FbC29898b87F7bDF"><code>0xbBC97a57c7f81F77dbA1b1b2FbC29898b87F7bDF</code></a> (2026-10-21; one real Commerzbank retirement range registered, a second claimant on the same credits refused with <code>RangeOverlap</code>). Below: replay of a real run of the same contract on a local Hardhat chain (<code>npm run chain-demo</code>). Same batch, overlapping serial numbers are refused.</p>
     <div id="chain"></div>
   </section>
 

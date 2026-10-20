@@ -1,0 +1,41 @@
+{
+  "network": "testnet",
+  "chainId": "11155111",
+  "contract": "RetirementRegistry",
+  "address": "0xbBC97a57c7f81F77dbA1b1b2FbC29898b87F7bDF",
+  "deployer": "0x992709971ba320c78a84581b14F4fE16d1C29d23",
+  "batchKey": "VERRA:4679:2023:18974",
+  "serial": "18974-916907312-916910855-VCS-VCU-262-VER-IN-13-4679-16102023-31122023-0",
+  "range": [
+    "916907312",
+    "916910855"
+  ],
+  "deployTx": {
+    "hash": "0xa743104cf05e231bae450af14cc21d2524619363005a9a0b195f9d2819f1c0b5",
+    "gasUsed": 3994914,
+    "effectiveGasPriceWei": "1000000000",
+    "block": 11957626
+  },
+  "addAttestorTx": {
+    "hash": "0x7f85c44933b38cfc99e188e8dd2e58772cb3accacb75b2245da4ee0b219138e2",
+    "gasUsed": 129622,
+    "effectiveGasPriceWei": "1250018",
+    "block": 11957627
+  },
+  "registerTx": {
+    "hash": "0x07eb32c400eac99d4af7183317fe0305658d0f7f563f27e60388025c9b127c59",
+    "gasUsed": 683837,
+    "effectiveGasPriceWei": "1000015",
+    "block": 11957628
+  },
+  "secondClaimant": {
+    "refused": true,
+    "error": "RangeOverlap",
+    "args": [
+      "0xcf708ef039cbaa41bbfe214018fb7d4e3ac083a58a7f9733400c0833fe8d48ba",
+      "916907312",
+      "916910855"
+    ]
+  },
+  "note": "Registered range is the retirement stated on a Verra certificate that Commerzbank AG publishes (data/real/samples.json)."
+}
