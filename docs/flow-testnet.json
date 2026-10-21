@@ -1,0 +1,87 @@
+{
+  "network": "testnet",
+  "chainId": "11155111",
+  "contract": "0xbBC97a57c7f81F77dbA1b1b2FbC29898b87F7bDF",
+  "sentence": "In 2024 Google retired 131,201 tCO2e of Gold Standard credits through Cool Effect.",
+  "claimant": "Google",
+  "note": "The sentence is written by us from the public Gold Standard records (beneficiary \"Google LLC\"); Google did not publish it.",
+  "check": {
+    "status": "MATCH",
+    "candidates": [
+      {
+        "serial": "GS1-1-MU-GS12147-21-2022-27150-1257-62800",
+        "credits": 61544,
+        "vintage": "2022",
+        "retired_on": "2024-10-17",
+        "note": "Retired by Cool Effect on behalf of Google LLC",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Google"
+      },
+      {
+        "serial": "GS1-1-MU-GS12147-21-2021-27149-1-69657",
+        "credits": 69657,
+        "vintage": "2021",
+        "retired_on": "2024-10-17",
+        "note": "Retired by Cool Effect on behalf of Google LLC",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Google"
+      }
+    ],
+    "total": 131201,
+    "claimed": 131201
+  },
+  "registered": [
+    {
+      "serial": "GS1-1-MU-GS12147-21-2022-27150-1257-62800",
+      "batchKey": "GOLD_STANDARD:GS12147:2022:27150",
+      "range": [
+        1257,
+        62800
+      ],
+      "credits": 61544,
+      "tx": {
+        "hash": "0xec12e7852eaf117c14594119ec54553faeba119bbb4006bda5a68c5c254cd1eb",
+        "status": 1,
+        "gasUsed": 683777,
+        "block": 11959276,
+        "effectiveGasPriceWei": "1000000000"
+      }
+    },
+    {
+      "serial": "GS1-1-MU-GS12147-21-2021-27149-1-69657",
+      "batchKey": "GOLD_STANDARD:GS12147:2021:27149",
+      "range": [
+        1,
+        69657
+      ],
+      "credits": 69657,
+      "tx": {
+        "hash": "0xbc7cdcc9aecebe640dbddfa3c1a396daa747d8796d4e6b396309f7a523be2e8b",
+        "status": 1,
+        "gasUsed": 683777,
+        "block": 11959277,
+        "effectiveGasPriceWei": "1000000000"
+      }
+    }
+  ],
+  "secondClaim": {
+    "claimant": "second claimant (demo)",
+    "serial": "GS1-1-MU-GS12147-21-2022-27150-1257-62800",
+    "range": [
+      1257,
+      62800
+    ],
+    "tx": {
+      "hash": "0x3567dcd9d2407764415eba66acda8cc30ea6b5540f9fa44544756f1819259118",
+      "status": 0,
+      "gasUsed": 25496,
+      "block": 11959278,
+      "effectiveGasPriceWei": "200024"
+    },
+    "revert": "RangeOverlap",
+    "args": [
+      "0xdfbabc343d631d440eb75f3c6b923c243ade8c2b99c3c453f8a1674ad56f38ac",
+      "1257",
+      "62800"
+    ]
+  },
+  "rangeCount": "1"
+}

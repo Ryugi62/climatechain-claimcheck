@@ -1,6 +1,6 @@
 # ClaimCheck
 
-**Paste one carbon-offset sentence from an ESG report. ClaimCheck checks the credit serial in it against public Gold Standard retirement records, and an on-chain registry refuses to count the same credits twice. A separate wording check (Backed / May conflict / No receipt) compares the rest of the sentence with the record and never changes the verdict.**
+**Paste one carbon-offset sentence from an ESG report. With a credit serial, ClaimCheck checks it against public Gold Standard retirement records. Most real reports print no serial (0 of 10 measured), so a sentence with only a company, a year and a quantity is looked up by the company named as beneficiary in the same registry. Either way the same credits can be registered on chain, and a second claim on them is refused. A separate wording check (Backed / May conflict / No receipt) compares the rest of the sentence with the record and never changes the verdict.**
 
 Live demo (no wallet, no login): https://ryugi62.github.io/climatechain-claimcheck/
 
@@ -9,7 +9,7 @@ Deployed on Sepolia testnet: [`0xbBC97a57c7f81F77dbA1b1b2FbC29898b87F7bDF`](http
 Built for the IEEE ClimateChain Global Hackathon, Track 1 (Carbon Markets and Emissions Transparency: double counting, lack of transparency).
 
 ## What is new, and what is not (similar tools)
-**Our own part: it starts from the report sentence. Serial and quantity are checked against the public retirement record, and a second claim on the same serial range fails on chain. None of the tools below does all three in one flow; each piece alone exists.** On-chain refusal of reused serials alone is not new (see the patent and EcoGuard rows).
+**Our own part: it starts from the report sentence, with or without a serial. Serial and quantity (or, with no serial, the company's retired blocks and their total) are checked against the public retirement record, and a second claim on the same serial range fails on chain, shown as one flow with one set of credits ([docs/flow-testnet.json](docs/flow-testnet.json)). None of the tools below does all three in one flow; each piece alone exists.** On-chain refusal of reused serials alone is not new (see the patent and EcoGuard rows).
 
 | Tool | Type | What it does | What it does not do |
 |---|---|---|---|
@@ -21,6 +21,8 @@ Built for the IEEE ClimateChain Global Hackathon, Track 1 (Carbon Markets and Em
 | EcoGuard on GenLayer (https://github.com/linoxbt/ecoguard) | Code | LLM validators audit project evidence; rejects a duplicate (serial, vintage) issuance | No company report sentence against a public retirement record |
 | US11694258B2, Miovision/BlueOwl (https://patents.google.com/patent/US11694258B2/en) | Patent | Serial-level retirement on a blockchain ledger to remove double counting | No sentence check |
 | EmeraldMind (https://www.cse.uoi.gr/~tsap/publications/EmeraldMind_WWWDemo.pdf) and Stammbach et al., ACL 2023 (https://aclanthology.org/2023.acl-short.91) | Papers | Greenwashing judgement of ESG sentences; environmental-claim detection | No registry record behind the verdict, no chain |
+
+First-time real sentences (honest numbers, [docs/BENEFICIARY_EVAL.md](docs/BENEFICIARY_EVAL.md)): of the 10 real reports we scanned, 0 print a serial; 3 contain a retirement sentence with a quantity; 2 of those get registry candidates by company name; 0 have a candidate total equal to the sentence (the registry total is lower, Gold Standard only). So the no-serial path gives leads on real text, and an exact quantity match so far only on sentences written from the public record.
 
 Why it matters now: Directive (EU) 2024/825 applies in the EU from 27 September 2026 and targets claims that a product is climate neutral or has reduced climate impact by way of offsetting (text: [EUR-Lex 32024L0825](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024L0825), Art. 4 and recital 12; second source: [EU Transition Pathways](https://transition-pathways.europa.eu/legislation/directive-eu-2024825-empowering-consumer-green-transition)). It applies to consumer-facing claims, not to a company's own ESG report, so it raises the pressure to back offset wording with a record; it is not a rule that ClaimCheck enforces.
 
@@ -42,10 +44,12 @@ Cost to keep running: hosting is static files on GitHub Pages ($0), registry rea
 | Extractor on those real sentences (`npm run eval:real`) | serial 18/18, quantity 18/18 after fixes; before fixes (the extractor as built in round 1): serial 8/18, quantity 1/18 |
 | Held-out set (6 sentences, collected after the extractor was frozen) | first run serial 3/6 (PDF line-break artefact "PE -14"), quantity 6/6; after the fix 6/6. In-sample after fixing, so treat the 100% as a regression guard, not an estimate |
 | Wording check on 72 frozen pairs (browser, [docs/NARRATIVE_EVAL.md](docs/NARRATIVE_EVAL.md)) | false May conflict on matching wording 2.8% (1/36), Backed on matching wording 80.6% (29/36), median 95 ms per sentence. Weakness: of 36 changed sentences only 27.8% (10/36) were flagged May conflict, the rest ended as No receipt, none as Backed |
-| Do real reports print a serial? ([docs/SERIAL_PREVALENCE.md](docs/SERIAL_PREVALENCE.md)) | 0 of 10 public sustainability/annual reports contain a credit serial; such sentences return No serial (see Limits) |
-| Domain tests | 69 pass (`npm run test:domain`) |
+| Do real reports print a serial? ([docs/SERIAL_PREVALENCE.md](docs/SERIAL_PREVALENCE.md)) | 0 of 10 public sustainability/annual reports contain a credit serial; such sentences still return No serial from the serial check |
+| Sentence without a serial, first-time real sentences ([docs/BENEFICIARY_EVAL.md](docs/BENEFICIARY_EVAL.md)) | 3 of 10 reports contain a retirement sentence with a quantity; 2 of 10 reports get at least one registry candidate for their sentence; 0 of 10 have a candidate total equal to the sentence (registry total lower every time: Gold Standard only, other registries not looked up). 7 of 10 reports are from a company with retired Gold Standard blocks under its own name. Same 10 reports as the serial measurement (in-sample for that question, first-time sentences for this path) |
+| One flow, one set of credits, Sepolia ([docs/flow-testnet.json](docs/flow-testnet.json)) | sentence without serial -> 2 Gold Standard candidates, total 131,201 t = the sentence -> both ranges registered (2 real transactions) -> second claim on the same range reverted with `RangeOverlap` (real transaction) |
+| Domain tests | 90 pass (`npm run test:domain`) |
 | Contract tests | 30 pass (`npm run test:contract`) |
-| Gas for one registration | about 162k first, about 223k at the 40th range of one batch |
+| Gas for one registration | about 162k first on the local test chain, about 223k at the 40th range of one batch; 683,777 on Sepolia for the same call (see below) |
 
 ## Testnet status
 Deployed on Sepolia (chain id 11155111), 2026-10-21, with free test ETH (no real funds).
@@ -57,19 +61,32 @@ Deployed on Sepolia (chain id 11155111), 2026-10-21, with free test ETH (no real
 | Register tx: one real Commerzbank retirement range 916907312-916910855 (block 11957628, 683,837 gas) | [`0x07eb32c4...127c59`](https://sepolia.etherscan.io/tx/0x07eb32c400eac99d4af7183317fe0305658d0f7f563f27e60388025c9b127c59) |
 | Second claimant on the same credits: a real transaction (block 11958923, 25,496 gas, status Failed) | [`0x43ab85cf...b3db8b`](https://sepolia.etherscan.io/tx/0x43ab85cf22d4f85514a8ed25e015d137a4efdeb6671e138cd1a192e380b3db8b) ([Blockscout, revert decoded](https://eth-sepolia.blockscout.com/tx/0x43ab85cf22d4f85514a8ed25e015d137a4efdeb6671e138cd1a192e380b3db8b)): reverted with `RangeOverlap(batchKey, 916907312, 916910855)`; the range count stayed 1. Sent with a fixed gas limit so the failure is mined; contract source verified on Blockscout |
 
+**One flow with the same credits** (2026-10-21, `scripts/flow_testnet.cjs`, record `docs/flow-testnet.json`). The sentence "In 2024 Google retired 131,201 tCO2e of Gold Standard credits through Cool Effect." is written by us from two public Gold Standard records whose beneficiary is "Google LLC" (Google did not publish it). The page finds both records by beneficiary, the total equals the sentence, and:
+
+| Step | Serial range | Transaction |
+|---|---|---|
+| Register candidate 1 (61,544 credits, block 11959276, 683,777 gas) | `GS1-1-MU-GS12147-21-2022-27150-1257-62800` (1257-62800) | [`0xec12e785...1cd1eb`](https://eth-sepolia.blockscout.com/tx/0xec12e7852eaf117c14594119ec54553faeba119bbb4006bda5a68c5c254cd1eb) |
+| Register candidate 2 (69,657 credits, block 11959277, 683,777 gas) | `GS1-1-MU-GS12147-21-2021-27149-1-69657` (1-69657) | [`0xbc7cdcc9...e2be8b`](https://eth-sepolia.blockscout.com/tx/0xbc7cdcc9aecebe640dbddfa3c1a396daa747d8796d4e6b396309f7a523be2e8b) |
+| Second claimant, same range as candidate 1 (block 11959278, 25,496 gas, status Failed) | 1257-62800 | [`0x3567dcd9...259118`](https://eth-sepolia.blockscout.com/tx/0x3567dcd9d2407764415eba66acda8cc30ea6b5540f9fa44544756f1819259118): `RangeOverlap(batchKey, 1257, 62800)`, range count stayed 1 |
+
+On the demo page, the same serial shows the Sepolia registration next to its Match result, and a Company B claim on it gets Double use from the page ledger with the same overlap.
+
+**Why 162k in the tests and 684k on Sepolia?** Same code, different price list for writing new storage. The first registration writes 6 new storage slots. The local test chain charges about 22k gas per new slot (162k in total). On Sepolia the same call cost 683,777 (the same figure twice in the flow above, 683,837 in the first run), and `addAttestor`, which writes 1 new slot, cost 129,622 against 47,602 locally: roughly 105k gas per new slot on both Sepolia transactions, about 5 times the local price. We measured the ratio; we did not investigate why Sepolia charges more. The 162k figure is the code's cost on the local test chain, 684k is what the registration really cost on Sepolia.
+
 Full record: `docs/testnet.json`. Overlap transaction: `IEEE_TESTNET_KEY_FILE=<keyfile> npx hardhat run --network testnet scripts/send_overlap_testnet.cjs`. Deploy: `IEEE_TESTNET_KEY_FILE=<keyfile> npx hardhat run --network testnet scripts/deploy_testnet.cjs`. The key never lives in the repo.
 
 Cost in USD per operation and the zero-cost parts: [docs/COST.md](docs/COST.md).
 
 ## How it works
+0. **No serial in the sentence:** `domain/beneficiary` reads company, year and quantity; `goldStandardLive.findByEntity` asks the registry (free-text `query`, paged by the `X-Total-Count` header) for blocks; a block is a candidate when it is RETIRED and the claimant is the leading words of its beneficiary name (`retirement_using_entity.name` or a note such as "on behalf of X"; legal suffixes ignored, so "Shenzhen Apple Brother" is not Apple). The result is the list of candidates, their total, and whether the total equals the sentence. It is a lead, never a verdict.
 1. `domain/` parses serials (Gold Standard, Verra format) and quantities ("33,131 tCO2e", "2.5 ktCO2e", "1.2 million tonnes", "4 000 t").
 2. `judge` compares the claim with the registry record: Match, Mismatch (not retired, quantity differs), Not found, Double use, No serial.
 3. `RetirementRegistry.sol` stores serial ranges per batch. Registering a range that overlaps an earlier one reverts with `RangeOverlap`. Only attestors can register.
 4. The demo page runs the same domain code as the tests in the browser.
 
 ```
-domain/        pure functions: serial, claim, ledger, reconcile      (no I/O)
-application/  checkClaim use case + ports                            
+domain/        pure functions: serial, claim, ledger, reconcile, beneficiary (no I/O)
+application/  checkClaim, checkBeneficiary use cases + ports            
 adapters/      sampleRecords (stored sample), goldStandardLive (HTTP)
 contracts/     RetirementRegistry.sol, tested with Hardhat (local chain), deployed on Sepolia
 docs/          static demo page, THREAT_MODEL.md
@@ -78,8 +95,10 @@ docs/          static demo page, THREAT_MODEL.md
 ## Run it
 ```
 npm install
-npm test                # 69 domain + 30 contract tests
+npm test                # 90 domain + 30 contract tests
 npm run eval:real       # extractor accuracy on real certificates -> data/eval/real-results.json
+node scripts/eval_beneficiary.mjs [--offline]   # sentence-without-serial path on 10 real reports -> docs/BENEFICIARY_EVAL.md
+IEEE_TESTNET_KEY_FILE=<keyfile> npx hardhat run --network testnet scripts/flow_testnet.cjs   # the one-flow Sepolia run
 npm run eval            # regenerate data/eval/results.json
 npm run chain-demo      # real run on a local chain -> docs/chain-transcript.json
 npm run build:site      # copy code and data into docs/
@@ -100,17 +119,18 @@ Input: the offset sentence from the report. Result: one verdict with the registr
 
 ## Limits
 - Only Gold Standard is looked up. Verra is parsed only.
-- Extraction is rules, not a model. It misses unusual wordings (see held-out miss) and a claim without a serial cannot be checked.
+- Extraction and the verdict are rules, not a model (the optional wording check is the only model). Extraction misses unusual wordings (see held-out miss). A claim without a serial gets candidates, not a verdict: the registry only names a beneficiary for some blocks, other registries are not looked up, and the candidate total is compared with the sentence as written.
 - A sub-range of a retired block that is not itself a registry row returns Not found unless the ledger already holds an overlapping range.
 - Match means "the public record agrees with the sentence". It is not an audit and says nothing about project quality or who owns the credits.
 - Evaluation claims are templated from real rows, not taken from real reports.
 - Tests run on a local chain; the contract is also deployed on the Sepolia testnet (test ETH only, no real funds). Trust sits in the attestor set (single owner here). See `docs/THREAT_MODEL.md`.
-- Real reports rarely print the serial: 0 of 10 reports we scanned did (`docs/SERIAL_PREVALENCE.md`). Those sentences return No serial; ClaimCheck helps where a certificate or retirement page is published.
+- Real reports rarely print the serial: 0 of 10 reports we scanned did (`docs/SERIAL_PREVALENCE.md`). The serial check still returns No serial for them; the beneficiary path then gives candidates (3 of 10 reports had a retirement sentence with a quantity, 2 of 10 got a candidate, 0 of 10 matched the quantity: `docs/BENEFICIARY_EVAL.md`).
+- The Sepolia flow uses a sentence we wrote from the public record, not a sentence a company published.
 - The wording check is a small pre-trained model: it catches a changed fact only 27.8% of the time as May conflict and never says a claim is false.
-- No personal data is collected. No model is trained by us.
+- No personal data is collected. No model is trained by us. Company names in the beneficiary path come from the registry's public records.
 
 ## AI use
-Code, tests and this document were drafted with Anthropic's Claude (Claude Code) and then run, measured and edited by the author. The claim parser and the verdict are deterministic rules. The only model in the product is the optional wording check: a pre-trained NLI model (Xenova/nli-deberta-v3-xsmall) running in the viewer's browser for inference, after a click, off the verdict path.
+Code, tests and this document were drafted with Anthropic's Claude (Claude Code) and then run, measured and edited by the author. The claim parser, the beneficiary lookup and the verdict are deterministic rules. The only model in the product is the optional wording check: a pre-trained NLI model (Xenova/nli-deberta-v3-xsmall) running in the viewer's browser for inference, after a click, off the verdict path.
 
 ## License
 MIT

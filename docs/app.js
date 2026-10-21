@@ -5,6 +5,7 @@ import { goldStandardLive } from './src/adapters/goldStandardLive.mjs';
 import { createTransformersNli } from './src/adapters/transformersNli.mjs';
 import { checkNarrative } from './src/application/checkNarrative.mjs';
 import { extractClaim } from './src/domain/claim.mjs';
+import { checkBeneficiary } from './src/application/checkBeneficiary.mjs';
 
 // Feature flag (SPEC kill switch): false hides the whole narrative check; the verdict path does not depend on it.
 const NARRATIVE = true;
@@ -14,6 +15,9 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&l
 const ledger = new Ledger();
 let rows = [];
 let lastRecords = null;
+let flow = null; // docs/flow-testnet.json: the same credits on the Sepolia testnet
+const EXPLORER = 'https://eth-sepolia.blockscout.com/tx/';
+const shortTx = (h) => `${h.slice(0, 10)}...${h.slice(-6)}`;
 const setStatus = (t) => { $('nstatus').textContent = t; };
 const nli = createTransformersNli({
   load: async () => {
@@ -67,8 +71,47 @@ const WHY = {
   no_serial: 'The sentence names no credit serial, so there is nothing to verify.',
 };
 
+function chainNote(serial) {
+  if (!flow) return '';
+  const reg = flow.registered.find((x) => x.serial === serial);
+  if (!reg) return '';
+  const s2 = flow.secondClaim;
+  const second = s2.serial === serial ? ` A second claimant on the same range was refused: <a href="${EXPLORER}${s2.tx.hash}"><code>${shortTx(s2.tx.hash)}</code></a> reverted with <b>${esc(s2.revert)}</b>.` : '';
+  return `<br><span class="sub">On the Sepolia testnet this same serial range is registered: <a href="${EXPLORER}${reg.tx.hash}"><code>${shortTx(reg.tx.hash)}</code></a> (${reg.tx.gasUsed.toLocaleString()} gas).${second}</span>`;
+}
+
+const BSTATUS = { MATCH: ['MATCH', 'Total equals the sentence'], MISMATCH: ['MISMATCH', 'Total differs from the sentence'], NOT_FOUND: ['NOT_FOUND', 'No candidate found'], NO_QUANTITY: ['NO_SERIAL', 'Candidates listed (no quantity in the sentence)'], NO_CLAIMANT: ['NO_SERIAL', 'No company name found'], SOURCE_ERROR: ['NOT_FOUND', 'The registry could not be reached'] };
+function renderBeneficiary(b, claimant) {
+  const out = $('bresult');
+  const [cls, label] = BSTATUS[b.status] || ['NO_SERIAL', b.status];
+  const rel = b.relation === 'registry_lower' ? ' The registry total is lower than the sentence.' : b.relation === 'registry_higher' ? ' The registry total is higher than the sentence.' : '';
+  const scope = b.yearScope === 'year' ? ` Counted: records of ${b.year}.` : b.yearScope === 'all' && b.year ? ` No record of ${b.year}; all candidates counted.` : '';
+  const head = b.candidates.length ? `<p class="small">${b.candidates.length} candidate${b.candidates.length > 1 ? 's' : ''} &middot; total ${Number(b.total).toLocaleString()} t &middot; sentence ${b.claimed == null ? 'n/a' : Number(b.claimed).toLocaleString()} t.${rel}${scope}</p>` : '';
+  const rows = b.candidates.slice(0, 6).map((c) => `<div class="line"><code>${esc(c.serial_number)}</code><br>${Number(c.number_of_credits).toLocaleString()} credits &middot; vintage ${esc(c.vintage)} &middot; retired ${esc(c.retired_on || 'n/a')} &middot; beneficiary: ${esc(c.beneficiary || c.note || 'n/a')}<br><button class="ghost use" data-serial="${esc(c.serial_number)}" data-n="${c.number_of_credits}" data-v="${esc(c.retired_on || '')}">Check this serial</button>${chainNote(c.serial_number)}</div>`).join('');
+  const more = b.candidates.length > 6 ? `<p class="small sub">${b.candidates.length - 6} more candidates not shown.</p>` : '';
+  out.innerHTML = `<h3 style="font-size:16px;margin:16px 0 4px">No serial in the sentence: candidates for ${esc(claimant)} <span class="sub small">(registry lookup by beneficiary, not proof)</span></h3><div class="verdict ${cls}" style="font-size:24px">${label}</div>${head}${rows}${more}<p class="small sub">Candidates are Gold Standard records that name ${esc(claimant)} as the company the credits were retired for. A candidate total that equals the sentence is a lead, not an audit.</p>`;
+  out.querySelectorAll('button.use').forEach((bt) => {
+    bt.onclick = () => {
+      $('claim').value = `In ${bt.dataset.v.slice(0, 4) || 'the year'} ${claimant} retired ${Number(bt.dataset.n).toLocaleString('en-US')} tCO2e (serial ${bt.dataset.serial}).`;
+      run();
+    };
+  });
+}
+async function runBeneficiary() {
+  const out = $('bresult');
+  const text = $('claim').value;
+  const c = $('claimant').value.trim();
+  const given = /^company [a-z]$/i.test(c) || c.toLowerCase() === 'anonymous' ? '' : c;
+  out.innerHTML = '<p class="small sub">No serial in the sentence. Looking up Gold Standard retirements by company name...</p>';
+  const registry = goldStandardLive();
+  const b = await checkBeneficiary({ text, claimant: given }, { registry });
+  if (b.status === 'NO_CLAIMANT') { out.innerHTML = '<p class="small sub">There is no serial and no company name in the sentence. Write "Company X retired 500 t" or type the company in the box to look up candidates.</p>'; return; }
+  renderBeneficiary(b, b.claimant);
+  window.__beneficiary = b;
+}
+
 function render(r) {
-  const lines = r.lines.map((l) => `<div class="line"><span class="tag ${l.verdict}">${LABEL[l.verdict]}</span> <code>${esc(l.serial)}</code><br>${esc(WHY[l.reason] || l.reason)}${l.overlap ? ` Overlap: ${l.overlap.toLocaleString()} credits, first used by ${esc(l.firstClaimant)}.` : ''}${l.evidence ? `<br><span class="sub">registry status ${esc(l.evidence.status)}, ${Number(l.evidence.number_of_credits).toLocaleString()} credits &middot; source ${esc(l.evidence.source_url)} &middot; fetched ${esc(l.evidence.fetched_at)}</span>` : ''}</div>`).join('');
+  const lines = r.lines.map((l) => `<div class="line"><span class="tag ${l.verdict}">${LABEL[l.verdict]}</span> <code>${esc(l.serial)}</code><br>${esc(WHY[l.reason] || l.reason)}${l.overlap ? ` Overlap: ${l.overlap.toLocaleString()} credits, first used by ${esc(l.firstClaimant)}.` : ''}${l.evidence ? `${chainNote(l.serial)}<br><span class="sub">registry status ${esc(l.evidence.status)}, ${Number(l.evidence.number_of_credits).toLocaleString()} credits &middot; source ${esc(l.evidence.source_url)} &middot; fetched ${esc(l.evidence.fetched_at)}</span>` : ''}</div>`).join('');
   const q = r.quantity.claimed != null ? `<p class="small">Claimed ${r.quantity.claimed.toLocaleString()} t &middot; registry ${r.quantity.registry == null ? 'n/a' : r.quantity.registry.toLocaleString()} t</p>` : '';
   $('result').innerHTML = `<div class="verdict ${r.verdict}">${LABEL[r.verdict]}</div><p>${esc(WHY[r.reason] || r.reason)}</p>${q}${lines}`;
 }
@@ -77,8 +120,11 @@ async function run() {
   const records = $('live').checked ? goldStandardLive() : sampleRecords(rows);
   lastRecords = records;
   $('nresult').innerHTML = '';
+  $('bresult').innerHTML = '';
   const r = await checkClaim({ text: $('claim').value, claimant: $('claimant').value.trim() || 'anonymous', commit: $('commit').checked }, { records, ledger });
   render(r);
+  if (r.verdict === 'NO_SERIAL' && $('live').checked) await runBeneficiary();
+  else if (r.verdict === 'NO_SERIAL') $('bresult').innerHTML = '<p class="small sub">Tick "live lookup" to look for candidates by company name in the Gold Standard registry.</p>';
 }
 
 async function init() {
@@ -96,11 +142,12 @@ async function init() {
     'Not retired': `We retired ${fmt(iss.number_of_credits)} tCO2e, serial ${iss.serial_number}.`,
     'Unknown': `We retired 500 tCO2e, serial GS1-1-IN-GS5500-16-2025-39999-1-500.`,
     'No serial': 'We are carbon neutral thanks to high-quality offsets.',
+    'No serial, company': 'In 2024 Google retired 131,201 tCO2e of Gold Standard credits through Cool Effect.',
   };
   $('claim').value = ex.Match;
   for (const [k, v] of Object.entries(ex)) {
     const bt = document.createElement('button'); bt.className = 'ghost'; bt.textContent = k;
-    bt.onclick = () => { $('claim').value = v; run(); };
+    bt.onclick = () => { $('claim').value = v; if (k === 'No serial, company') { $('live').checked = true; $('claimant').value = 'Company A'; } run(); };
     $('examples').appendChild(bt);
   }
   $('go').onclick = run;
@@ -117,6 +164,12 @@ async function init() {
       $('nexamples').appendChild(bt);
     }
   }
+  try {
+    flow = await (await fetch('./flow-testnet.json')).json();
+    const rows2 = [...flow.registered.map((x, i) => `<tr><td>Registered on Sepolia (candidate ${i + 1})</td><td><code>${esc(x.serial)}</code></td><td><span class="MATCH">Registered</span> <a href="${EXPLORER}${x.tx.hash}"><code>${shortTx(x.tx.hash)}</code></a> (${x.tx.gasUsed.toLocaleString()} gas)</td></tr>`),
+      `<tr><td>Second claimant, same range</td><td><code>${esc(flow.secondClaim.serial)}</code></td><td><span class="DUPLICATE">Refused: ${esc(flow.secondClaim.revert)}</span> <a href="${EXPLORER}${flow.secondClaim.tx.hash}"><code>${shortTx(flow.secondClaim.tx.hash)}</code></a></td></tr>`].join('');
+    $('flow').innerHTML = `<p class="small">Sentence: &ldquo;${esc(flow.sentence)}&rdquo;<br><span class="sub">${esc(flow.note)} Gold Standard lookup by beneficiary: ${flow.check.candidates.length} candidates, total ${flow.check.total.toLocaleString()} t, equals the sentence.</span></p><table><tr><th>Step</th><th>Serial</th><th>Result on chain</th></tr>${rows2}</table>`;
+  } catch { $('flow').textContent = ''; }
   const tr = await (await fetch('./chain-transcript.json')).json();
   $('chain').innerHTML = `<table><tr><th>Step</th><th>Serial range</th><th>Result</th></tr>${tr.steps.map((s) => `<tr><td>${esc(s.label)}</td><td><code>${s.serialRange.join(' - ')}</code></td><td>${s.outcome === 'REGISTERED' ? `<span class="MATCH">Registered</span> (${s.gasUsed.toLocaleString()} gas)` : `<span class="DUPLICATE">Refused: ${esc(s.error)}</span> existing ${esc(s.args[1])}-${esc(s.args[2])}`}</td></tr>`).join('')}</table>`;
   const c = res.claims, d = res.double_use, e1 = res.extraction.set1_after_fixes, e2 = res.extraction.set2_heldout;

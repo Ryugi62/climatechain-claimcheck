@@ -1,0 +1,729 @@
+{
+ "measured": "2026-10-21",
+ "reports": 10,
+ "with_sentence": 3,
+ "sentence_with_candidates": 2,
+ "sentence_quantity_equal": 0,
+ "company_has_gs_records": 7,
+ "rows": [
+  {
+   "id": "microsoft-2024",
+   "publisher": "Microsoft",
+   "claimant": "Microsoft",
+   "sentences": 1,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 14,
+    "total": 27021,
+    "allCandidates": 14
+   },
+   "results": [
+    {
+     "text": "Additionally, we retired 605,354 metrics tons of carbon removal as part of achieving our annual target to be carbon neutral.",
+     "result": {
+      "claimant": "Microsoft",
+      "candidates": [
+       {
+        "serial_number": "GS1-1-CH-GS11627-21-2025-30548-1-500",
+        "number_of_credits": 500,
+        "vintage": "2025",
+        "status": "RETIRED",
+        "retired_on": "2026-07-14",
+        "beneficiary": "Microsoft",
+        "note": null,
+        "project_name": "GS11623 VPA-1 CO2 Sequestration at a Concrete Recycler in Switzerland using the Neustark Technology",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Microsoft"
+       },
+       {
+        "serial_number": "GS1-1-CH-GS12333-21-2024-29142-1-10",
+        "number_of_credits": 10,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2025-09-09",
+        "beneficiary": "Microsoft",
+        "note": "Retired on behalf of Microsoft for voluntary purposes",
+        "project_name": "GS11623 GS11627 RVPA-10 CO2 Sequestration at a Swiss Concrete Recycler using the Neustark Technology",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Microsoft"
+       },
+       {
+        "serial_number": "GS1-1-CH-GS12332-21-2024-29141-9-541",
+        "number_of_credits": 533,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2025-09-09",
+        "beneficiary": "Microsoft",
+        "note": "Retired on behalf of Microsoft for voluntary purposes",
+        "project_name": "GS11623 GS11627 RVPA-9 CO2 Sequestration at a Swiss Concrete Recycler using the Neustark Technology",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Microsoft"
+       },
+       {
+        "serial_number": "GS1-1-CH-GS12331-21-2024-29140-1-4",
+        "number_of_credits": 4,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2025-09-09",
+        "beneficiary": "Microsoft",
+        "note": "Retired on behalf of Microsoft for voluntary purposes",
+        "project_name": "GS11623 GS11627 RVPA-8 CO2 Sequestration at a Swiss Concrete Recycler using the Neustark Technology",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Microsoft"
+       },
+       {
+        "serial_number": "GS1-1-CH-GS12331-21-2023-29139-1-4",
+        "number_of_credits": 4,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2025-09-09",
+        "beneficiary": "Microsoft",
+        "note": "Retired on behalf of Microsoft for voluntary purposes",
+        "project_name": "GS11623 GS11627 RVPA-8 CO2 Sequestration at a Swiss Concrete Recycler using the Neustark Technology",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Microsoft"
+       },
+       {
+        "serial_number": "GS1-1-CH-GS12330-21-2024-29138-78-156",
+        "number_of_credits": 79,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2025-09-09",
+        "beneficiary": "Microsoft",
+        "note": "Retired on behalf of Microsoft for voluntary purposes",
+        "project_name": "GS11623 GS11627 RVPA-7 CO2 Sequestration at a Swiss Concrete Recycler using the Neustark Technology",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Microsoft"
+       },
+       {
+        "serial_number": "GS1-1-CH-GS11987-21-2024-29136-1-18",
+        "number_of_credits": 18,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2025-09-09",
+        "beneficiary": "Microsoft",
+        "note": "Retired on behalf of Microsoft for voluntary purposes",
+        "project_name": "GS11623 GS11627 RVPA-5 CO2 Sequestration at a Swiss Concrete Recycler using the Neustark Technology",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Microsoft"
+       },
+       {
+        "serial_number": "GS1-1-CH-GS12332-21-2023-27892-1-203",
+        "number_of_credits": 203,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2026-02-27",
+        "beneficiary": "Microsoft",
+        "note": null,
+        "project_name": "GS11623 GS11627 RVPA-9 CO2 Sequestration at a Swiss Concrete Recycler using the Neustark Technology",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Microsoft"
+       },
+       {
+        "serial_number": "GS1-1-CH-GS12330-21-2023-27891-75-215",
+        "number_of_credits": 141,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2026-02-27",
+        "beneficiary": "Microsoft",
+        "note": "Retired on behalf of Microsoft for voluntary purposes",
+        "project_name": "GS11623 GS11627 RVPA-7 CO2 Sequestration at a Swiss Concrete Recycler using the Neustark Technology",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Microsoft"
+       },
+       {
+        "serial_number": "GS1-1-CH-GS11627-21-2022-26620-10-29",
+        "number_of_credits": 20,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2024-04-12",
+        "beneficiary": "Microsoft",
+        "note": null,
+        "project_name": "GS11623 VPA-1 CO2 Sequestration at a Concrete Recycler in Switzerland using the Neustark Technology",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Microsoft"
+       },
+       {
+        "serial_number": "GS1-1-TW-GS472-12-2018-18583-4071-4749",
+        "number_of_credits": 679,
+        "vintage": "2018",
+        "status": "RETIRED",
+        "retired_on": "2019-07-01",
+        "beneficiary": null,
+        "note": "Retired on behalf of Microsoft",
+        "project_name": "InfraVest Changbin and Taichung bundled Wind Farms Project - Taiwan (300190)",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Microsoft"
+       },
+       {
+        "serial_number": "GS1-1-CN-GS2588-12-2016-5810-2147-26218",
+        "number_of_credits": 24072,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2017-04-11",
+        "beneficiary": null,
+        "note": "Retired on behalf of Microsoft",
+        "project_name": "Zhangbei Danjinghe Phase III 49.5MW Wind Power Project",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Microsoft"
+       },
+       {
+        "serial_number": "GS1-1-TH-GS4273-1-2015-5664-1704-1986",
+        "number_of_credits": 283,
+        "vintage": "2015",
+        "status": "RETIRED",
+        "retired_on": "2017-02-23",
+        "beneficiary": null,
+        "note": "500 MWh of GoldPower for Microsoft Corporation",
+        "project_name": "SSE1 Solar PV 1 – 10 Power Plant Project",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Microsoft"
+       },
+       {
+        "serial_number": "GS1-1-TW-GS472-12-2016-5120-32477-32951",
+        "number_of_credits": 475,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2016-08-12",
+        "beneficiary": null,
+        "note": "Retired on behalf of Microsoft",
+        "project_name": "InfraVest Changbin and Taichung bundled Wind Farms Project - Taiwan (300190)",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Microsoft"
+       }
+      ],
+      "allCandidates": 14,
+      "total": 27021,
+      "claimed": 605354,
+      "year": null,
+      "yearScope": "all",
+      "status": "MISMATCH",
+      "reason": "total_differs",
+      "relation": "registry_lower"
+     }
+    }
+   ]
+  },
+  {
+   "id": "apple-2024",
+   "publisher": "Apple",
+   "claimant": "Apple",
+   "sentences": 2,
+   "company_probe": {
+    "status": "NOT_FOUND",
+    "candidates": 0,
+    "total": 0,
+    "allCandidates": 0
+   },
+   "results": [
+    {
+     "text": "We retired 324,100 metric tons of carbon credits from the Alto Mayo project in Peru and Chyulu Hills project in Kenya to maintain carbon neutrality for our corporate emissions in fiscal year 2022.",
+     "result": {
+      "status": "NOT_FOUND",
+      "reason": "no_candidate",
+      "claimant": "Apple",
+      "candidates": [],
+      "total": 0,
+      "claimed": 324100,
+      "year": 2022,
+      "yearScope": null
+     }
+    },
+    {
+     "text": "We retired 167,000 metric tons of carbon credits from the Chyulu Hills project in Kenya to maintain carbon neutrality for our corporate emissions in fiscal year 2021.",
+     "result": {
+      "status": "NOT_FOUND",
+      "reason": "no_candidate",
+      "claimant": "Apple",
+      "candidates": [],
+      "total": 0,
+      "claimed": 167000,
+      "year": 2021,
+      "yearScope": null
+     }
+    }
+   ]
+  },
+  {
+   "id": "google-2024",
+   "publisher": "Google",
+   "claimant": "Google",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 2,
+    "total": 131201,
+    "allCandidates": 2
+   },
+   "results": []
+  },
+  {
+   "id": "easyjet-ar24",
+   "publisher": "easyJet (annual report FY24, sustainability section)",
+   "claimant": "easyJet",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 34,
+    "total": 416303,
+    "allCandidates": 34
+   },
+   "results": []
+  },
+  {
+   "id": "easyjet-ara22",
+   "publisher": "easyJet (2022 sustainability extract of the annual report)",
+   "claimant": "easyJet",
+   "sentences": 1,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 34,
+    "total": 416303,
+    "allCandidates": 34
+   },
+   "results": [
+    {
+     "text": "Since the launch in November 2019, we have offset 11,767,387 tonnes of carbon emissions (19 November 2019–30 September 2022), with our portfolio of projects meeting the high quality certifications of either Gold Standard or VCS (Verified Carbon Standard).",
+     "result": {
+      "claimant": "easyJet",
+      "candidates": [
+       {
+        "serial_number": "GS1-1-IN-GS4962-12-2021-27365-128-128",
+        "number_of_credits": 1,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2025-04-10",
+        "beneficiary": null,
+        "note": "Gold Standard Marketplace Order GSM28149 for easyjet europe",
+        "project_name": "Wind Power Project in Madhya Pradesh by OBWPPL",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS7538-2-2019-21063-342381-400699",
+        "number_of_credits": 58319,
+        "vintage": "2019",
+        "status": "RETIRED",
+        "retired_on": "2022-11-30",
+        "beneficiary": "EasyJet Airline Company Ltd",
+        "note": null,
+        "project_name": "Energising India using Solar Energy",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS7538-2-2019-21063-1-91801",
+        "number_of_credits": 91801,
+        "vintage": "2019",
+        "status": "RETIRED",
+        "retired_on": "2022-11-25",
+        "beneficiary": "EasyJet Airline Company Ltd",
+        "note": null,
+        "project_name": "Energising India using Solar Energy",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS10656-12-2016-19226-1-5096",
+        "number_of_credits": 5096,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022.",
+        "project_name": "Enercon Wind Farm (Hindustan) Ltd in Rajasthan (GS2483 CER to VER conversion)",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS10656-12-2015-19225-1-3249",
+        "number_of_credits": 3249,
+        "vintage": "2015",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022.",
+        "project_name": "Enercon Wind Farm (Hindustan) Ltd in Rajasthan (GS2483 CER to VER conversion)",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS10656-12-2014-19224-10279-70115",
+        "number_of_credits": 59837,
+        "vintage": "2014",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022.",
+        "project_name": "Enercon Wind Farm (Hindustan) Ltd in Rajasthan (GS2483 CER to VER conversion)",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS5046-16-2017-18663-4223-4919",
+        "number_of_credits": 697,
+        "vintage": "2017",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022.",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA  No. 11 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS5046-16-2016-18662-175-8708",
+        "number_of_credits": 8534,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022.",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA  No. 11 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS4291-16-2016-18659-176-8773",
+        "number_of_credits": 8598,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022.",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA  No. 10 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS3367-16-2016-18656-158-7889",
+        "number_of_credits": 7732,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA No. 09 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS3366-16-2016-18653-138-6885",
+        "number_of_credits": 6748,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA No. 08 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS3365-16-2016-18650-143-7130",
+        "number_of_credits": 6988,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA No. 07 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS3364-16-2016-18647-93-4604",
+        "number_of_credits": 4512,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA No. 06 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS3363-16-2016-18644-17-842",
+        "number_of_credits": 826,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA No. 05 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS5046-16-2016-18514-175-8707",
+        "number_of_credits": 8533,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA  No. 11 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS4291-16-2016-18511-176-8775",
+        "number_of_credits": 8600,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA  No. 10 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS3367-16-2016-18508-158-7890",
+        "number_of_credits": 7733,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA No. 09 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS3366-16-2016-18505-138-6885",
+        "number_of_credits": 6748,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA No. 08 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS3365-16-2016-18502-143-7131",
+        "number_of_credits": 6989,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA No. 07 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS3364-16-2016-18499-93-4603",
+        "number_of_credits": 4511,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA No. 06 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS3363-16-2016-18496-17-844",
+        "number_of_credits": 828,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA No. 05 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS5046-16-2016-18438-175-8707",
+        "number_of_credits": 8533,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA  No. 11 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS4291-16-2016-18435-1384-8775",
+        "number_of_credits": 7392,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA  No. 10 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS3367-16-2016-18432-158-7890",
+        "number_of_credits": 7733,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA No. 09 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS3366-16-2016-18429-138-6885",
+        "number_of_credits": 6748,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA No. 08 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS3365-16-2016-18426-5631-7131",
+        "number_of_credits": 1501,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA No. 07 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS5046-16-2016-7241-297-8707",
+        "number_of_credits": 8411,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA  No. 11 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS4291-16-2016-7238-176-8775",
+        "number_of_credits": 8600,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA  No. 10 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS3367-16-2016-7235-1421-7890",
+        "number_of_credits": 6470,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA No. 09 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS3364-16-2016-7226-1397-4603",
+        "number_of_credits": 3207,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA No. 06 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS3363-16-2016-7223-17-844",
+        "number_of_credits": 828,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "The Breathing Space Improved Cooking Stoves Programme, India - VPA No. 05 Envirofit",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-BG-GS3379-21-2015-6023-4908-14239",
+        "number_of_credits": 9332,
+        "vintage": "2015",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "Svilosa Biomass Project",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-BG-GS3379-21-2016-6022-53001-83668",
+        "number_of_credits": 30668,
+        "vintage": "2016",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "Svilosa Biomass Project",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=easyJet"
+       },
+       {
+        "serial_number": "GS1-1-BG-GS3379-21-2015-5214-26528-36527",
+        "number_of_credits": 10000,
+        "vintage": "2015",
+        "status": "RETIRED",
+        "retired_on": "2022-05-03",
+        "beneficiary": null,
+        "note": "Retired on behalf of easyJet for aviation emissions period 01 January – 31 March 2022, and on behalf of easyJet Holidays for ground-based emissions period 01 January – 31 March 2022",
+        "project_name": "Svilosa Biomass Project",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=easyJet"
+       }
+      ],
+      "allCandidates": 34,
+      "total": 416303,
+      "claimed": 11767387,
+      "year": null,
+      "yearScope": "all",
+      "status": "MISMATCH",
+      "reason": "total_differs",
+      "relation": "registry_lower"
+     }
+    }
+   ]
+  },
+  {
+   "id": "commerzbank-nfr23",
+   "publisher": "Commerzbank (non-financial report 2023)",
+   "claimant": "Commerzbank",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NOT_FOUND",
+    "candidates": 0,
+    "total": 0,
+    "allCandidates": 0
+   },
+   "results": []
+  },
+  {
+   "id": "storebrand-ar23",
+   "publisher": "Storebrand (annual report 2023)",
+   "claimant": "Storebrand",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 1,
+    "total": 50,
+    "allCandidates": 1
+   },
+   "results": []
+  },
+  {
+   "id": "storebrand-cf23",
+   "publisher": "Storebrand (carbon footprint report 2023)",
+   "claimant": "Storebrand",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 1,
+    "total": 50,
+    "allCandidates": 1
+   },
+   "results": []
+  },
+  {
+   "id": "aixtron-sr23",
+   "publisher": "AIXTRON (sustainability report 2023)",
+   "claimant": "AIXTRON",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NOT_FOUND",
+    "candidates": 0,
+    "total": 0,
+    "allCandidates": 0
+   },
+   "results": []
+  },
+  {
+   "id": "netflix-esg24",
+   "publisher": "Netflix (ESG report 2024)",
+   "claimant": "Netflix",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 15,
+    "total": 128506,
+    "allCandidates": 15
+   },
+   "results": []
+  }
+ ]
+}

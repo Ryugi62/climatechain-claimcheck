@@ -1,0 +1,444 @@
+{
+ "google": [
+  {
+   "serial_number": "GS1-1-MU-GS12147-21-2022-27150-1257-62800",
+   "status": "RETIRED",
+   "number_of_credits": 61544,
+   "starting_credit_number": 1257,
+   "ending_credit_number": 62800,
+   "batch_number": 27150,
+   "vintage": "2022",
+   "updated_at": "2024-10-17T23:00:17Z",
+   "note": "Retired by Cool Effect on behalf of Google LLC",
+   "retirement_using_entity": {
+    "name": "Google LLC"
+   },
+   "project": {
+    "name": "Mare Chicose Landfill Gas Project",
+    "country_code": "MU"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Google"
+  },
+  {
+   "serial_number": "GS1-1-MU-GS12147-21-2021-27149-1-69657",
+   "status": "RETIRED",
+   "number_of_credits": 69657,
+   "starting_credit_number": 1,
+   "ending_credit_number": 69657,
+   "batch_number": 27149,
+   "vintage": "2021",
+   "updated_at": "2024-10-17T23:01:09Z",
+   "note": "Retired by Cool Effect on behalf of Google LLC",
+   "retirement_using_entity": {
+    "name": "Google LLC"
+   },
+   "project": {
+    "name": "Mare Chicose Landfill Gas Project",
+    "country_code": "MU"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Google"
+  },
+  {
+   "serial_number": "GS1-1-TR-GS617-12-2013-3009-18067-18166",
+   "status": "RETIRED",
+   "number_of_credits": 100,
+   "starting_credit_number": 18067,
+   "ending_credit_number": 18166,
+   "batch_number": 3009,
+   "vintage": "2013",
+   "updated_at": "2014-03-31T00:00:00Z",
+   "note": "LEED ID+C: CI PROJECT #1000044602 Google Istanbul Office Level 5 - EA Green Power and Carbon Offsets",
+   "retirement_using_entity": null,
+   "project": {
+    "name": "Ziyaret Wind Power Project, Turkey",
+    "country_code": "TR"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Google"
+  },
+  {
+   "serial_number": "GS1-1-TR-352-12-2011-225-133346-133357",
+   "status": "RETIRED",
+   "number_of_credits": 12,
+   "starting_credit_number": 133346,
+   "ending_credit_number": 133357,
+   "batch_number": 225,
+   "vintage": "2011",
+   "updated_at": "2012-04-25T00:00:00Z",
+   "note": "LEED ID+C: CI PROJECT #1000044602 Google Istanbul Office Level 5 - EA Green Power and Carbon Offsets",
+   "retirement_using_entity": null,
+   "project": {
+    "name": "Yuntdag Wind Power Project, Turkey",
+    "country_code": "TR"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Google"
+  }
+ ],
+ "apple": [
+  {
+   "serial_number": "GS1-1-CN-GS3031-22-2021-28645-660-665",
+   "status": "RETIRED",
+   "number_of_credits": 6,
+   "starting_credit_number": 660,
+   "ending_credit_number": 665,
+   "batch_number": 28645,
+   "vintage": "2021",
+   "updated_at": "2026-04-20T07:41:44Z",
+   "note": "The purpose of this procurement is to offset for the carbon emissions related to IDL service provided by JD Logistics for Apple retail store in China",
+   "retirement_using_entity": {
+    "name": "北京京邦达贸易有限公司/ Beijing Jingbangda Trade Co., Ltd."
+   },
+   "project": {
+    "name": "Afforestation Project in Tongliao, Inner Mongolia ",
+    "country_code": "CN"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Apple"
+  },
+  {
+   "serial_number": "GS1-1-TH-GS7550-12-2020-24891-46683-46683",
+   "status": "RETIRED",
+   "number_of_credits": 1,
+   "starting_credit_number": 46683,
+   "ending_credit_number": 46683,
+   "batch_number": 24891,
+   "vintage": "2020",
+   "updated_at": "2024-06-06T09:00:16Z",
+   "note": "Gold Standard Marketplace Order GSM24475 for Christof Appler",
+   "retirement_using_entity": null,
+   "project": {
+    "name": "Chaiyaphum Wind Farm Power Project",
+    "country_code": "TH"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Apple"
+  },
+  {
+   "serial_number": "GS1-1-CN-GS11338-5-2022-23977-47850-48067",
+   "status": "RETIRED",
+   "number_of_credits": 218,
+   "starting_credit_number": 47850,
+   "ending_credit_number": 48067,
+   "batch_number": 23977,
+   "vintage": "2022",
+   "updated_at": "2026-09-27T21:10:40Z",
+   "note": "On behalf of Shenzhen Apple Brother Technology Co.",
+   "retirement_using_entity": {
+    "name": "Shenzhen Apple Brother Technology Co."
+   },
+   "project": {
+    "name": "Shuangbaotai Animal Manure Management System GHG Mitigation Project in Anhui Province",
+    "country_code": "CN"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Apple"
+  },
+  {
+   "serial_number": "GS1-1-TR-GS1134-12-2018-22478-884-888",
+   "status": "RETIRED",
+   "number_of_credits": 5,
+   "starting_credit_number": 884,
+   "ending_credit_number": 888,
+   "batch_number": 22478,
+   "vintage": "2018",
+   "updated_at": "2022-07-20T16:08:55Z",
+   "note": "Gold Standard Marketplace Order GSM13954 for Morgan Appleberry",
+   "retirement_using_entity": null,
+   "project": {
+    "name": "Aksu Wind Farm Project, Turkey",
+    "country_code": "TR"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Apple"
+  },
+  {
+   "serial_number": "GS1-1-TD-GS3445-3-2020-21591-5605-5605",
+   "status": "RETIRED",
+   "number_of_credits": 1,
+   "starting_credit_number": 5605,
+   "ending_credit_number": 5605,
+   "batch_number": 21591,
+   "vintage": "2020",
+   "updated_at": "2022-07-20T16:08:54Z",
+   "note": "Gold Standard Marketplace Order GSM13954 for Morgan Appleberry",
+   "retirement_using_entity": null,
+   "project": {
+    "name": "Solar cooking in Chad, Iridimi (VPA1)",
+    "country_code": "TD"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Apple"
+  },
+  {
+   "serial_number": "GS1-1-IN-GS3969-12-2020-20916-106091-106095",
+   "status": "RETIRED",
+   "number_of_credits": 5,
+   "starting_credit_number": 106091,
+   "ending_credit_number": 106095,
+   "batch_number": 20916,
+   "vintage": "2020",
+   "updated_at": "2022-07-20T16:08:55Z",
+   "note": "Gold Standard Marketplace Order GSM13954 for Morgan Appleberry",
+   "retirement_using_entity": null,
+   "project": {
+    "name": "100.5 MW Wind Power Project in Madhya Pradesh, India",
+    "country_code": "IN"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Apple"
+  },
+  {
+   "serial_number": "GS1-1-IN-GS3969-12-2019-20915-11078-11097",
+   "status": "RETIRED",
+   "number_of_credits": 20,
+   "starting_credit_number": 11078,
+   "ending_credit_number": 11097,
+   "batch_number": 20915,
+   "vintage": "2019",
+   "updated_at": "2021-06-06T20:34:11Z",
+   "note": "Gold Standard Marketplace Order GSM6402 for Morgan Appleberry",
+   "retirement_using_entity": null,
+   "project": {
+    "name": "100.5 MW Wind Power Project in Madhya Pradesh, India",
+    "country_code": "IN"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Apple"
+  },
+  {
+   "serial_number": "GS1-1-IN-GS7071-2-2019-19764-222640-222644",
+   "status": "RETIRED",
+   "number_of_credits": 5,
+   "starting_credit_number": 222640,
+   "ending_credit_number": 222644,
+   "batch_number": 19764,
+   "vintage": "2019",
+   "updated_at": "2022-07-20T16:08:55Z",
+   "note": "Gold Standard Marketplace Order GSM13954 for Morgan Appleberry",
+   "retirement_using_entity": null,
+   "project": {
+    "name": "400 MW Solar Power Project at Bhadla, Rajasthan",
+    "country_code": "IN"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Apple"
+  },
+  {
+   "serial_number": "GS1-1-NI-GS4220-21-2015-19259-258-258",
+   "status": "RETIRED",
+   "number_of_credits": 1,
+   "starting_credit_number": 258,
+   "ending_credit_number": 258,
+   "batch_number": 19259,
+   "vintage": "2015",
+   "updated_at": "2022-07-20T16:08:56Z",
+   "note": "Gold Standard Marketplace Order GSM13954 for Morgan Appleberry",
+   "retirement_using_entity": null,
+   "project": {
+    "name": "Reforestation Program in the Southeastern Region of Nicaragua on degraded pastureland  ",
+    "country_code": "NI"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Apple"
+  },
+  {
+   "serial_number": "GS1-1-RW-GS3431-16-2017-18757-6072-6072",
+   "status": "RETIRED",
+   "number_of_credits": 1,
+   "starting_credit_number": 6072,
+   "ending_credit_number": 6072,
+   "batch_number": 18757,
+   "vintage": "2017",
+   "updated_at": "2020-09-07T18:43:01Z",
+   "note": "Gold Standard Marketplace Order GSM2433 for Morgan Appleberry",
+   "retirement_using_entity": null,
+   "project": {
+    "name": "GS1247 VPA 20 Improved Kitchen Regimes: Gatsibo District Borehole Project, Rwanda",
+    "country_code": "RW"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Apple"
+  },
+  {
+   "serial_number": "GS1-1-LA-GS2095-16-2018-18489-15433-15433",
+   "status": "RETIRED",
+   "number_of_credits": 1,
+   "starting_credit_number": 15433,
+   "ending_credit_number": 15433,
+   "batch_number": 18489,
+   "vintage": "2018",
+   "updated_at": "2022-07-20T16:08:53Z",
+   "note": "Gold Standard Marketplace Order GSM13954 for Morgan Appleberry",
+   "retirement_using_entity": null,
+   "project": {
+    "name": "TerraClear Ceramic Water Purifier Project in Lao PDR",
+    "country_code": "LA"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Apple"
+  },
+  {
+   "serial_number": "GS1-1-LA-GS2095-16-2016-18487-3318-3318",
+   "status": "RETIRED",
+   "number_of_credits": 1,
+   "starting_credit_number": 3318,
+   "ending_credit_number": 3318,
+   "batch_number": 18487,
+   "vintage": "2016",
+   "updated_at": "2020-09-07T18:43:02Z",
+   "note": "Gold Standard Marketplace Order GSM2433 for Morgan Appleberry",
+   "retirement_using_entity": null,
+   "project": {
+    "name": "TerraClear Ceramic Water Purifier Project in Lao PDR",
+    "country_code": "LA"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Apple"
+  },
+  {
+   "serial_number": "GS1-1-LA-GS2095-16-2016-18487-1705-1706",
+   "status": "RETIRED",
+   "number_of_credits": 2,
+   "starting_credit_number": 1705,
+   "ending_credit_number": 1706,
+   "batch_number": 18487,
+   "vintage": "2016",
+   "updated_at": "2020-05-23T14:10:47Z",
+   "note": "Gold Standard Marketplace Order GSM1444 for Morgan Appleberry",
+   "retirement_using_entity": null,
+   "project": {
+    "name": "TerraClear Ceramic Water Purifier Project in Lao PDR",
+    "country_code": "LA"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Apple"
+  },
+  {
+   "serial_number": "GS1-1-MX-GS2441-16-2018-17438-6245-6245",
+   "status": "RETIRED",
+   "number_of_credits": 1,
+   "starting_credit_number": 6245,
+   "ending_credit_number": 6245,
+   "batch_number": 17438,
+   "vintage": "2018",
+   "updated_at": "2022-07-20T16:08:54Z",
+   "note": "Gold Standard Marketplace Order GSM13954 for Morgan Appleberry",
+   "retirement_using_entity": null,
+   "project": {
+    "name": "GS1377 Utsil Naj - Casa saludable para todos VPA4",
+    "country_code": "MX"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Apple"
+  },
+  {
+   "serial_number": "GS1-1-HN-GS1367-14-2016-6870-5001-5001",
+   "status": "RETIRED",
+   "number_of_credits": 1,
+   "starting_credit_number": 5001,
+   "ending_credit_number": 5001,
+   "batch_number": 6870,
+   "vintage": "2016",
+   "updated_at": "2019-12-11T12:53:58Z",
+   "note": "Retired for Morgan Appleberry",
+   "retirement_using_entity": null,
+   "project": {
+    "name": "Betulia Hydroelectric project",
+    "country_code": "HN"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Apple"
+  },
+  {
+   "serial_number": "GS1-1-IN-GS4557-12-2017-6744-42397-42397",
+   "status": "RETIRED",
+   "number_of_credits": 1,
+   "starting_credit_number": 42397,
+   "ending_credit_number": 42397,
+   "batch_number": 6744,
+   "vintage": "2017",
+   "updated_at": "2021-11-11T10:45:05Z",
+   "note": "Retired by Morgan Appleberry",
+   "retirement_using_entity": null,
+   "project": {
+    "name": "100 MW Wind Power Project in Andhra Pradesh by OAWPPL",
+    "country_code": "IN"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Apple"
+  },
+  {
+   "serial_number": "GS1-1-IN-GS4557-12-2018-6743-19703-19703",
+   "status": "RETIRED",
+   "number_of_credits": 1,
+   "starting_credit_number": 19703,
+   "ending_credit_number": 19703,
+   "batch_number": 6743,
+   "vintage": "2018",
+   "updated_at": "2021-11-11T10:39:25Z",
+   "note": "Gold Standard Marketplace Order GSM2433 for Morgan Appleberry",
+   "retirement_using_entity": null,
+   "project": {
+    "name": "100 MW Wind Power Project in Andhra Pradesh by OAWPPL",
+    "country_code": "IN"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Apple"
+  },
+  {
+   "serial_number": "GS1-1-MM-GS2394-16-2015-6652-704-713",
+   "status": "RETIRED",
+   "number_of_credits": 10,
+   "starting_credit_number": 704,
+   "ending_credit_number": 713,
+   "batch_number": 6652,
+   "vintage": "2015",
+   "updated_at": "2021-03-19T14:42:30Z",
+   "note": "Gold Standard Marketplace Order GSM5327 for Appleby Family",
+   "retirement_using_entity": null,
+   "project": {
+    "name": "GS1729 Myanmar Stoves Campaign - SLOW LIFE in Myanmar - VPA No. 002",
+    "country_code": "MM"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Apple"
+  },
+  {
+   "serial_number": "GS1-1-KH-GS1020-16-2016-6574-74298-74298",
+   "status": "RETIRED",
+   "number_of_credits": 1,
+   "starting_credit_number": 74298,
+   "ending_credit_number": 74298,
+   "batch_number": 6574,
+   "vintage": "2016",
+   "updated_at": "2020-09-07T18:43:03Z",
+   "note": "Gold Standard Marketplace Order GSM2433 for Morgan Appleberry",
+   "retirement_using_entity": null,
+   "project": {
+    "name": "Production and dissemination of Ceramic Water Purifiers by Hydrologic, in the Kingdom of Cambodia",
+    "country_code": "KH"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Apple"
+  },
+  {
+   "serial_number": "GS1-1-TD-GS3445-3-2012-6138-3359-3381",
+   "status": "RETIRED",
+   "number_of_credits": 23,
+   "starting_credit_number": 3359,
+   "ending_credit_number": 3381,
+   "batch_number": 6138,
+   "vintage": "2012",
+   "updated_at": "2019-12-17T11:42:22Z",
+   "note": "Retired for Alistair Appleby",
+   "retirement_using_entity": null,
+   "project": {
+    "name": "Solar cooking in Chad, Iridimi (VPA1)",
+    "country_code": "TD"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Apple"
+  }
+ ],
+ "storebrand": [
+  {
+   "serial_number": "GS1-1-NI-GS4220-21-2018-22249-2020-2069",
+   "status": "RETIRED",
+   "number_of_credits": 50,
+   "starting_credit_number": 2020,
+   "ending_credit_number": 2069,
+   "batch_number": 22249,
+   "vintage": "2018",
+   "updated_at": "2024-09-30T14:38:06Z",
+   "note": "Retired by Klimate ApS on behalf of Storebrand Livsforsikring AS",
+   "retirement_using_entity": {
+    "name": "Storebrand Livsforsikring AS"
+   },
+   "project": {
+    "name": "Reforestation Program in the Southeastern Region of Nicaragua on degraded pastureland  ",
+    "country_code": "NI"
+   },
+   "source_url": "https://public-api.goldstandard.org/credits?size=20&query=Storebrand"
+  }
+ ],
+ "fetched_at": "2026-10-21"
+}

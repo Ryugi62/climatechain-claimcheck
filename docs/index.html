@@ -29,7 +29,7 @@ label{font-size:14px}.small{font-size:13px}
 <body>
 <main>
   <h1>ClaimCheck</h1>
-  <p class="sub">Paste one carbon-offset sentence from an ESG report. We check the credit serial in it against <b>public Gold Standard retirement records</b>, and an on-chain registry refuses to count the same credits twice.</p>
+  <p class="sub">Paste one carbon-offset sentence from an ESG report. With a serial, we check it against <b>public Gold Standard retirement records</b>. Without a serial, we look up the company as the records' beneficiary and compare the total. An on-chain registry then refuses to count the same credits twice.</p>
   <p class="small sub">Data note: lookups use a stored sample of <span id="n-records">140</span> real registry records (fetched <span id="fetched">2026-10-17</span>). Tick "live lookup" to ask the registry's public read endpoint for your own serial. No wallet, no login. Chain part: the registry contract is deployed on the Sepolia testnet (below).</p>
 
   <section class="card" aria-label="Check a claim">
@@ -43,6 +43,7 @@ label{font-size:14px}.small{font-size:13px}
     <div class="row"><button id="go">Check claim</button><span class="sub small">Examples:</span>
       <span id="examples" class="row" style="margin:0"></span></div>
     <div id="result" aria-live="polite"></div>
+    <div id="bresult" aria-live="polite"></div>
     <div id="narr" hidden>
       <h3 style="font-size:16px;margin:16px 0 4px">Wording check <span class="sub small">(helper, never changes the verdict)</span></h3>
       <p class="small sub">Compares the words around the serial (project type, country, year) with the registry record using a small AI model that runs in your browser. Result: Backed, May conflict or No receipt. It can miss changed facts; the numbers are under "Measured, not promised". First use downloads about 90 MB once from huggingface.co.</p>
@@ -54,8 +55,10 @@ label{font-size:14px}.small{font-size:13px}
 
   <section class="card">
     <h2>2. What the contract does with double use</h2>
-    <p class="small sub">Deployed on Sepolia testnet: <a href="https://sepolia.etherscan.io/address/0xbBC97a57c7f81F77dbA1b1b2FbC29898b87F7bDF"><code>0xbBC97a57c7f81F77dbA1b1b2FbC29898b87F7bDF</code></a> (2026-10-21; one real Commerzbank retirement range registered, a second claimant on the same credits refused with <code>RangeOverlap</code>). Below: replay of a real run of the same contract on a local Hardhat chain (<code>npm run chain-demo</code>). Same batch, overlapping serial numbers are refused.</p>
-    <div id="chain"></div>
+    <p class="small sub">Deployed on Sepolia testnet: <a href="https://sepolia.etherscan.io/address/0xbBC97a57c7f81F77dbA1b1b2FbC29898b87F7bDF"><code>0xbBC97a57c7f81F77dbA1b1b2FbC29898b87F7bDF</code></a> (2026-10-21; one real Commerzbank retirement range registered, a second claimant on the same credits refused with <code>RangeOverlap</code>). Same batch, overlapping serial numbers are refused.</p>
+    <h3 style="font-size:16px;margin:12px 0 4px">One flow, one set of credits (real Sepolia transactions)</h3>
+    <div id="flow"></div>
+    <details><summary class="small">Replay of the same contract on a local Hardhat chain (<code>npm run chain-demo</code>)</summary><div id="chain"></div></details>
   </section>
 
   <section class="card">

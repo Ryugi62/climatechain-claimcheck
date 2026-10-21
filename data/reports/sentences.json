@@ -1,0 +1,13 @@
+{
+ "note": "Retirement sentences copied verbatim from the text layer of the 10 reports of docs/SERIAL_PREVALENCE.md (whitespace flattened). A sentence is listed when it says credits were retired or offset AND gives a tonne quantity. The other reports have none; the check was a regex pass for retire/offset/carbon credit near a quantity, then a manual read of the hits (financial 'offset' and contracted-not-retired purchases excluded). Written down before the beneficiary matcher was run on them.",
+ "claimants": {
+  "microsoft-2024": "Microsoft", "apple-2024": "Apple", "google-2024": "Google", "easyjet-ar24": "easyJet", "easyjet-ara22": "easyJet",
+  "commerzbank-nfr23": "Commerzbank", "storebrand-ar23": "Storebrand", "storebrand-cf23": "Storebrand", "aixtron-sr23": "AIXTRON", "netflix-esg24": "Netflix"
+ },
+ "sentences": [
+  { "report": "microsoft-2024", "text": "Additionally, we retired 605,354 metrics tons of carbon removal as part of achieving our annual target to be carbon neutral." },
+  { "report": "apple-2024", "text": "We retired 324,100 metric tons of carbon credits from the Alto Mayo project in Peru and Chyulu Hills project in Kenya to maintain carbon neutrality for our corporate emissions in fiscal year 2022." },
+  { "report": "apple-2024", "text": "We retired 167,000 metric tons of carbon credits from the Chyulu Hills project in Kenya to maintain carbon neutrality for our corporate emissions in fiscal year 2021." },
+  { "report": "easyjet-ara22", "text": "Since the launch in November 2019, we have offset 11,767,387 tonnes of carbon emissions (19 November 2019–30 September 2022), with our portfolio of projects meeting the high quality certifications of either Gold Standard or VCS (Verified Carbon Standard)." }
+ ]
+}

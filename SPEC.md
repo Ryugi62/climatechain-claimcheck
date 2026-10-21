@@ -11,6 +11,8 @@ An on-chain registry contract makes (3) enforceable: registering a serial range 
 
 4. **(Narrative check, added 2026-10-21)** whether the *wording* around the serial (business type, country, vintage/year, who retired, how many) is supported by the registry record, shown next to the verdict as **Backed**, **May conflict** or **No receipt**. This is a helper display. It never changes the verdict.
 
+5. **(Sentence without a serial, added 2026-10-21)** when the sentence names no serial, find the Gold Standard retirement records that list the company as the beneficiary (`retirement_using_entity.name`, or a note "on behalf of <company>") and compare their total with the quantity in the sentence. The result is a list of **candidates** with a total, never a proof, and it never changes the five verdicts above.
+
 Hackathon track: Track 1, Carbon Markets & Emissions Transparency (double counting, lack of transparency).
 
 ## 2. Non-goals (비목표)
@@ -33,6 +35,9 @@ Hackathon track: Track 1, Carbon Markets & Emissions Transparency (double counti
 | Narrative | The sentence with serials removed (what is left to say about the credit) |
 | RecordText | A registry record rendered as plain sentences (project, country, vintage, quantity, status) |
 | Receipt | The label of the narrative check: `BACKED` (record entails the narrative), `MAY_CONFLICT` (record contradicts it), `NO_RECEIPT` (neither, or no record) |
+| Beneficiary | The company a registry record names as the party the credits were retired for (field `retirement_using_entity.name` or a note "on behalf of ...") |
+| Candidate | A RETIRED registry record whose Beneficiary equals the claimant (whole leading words, legal suffix ignored) |
+| BeneficiaryResult | `MATCH` (candidate total equals the quantity), `MISMATCH` (total lower or higher), `NOT_FOUND` (no candidate), `NO_CLAIMANT` (no company name in input), `NO_QUANTITY` (candidates listed, sentence has no quantity) |
 | Verdict | `MATCH`, `MISMATCH`, `NOT_FOUND`, `DUPLICATE`, `NO_SERIAL` |
 | Attestor | Address allowed to register a range on chain |
 | BatchKey | `registry : project : vintage : batch`, hashed on chain |
@@ -57,6 +62,14 @@ Hackathon track: Track 1, Carbon Markets & Emissions Transparency (double counti
 - **G13 No receipt.** Given no registry record (NOT_FOUND, NO_SERIAL, unsupported registry), or a narrative the record neither supports nor contradicts, then receipt NO_RECEIPT.
 - **G14 Isolation.** Given the same input with the narrative check on or off, then the verdict, reason and lines are identical (regression 0).
 
+- **G15 Candidates by beneficiary.** Given RETIRED records whose beneficiary is "Google LLC" (two blocks, 61,544 and 69,657 credits), when the sentence has no serial, names Google and says 131,201 tCO2e, then BeneficiaryResult MATCH with candidates 2 and total 131,201.
+- **G16 Quantity differs.** Given the same two records, when the sentence says 500,000 t, then MISMATCH with relation `registry_lower`, total and claimed both in the result; when it says 100,000 t, relation `registry_higher`.
+- **G17 Homonym is not a candidate.** Given a record retired for "Shenzhen Apple Brother Technology Co.", when the claimant is Apple, then it is not a candidate (the claimant must be the leading words of the beneficiary name).
+- **G18 Not found / no claimant.** Given no candidate, then NOT_FOUND ("not in the records we hold", never "fake"); given no company name in the input, then NO_CLAIMANT.
+- **G19 Year.** Given a year in the sentence, then candidates whose retirement year or vintage equals it are summed when there are any; otherwise all candidates are summed and the result says so (`year_scope: all`).
+- **G20 Isolation.** Given a sentence with a serial, the beneficiary path is not used; given a sentence without one, `checkClaim` still returns NO_SERIAL (regression 0). Only RETIRED records count.
+- **G21 One credit, one story.** Given a candidate from G15, when its serial range is registered on chain and a second claimant registers an overlapping range, then the transaction reverts with `RangeOverlap` (G7) and the web page shows the same serial in the sentence check and in the chain record.
+
 ## 6. Numeric success conditions (성공 조건; measured, not promised)
 | # | Condition | Measured by |
 |---|---|---|
@@ -72,6 +85,8 @@ Hackathon track: Track 1, Carbon Markets & Emissions Transparency (double counti
 | S11 | On matching pairs, `BACKED` reproduced >= 70% | `docs/NARRATIVE_EVAL.md` |
 | S12 | One narrative checked in <= 2 s after the model is loaded (model load time reported separately) | `docs/NARRATIVE_EVAL.md`, headless browser run |
 | S13 | All existing tests still pass, plus new narrative tests (written first, seen failing) | `npm test` |
+| S14 | Beneficiary path: >= 12 new unit tests written first and seen failing; on the 10 real reports of `docs/SERIAL_PREVALENCE.md` report how many reports have a retirement sentence, how many of those get >= 1 candidate, how many totals equal the sentence (honest, including 0) | `docs/BENEFICIARY_EVAL.md` |
+| S15 | One real Gold Standard range goes sentence -> candidate -> Sepolia registration -> second claim reverts, with tx hashes | `docs/flow-testnet.json` |
 | S8 | Cost per registration on chain reported in gas | contract test output |
 
 ### Pre-registration for S9-S12 (2026-10-21, before any model run)

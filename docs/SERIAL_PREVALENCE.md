@@ -20,6 +20,6 @@ Method: 10 public PDFs (3 big-tech environmental reports, 2 easyJet documents, C
 **Result: 0 of 10 reports print at least one credit serial.** Sample size 10, chosen by us (not random; mostly companies known to buy credits), so this is a finding about these reports, not a market estimate. Offsets are usually described as totals ("we retired X credits") and the proof sits in a separate certificate PDF (the 24 sentences in `data/real/` come from such certificates).
 
 What this means for the product:
-- Pasting a report sentence from these reports returns `No serial` (nothing to verify). That is the correct output: the claim cannot be checked from the report alone. It is the main limit of the idea, and it is also the value: a reader sees which claims come with no checkable identifier.
+- Pasting a report sentence from these reports returns `No serial` from the serial check (nothing to verify by serial). Follow-up (2026-10-21): a second path looks the company up as the beneficiary of Gold Standard retirements and compares the total with the sentence; result on these same reports in [BENEFICIARY_EVAL.md](BENEFICIARY_EVAL.md). A reader still sees which claims come with no checkable identifier.
 - ClaimCheck works where a serial is published: certificates and retirement pages that companies post next to their report.
 - Not measured: whether those separate certificates are linked from the reports (we did not follow links).
