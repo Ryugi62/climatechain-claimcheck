@@ -2,11 +2,57 @@ import { checkClaim } from './src/application/checkClaim.mjs';
 import { Ledger } from './src/domain/ledger.mjs';
 import { sampleRecords } from './src/adapters/sampleRecords.mjs';
 import { goldStandardLive } from './src/adapters/goldStandardLive.mjs';
+import { createTransformersNli } from './src/adapters/transformersNli.mjs';
+import { checkNarrative } from './src/application/checkNarrative.mjs';
+import { extractClaim } from './src/domain/claim.mjs';
+
+// Feature flag (SPEC kill switch): false hides the whole narrative check; the verdict path does not depend on it.
+const NARRATIVE = true;
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const ledger = new Ledger();
 let rows = [];
+let lastRecords = null;
+const setStatus = (t) => { $('nstatus').textContent = t; };
+const nli = createTransformersNli({
+  load: async () => {
+    const t = await import('./vendor/transformers.min.js');
+    t.env.allowLocalModels = false;
+    t.env.backends.onnx.wasm.wasmPaths = new URL('./vendor/', import.meta.url).href;
+    t.env.backends.onnx.wasm.numThreads = 1;
+    return t;
+  },
+  device: 'wasm',
+  onProgress: (p) => { if (p.status === 'progress' && p.file) setStatus('Downloading model: ' + Math.round(p.progress || 0) + '% (' + p.file.split('/').pop() + ')'); },
+});
+const RTAG = { BACKED: 'MATCH', MAY_CONFLICT: 'MISMATCH', NO_RECEIPT: 'NO_SERIAL' };
+let modelReadyMs = null;
+async function runNarrative() {
+  const text = $('claim').value;
+  const claim = extractClaim(text);
+  const out = $('nresult');
+  if (!lastRecords) await run();
+  let record = null;
+  for (const s of claim.serials) { try { record = await lastRecords.find(s); } catch { record = null; } if (record) break; }
+  if (!record) { out.innerHTML = '<p><span class="tag NO_SERIAL">No receipt</span> There is no registry record to compare the wording with.</p>'; return; }
+  try {
+    $('nbtn').disabled = true;
+    if (modelReadyMs === null) { setStatus('Loading the model (one-time download, about 90 MB, from huggingface.co)...'); const t0 = performance.now(); await nli.warm(); modelReadyMs = performance.now() - t0; }
+    setStatus('Comparing...');
+    const t1 = performance.now();
+    const r = await checkNarrative({ text, record }, { nli });
+    const ms = performance.now() - t1;
+    if (r.error) throw new Error(r.error);
+    const sub = r.inference ? `entails ${r.inference.entail.toFixed(2)} &middot; contradicts ${r.inference.contradict.toFixed(2)}` : 'too little wording to compare';
+    out.innerHTML = `<p><span class="tag ${RTAG[r.receipt]}">${r.label}</span> <span class="sub small">${sub} &middot; ${Math.round(ms)} ms${modelReadyMs ? ` &middot; model load ${(modelReadyMs / 1000).toFixed(1)} s (first time only)` : ''}</span></p><p class="small sub">Wording compared: &ldquo;${esc(r.narrative)}&rdquo;<br>Record: ${esc(r.premise || '')}</p>`;
+    window.__narrative = { receipt: r.receipt, ms, modelLoadMs: modelReadyMs };
+    setStatus('');
+  } catch (e) {
+    setStatus('');
+    out.innerHTML = '<p class="small">The wording check could not run: ' + esc(e.message) + '. The verdict above does not depend on it. Check your connection and try again.</p>';
+  } finally { $('nbtn').disabled = false; }
+}
 
 const LABEL = { MATCH: 'Match', MISMATCH: 'Mismatch', NOT_FOUND: 'Not found', DUPLICATE: 'Double use', NO_SERIAL: 'No serial to check' };
 const WHY = {
@@ -29,6 +75,8 @@ function render(r) {
 
 async function run() {
   const records = $('live').checked ? goldStandardLive() : sampleRecords(rows);
+  lastRecords = records;
+  $('nresult').innerHTML = '';
   const r = await checkClaim({ text: $('claim').value, claimant: $('claimant').value.trim() || 'anonymous', commit: $('commit').checked }, { records, ledger });
   render(r);
 }
@@ -56,6 +104,19 @@ async function init() {
     $('examples').appendChild(bt);
   }
   $('go').onclick = run;
+  if (NARRATIVE) {
+    $('narr').hidden = false;
+    $('nbtn').onclick = runNarrative;
+    const ok = ret[0];
+    const nm = (ok.project_name || '').replace(/^GS\d+\s+(?:VPA\s*\d+\s+)?/i, '');
+    const ctry = new Intl.DisplayNames(['en'], { type: 'region' }).of(ok.country_code);
+    const mk = (words) => `In ${ok.vintage} we retired ${fmt(ok.number_of_credits)} tCO2e ${words} (serial ${ok.serial_number}).`;
+    for (const [k, v] of [['Wording backed', mk(`from ${nm} in ${ctry}`)], ['Wording changed', mk('from a landfill gas project in Turkey')]]) {
+      const bt = document.createElement('button'); bt.className = 'ghost'; bt.textContent = k;
+      bt.onclick = () => { $('claim').value = v; run().then(runNarrative); };
+      $('nexamples').appendChild(bt);
+    }
+  }
   const tr = await (await fetch('./chain-transcript.json')).json();
   $('chain').innerHTML = `<table><tr><th>Step</th><th>Serial range</th><th>Result</th></tr>${tr.steps.map((s) => `<tr><td>${esc(s.label)}</td><td><code>${s.serialRange.join(' - ')}</code></td><td>${s.outcome === 'REGISTERED' ? `<span class="MATCH">Registered</span> (${s.gasUsed.toLocaleString()} gas)` : `<span class="DUPLICATE">Refused: ${esc(s.error)}</span> existing ${esc(s.args[1])}-${esc(s.args[2])}`}</td></tr>`).join('')}</table>`;
   const c = res.claims, d = res.double_use, e1 = res.extraction.set1_after_fixes, e2 = res.extraction.set2_heldout;
@@ -68,5 +129,9 @@ async function init() {
   <tr><td>Issued-but-not-retired caught</td><td>${bk.issued_not_retired.ok}/${bk.issued_not_retired.n}</td></tr>
   <tr><td>Second claimant refused (double use)</td><td>${d.second_duplicate}/${d.pairs} full, ${d.partial_overlap_duplicate}/${d.partial_overlap_tried} partial</td></tr>
   <tr><td>Held-out phrasings: serial / quantity found</td><td>${e2.serial_recall} / ${e2.quantity_recall}</td></tr></table>`;
+  try {
+    const n = await (await fetch('./data/narrative.json')).json();
+    $('metrics').innerHTML += `<p class="small"><b>Wording check</b> (${n.pairs} labelled pairs from real documents, thresholds frozen before the run): false alarms on matching wording ${n.false_alarm_pct}% (${n.match.may_conflict}/${n.match.n}), Backed on matching wording ${n.backed_recall_pct}%, May conflict on changed wording ${n.conflict_recall_on_changed_pct}% (it misses most changes, so No receipt is not a pass). Median ${n.latency_ms.per_sentence_median} ms per sentence after load.</p>`;
+  } catch { /* no wording-check numbers bundled */ }
 }
 init().catch((e) => { $('result').textContent = 'Page failed to load: ' + e.message; });

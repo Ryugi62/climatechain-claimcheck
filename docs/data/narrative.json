@@ -1,0 +1,99 @@
+{
+ "runtime": "headless Chromium, vendored transformers.js, wasm, 1 thread: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/148.0.7778.96 Safari/537.36",
+ "model": "Xenova/nli-deberta-v3-xsmall q8",
+ "thresholds": {
+  "entail": 0.7,
+  "contradict": 0.97
+ },
+ "pairs": 72,
+ "match": {
+  "n": 36,
+  "backed": 29,
+  "may_conflict": 1,
+  "no_receipt": 6
+ },
+ "changed": {
+  "n": 36,
+  "backed": 0,
+  "may_conflict": 10,
+  "no_receipt": 26
+ },
+ "false_alarm_pct": 2.8,
+ "backed_recall_pct": 80.6,
+ "conflict_recall_on_changed_pct": 27.8,
+ "backed_on_changed_pct": 0,
+ "latency_ms": {
+  "model_load": 6319,
+  "per_sentence_median": 95,
+  "per_sentence_p95": 175,
+  "per_sentence_max": 195
+ },
+ "changed_by_kind": {
+  "company": {
+   "n": 2,
+   "backed": 0,
+   "may_conflict": 1,
+   "no_receipt": 1
+  },
+  "country": {
+   "n": 8,
+   "backed": 0,
+   "may_conflict": 1,
+   "no_receipt": 7
+  },
+  "project_type": {
+   "n": 12,
+   "backed": 0,
+   "may_conflict": 3,
+   "no_receipt": 9
+  },
+  "quantity": {
+   "n": 2,
+   "backed": 0,
+   "may_conflict": 1,
+   "no_receipt": 1
+  },
+  "registry": {
+   "n": 1,
+   "backed": 0,
+   "may_conflict": 0,
+   "no_receipt": 1
+  },
+  "year": {
+   "n": 11,
+   "backed": 0,
+   "may_conflict": 4,
+   "no_receipt": 7
+  }
+ },
+ "by_source": {
+  "real_certificate": {
+   "match": {
+    "n": 24,
+    "backed": 22,
+    "may_conflict": 1,
+    "no_receipt": 1
+   },
+   "changed": {
+    "n": 24,
+    "backed": 0,
+    "may_conflict": 6,
+    "no_receipt": 18
+   }
+  },
+  "gold_standard_row": {
+   "match": {
+    "n": 12,
+    "backed": 7,
+    "may_conflict": 0,
+    "no_receipt": 5
+   },
+   "changed": {
+    "n": 12,
+    "backed": 0,
+    "may_conflict": 4,
+    "no_receipt": 8
+   }
+  }
+ }
+}

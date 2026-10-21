@@ -95,3 +95,27 @@ test('S9 pair set is frozen: >=30 pairs, both labels, kinds, premise has no seri
   assert.ok(d.pairs.every((p) => p.premise && p.hypothesis && !/GS1-1-[A-Z]{2}-/.test(p.premise)));
   assert.ok(d.pairs.filter((p) => p.source === 'real_certificate').length >= 48);
 });
+
+import { createTransformersNli, toInference } from '../../src/adapters/transformersNli.mjs';
+
+test('adapter toInference maps logits by the model id2label (order differs between models)', () => {
+  const p = toInference([0, 5, 0], { 0: 'contradiction', 1: 'entailment', 2: 'neutral' });
+  assert.ok(p.entail > 0.98 && p.contradict < 0.01);
+  const q = toInference([5, 0, 0], { 0: 'CONTRADICTION', 1: 'ENTAILMENT', 2: 'NEUTRAL' });
+  assert.ok(q.contradict > 0.98 && q.entail < 0.01);
+});
+
+test('adapter loads the library lazily, once, and batches pairs into one forward pass', async () => {
+  let loads = 0, forwards = 0;
+  const lib = {
+    AutoTokenizer: { from_pretrained: async () => async (a, o) => ({ a, o }) },
+    AutoModelForSequenceClassification: { from_pretrained: async () => Object.assign(async () => { forwards++; return { logits: { dims: [2, 3], data: Float32Array.from([0, 5, 0, 5, 0, 0]) } }; }, { config: { id2label: { 0: 'contradiction', 1: 'entailment', 2: 'neutral' } } }) },
+  };
+  const nli = createTransformersNli({ load: async () => { loads++; return lib; } });
+  assert.equal(loads, 0);
+  const out = await nli.infer([{ premise: 'a', hypothesis: 'b' }, { premise: 'c', hypothesis: 'd' }]);
+  await nli.infer([{ premise: 'a', hypothesis: 'b' }]).catch(() => {});
+  assert.equal(loads, 1);
+  assert.equal(forwards >= 1, true);
+  assert.ok(out[0].entail > 0.98 && out[1].contradict > 0.98);
+});

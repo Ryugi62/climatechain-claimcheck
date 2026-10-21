@@ -6,3 +6,9 @@ cpSync(`${root}src`, `${root}docs/src`, { recursive: true });
 cpSync(`${root}data/gs/credits-sample.json`, `${root}docs/data/credits-sample.json`);
 cpSync(`${root}data/eval/results.json`, `${root}docs/data/results.json`);
 console.log('site built:', readdirSync(`${root}docs`).join(', '));
+import { existsSync } from 'node:fs';
+if (existsSync(`${root}data/narrative/results-browser.json`)) {
+  const r = JSON.parse(readFileSync(`${root}data/narrative/results-browser.json`, 'utf8')); delete r.rows;
+  cpSync(`${root}data/narrative/pairs.json`, `${root}docs/data/narrative-pairs.json`);
+  (await import('node:fs')).writeFileSync(`${root}docs/data/narrative.json`, JSON.stringify(r, null, 1));
+}

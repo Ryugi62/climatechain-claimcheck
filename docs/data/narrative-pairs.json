@@ -1,0 +1,581 @@
+{
+ "frozen": "2026-10-21 before any model run",
+ "pairs": [
+  {
+   "id": "dolomiti-00:match",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 29 Mar 2024, 1,000 Verified Carbon Units (VCUs) were retired on behalf of: Cordillera Azul National Park REDD Project Dolomiti Energia S.p.A. CCB-Gold",
+   "hypothesis": "In March 2024 Dolomiti Energia retired 1,000 carbon credits from the Cordillera Azul National Park REDD Project.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "dolomiti-00:changed",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 29 Mar 2024, 1,000 Verified Carbon Units (VCUs) were retired on behalf of: Cordillera Azul National Park REDD Project Dolomiti Energia S.p.A. CCB-Gold",
+   "hypothesis": "In March 2024 Dolomiti Energia retired 1,000 carbon credits from a wind power project.",
+   "label": "changed",
+   "change": "project_type"
+  },
+  {
+   "id": "dolomiti-03:match",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 29 Mar 2024, 4,890 Verified Carbon Units (VCUs) were retired on behalf of: Cordillera Azul National Park REDD Project Dolomiti Energia S.p.A. CCB-Gold",
+   "hypothesis": "Dolomiti Energia retired 4,890 Verified Carbon Units from the Cordillera Azul National Park REDD Project.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "dolomiti-03:changed",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 29 Mar 2024, 4,890 Verified Carbon Units (VCUs) were retired on behalf of: Cordillera Azul National Park REDD Project Dolomiti Energia S.p.A. CCB-Gold",
+   "hypothesis": "Dolomiti Energia retired 4,890 Verified Carbon Units in 2019 from the Cordillera Azul National Park REDD Project.",
+   "label": "changed",
+   "change": "year"
+  },
+  {
+   "id": "dolomiti-06:match",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 29 Mar 2024, 466 Verified Carbon Units (VCUs) were retired on behalf of: Cordillera Azul National Park REDD Project Dolomiti Energia S.p.A. CCB-Gold",
+   "hypothesis": "Our company retired 466 VCUs on 29 March 2024 for the Cordillera Azul National Park REDD Project.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "dolomiti-06:changed",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 29 Mar 2024, 466 Verified Carbon Units (VCUs) were retired on behalf of: Cordillera Azul National Park REDD Project Dolomiti Energia S.p.A. CCB-Gold",
+   "hypothesis": "Our company retired 4,660 VCUs on 29 March 2024 for the Cordillera Azul National Park REDD Project.",
+   "label": "changed",
+   "change": "quantity"
+  },
+  {
+   "id": "dolomiti-12:match",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 29 Mar 2024, 174 Verified Carbon Units (VCUs) were retired on behalf of: Cordillera Azul National Park REDD Project Dolomiti Energia S.p.A. CCB-Gold",
+   "hypothesis": "174 Verified Carbon Units from the Cordillera Azul National Park REDD Project were retired on behalf of Dolomiti Energia.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "dolomiti-12:changed",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 29 Mar 2024, 174 Verified Carbon Units (VCUs) were retired on behalf of: Cordillera Azul National Park REDD Project Dolomiti Energia S.p.A. CCB-Gold",
+   "hypothesis": "174 Verified Carbon Units from a hydroelectric dam project in Norway were retired on behalf of Dolomiti Energia.",
+   "label": "changed",
+   "change": "country"
+  },
+  {
+   "id": "dolomiti-28:match",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 29 Mar 2024, 27,020 Verified Carbon Units (VCUs) were retired on behalf of: 210 MW Musi Hydro Power Plant, Bengkulu Dolomiti Energia S.p.A.",
+   "hypothesis": "We retired 27,020 credits from the 210 MW Musi Hydro Power Plant in Bengkulu.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "dolomiti-28:changed",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 29 Mar 2024, 27,020 Verified Carbon Units (VCUs) were retired on behalf of: 210 MW Musi Hydro Power Plant, Bengkulu Dolomiti Energia S.p.A.",
+   "hypothesis": "We retired 27,020 credits from a forest protection project in Brazil.",
+   "label": "changed",
+   "change": "project_type"
+  },
+  {
+   "id": "dolomiti-30:match",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 29 Mar 2024, 2,189 Verified Carbon Units (VCUs) were retired on behalf of: Rio Anapu-Pacaja REDD Project Dolomiti Energia S.p.A. CCB-No Distinction",
+   "hypothesis": "Dolomiti Energia retired 2,189 Verified Carbon Units from the Rio Anapu-Pacaja REDD Project.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "dolomiti-30:changed",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 29 Mar 2024, 2,189 Verified Carbon Units (VCUs) were retired on behalf of: Rio Anapu-Pacaja REDD Project Dolomiti Energia S.p.A. CCB-No Distinction",
+   "hypothesis": "Dolomiti Energia retired 2,189 Verified Carbon Units from a cookstove distribution project.",
+   "label": "changed",
+   "change": "project_type"
+  },
+  {
+   "id": "dolomiti-32:match",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 29 Mar 2024, 3,776 Verified Carbon Units (VCUs) were retired on behalf of: The Envira Amazonia Project - A Tropical Forest Conservation Project in Acre, Brazil Dolomiti Energia S.p.A. CCB-Biodiversity Gold; CCB-Climate Gold; CCB-Community Gold; CCB-Gold",
+   "hypothesis": "We retired 3,776 VCUs from a tropical forest conservation project in Acre, Brazil.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "dolomiti-32:changed",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 29 Mar 2024, 3,776 Verified Carbon Units (VCUs) were retired on behalf of: The Envira Amazonia Project - A Tropical Forest Conservation Project in Acre, Brazil Dolomiti Energia S.p.A. CCB-Biodiversity Gold; CCB-Climate Gold; CCB-Community Gold; CCB-Gold",
+   "hypothesis": "We retired 3,776 VCUs from a solar farm in Spain.",
+   "label": "changed",
+   "change": "country"
+  },
+  {
+   "id": "dolomiti-38:match",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 29 Mar 2024, 8,000 Verified Carbon Units (VCUs) were retired on behalf of: The Mai Ndombe REDD+ Project Dolomiti Energia S.p.A. CCB-Gold",
+   "hypothesis": "Dolomiti Energia retired 8,000 Verified Carbon Units on 29 March 2024 from The Mai Ndombe REDD+ Project.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "dolomiti-38:changed",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 29 Mar 2024, 8,000 Verified Carbon Units (VCUs) were retired on behalf of: The Mai Ndombe REDD+ Project Dolomiti Energia S.p.A. CCB-Gold",
+   "hypothesis": "Dolomiti Energia retired 8,000 Verified Carbon Units on 29 March 2020 from The Mai Ndombe REDD+ Project.",
+   "label": "changed",
+   "change": "year"
+  },
+  {
+   "id": "dolomiti-39:match",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 29 Mar 2024, 7,000 Verified Carbon Units (VCUs) were retired on behalf of: REDD+ Project Resguardo Indigena Unificado Selva de Mataven (RIU SM) Dolomiti Energia S.p.A.",
+   "hypothesis": "We retired 7,000 credits from the REDD+ Project Resguardo Indigena Unificado Selva de Mataven.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "dolomiti-39:changed",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 29 Mar 2024, 7,000 Verified Carbon Units (VCUs) were retired on behalf of: REDD+ Project Resguardo Indigena Unificado Selva de Mataven (RIU SM) Dolomiti Energia S.p.A.",
+   "hypothesis": "We retired 7,000 credits from a landfill gas project in Turkey.",
+   "label": "changed",
+   "change": "country"
+  },
+  {
+   "id": "dolomiti-41:match",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 29 Mar 2024, 35,000 Verified Carbon Units (VCUs) were retired on behalf of: Hydroelectric Project in Kinnaur District in Himachal Pradesh Dolomiti Energia S.p.A.",
+   "hypothesis": "We retired 35,000 Verified Carbon Units from a hydroelectric project in Kinnaur District, Himachal Pradesh.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "dolomiti-41:changed",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 29 Mar 2024, 35,000 Verified Carbon Units (VCUs) were retired on behalf of: Hydroelectric Project in Kinnaur District in Himachal Pradesh Dolomiti Energia S.p.A.",
+   "hypothesis": "We retired 35,000 Verified Carbon Units from a rainforest conservation project in Peru.",
+   "label": "changed",
+   "change": "project_type"
+  },
+  {
+   "id": "dolomiti-45:match",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 23 Jul 2024, 11,326 Verified Carbon Units (VCUs) were retired on behalf of: Renewable Wind Power Project by Adani Dolomiti Energia S.p.A.",
+   "hypothesis": "In July 2024 we retired 11,326 Verified Carbon Units from a renewable wind power project.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "dolomiti-45:changed",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 23 Jul 2024, 11,326 Verified Carbon Units (VCUs) were retired on behalf of: Renewable Wind Power Project by Adani Dolomiti Energia S.p.A.",
+   "hypothesis": "In July 2024 we retired 11,326 Verified Carbon Units from a household water filter project.",
+   "label": "changed",
+   "change": "project_type"
+  },
+  {
+   "id": "storebrand-2021:match",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 18 Mar 2021, 475 Verified Carbon Units (VCUs) were retired on behalf of: Storebrand ASA. VCU serial number:",
+   "hypothesis": "Storebrand ASA retired 475 Verified Carbon Units in March 2021.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "storebrand-2021:changed",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 18 Mar 2021, 475 Verified Carbon Units (VCUs) were retired on behalf of: Storebrand ASA. VCU serial number:",
+   "hypothesis": "Storebrand ASA retired 475 Verified Carbon Units in March 2018.",
+   "label": "changed",
+   "change": "year"
+  },
+  {
+   "id": "storebrand-2022:match",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 30 Mar 2022, 320 Verified Carbon Units (VCUs) were retired on behalf of: Storebrand ASA. VCU Serial Number",
+   "hypothesis": "Storebrand retired 320 VCUs on 30 March 2022 under the Verra Registry.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "storebrand-2022:changed",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 30 Mar 2022, 320 Verified Carbon Units (VCUs) were retired on behalf of: Storebrand ASA. VCU Serial Number",
+   "hypothesis": "Storebrand retired 320 VCUs on 30 March 2022 under the Gold Standard registry.",
+   "label": "changed",
+   "change": "registry"
+  },
+  {
+   "id": "storebrand-2023:match",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 28 Apr 2023, 685 Verified Carbon Units (VCUs) were retired on behalf of: Storebrand ASA. VCU Serial Number",
+   "hypothesis": "On 28 April 2023 Storebrand ASA retired 685 Verified Carbon Units.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "storebrand-2023:changed",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 28 Apr 2023, 685 Verified Carbon Units (VCUs) were retired on behalf of: Storebrand ASA. VCU Serial Number",
+   "hypothesis": "On 28 April 2023 Storebrand ASA retired 6,850 Verified Carbon Units.",
+   "label": "changed",
+   "change": "quantity"
+  },
+  {
+   "id": "commerzbank-2025:match",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 22 Dec 2025, 3,544 Verified Carbon Units (VCUs) were retired on behalf of: CO2 Compensation 2025 - Commerzbank AG. VCU Serial Number",
+   "hypothesis": "Commerzbank AG retired 3,544 Verified Carbon Units in December 2025 as its CO2 compensation for 2025.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "commerzbank-2025:changed",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 22 Dec 2025, 3,544 Verified Carbon Units (VCUs) were retired on behalf of: CO2 Compensation 2025 - Commerzbank AG. VCU Serial Number",
+   "hypothesis": "Commerzbank AG retired 3,544 Verified Carbon Units in December 2022 as its CO2 compensation for 2022.",
+   "label": "changed",
+   "change": "year"
+  },
+  {
+   "id": "easyjet-kamuthi-2022:match",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 03 May 2022, 56 Verified Carbon Units (VCUs) were retired on behalf of: easyJet. VCU Serial Number",
+   "hypothesis": "easyJet retired 56 Verified Carbon Units on 3 May 2022.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "easyjet-kamuthi-2022:changed",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 03 May 2022, 56 Verified Carbon Units (VCUs) were retired on behalf of: easyJet. VCU Serial Number",
+   "hypothesis": "Lufthansa retired 56 Verified Carbon Units on 3 May 2022.",
+   "label": "changed",
+   "change": "company"
+  },
+  {
+   "id": "aixtron-2024:match",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 08 Mar 2024, 5,326 Verified Carbon Units (VCUs) were retired on behalf of: AIXTRON SE 2023 Klimaschutzbeitrag. VCU Serial Number",
+   "hypothesis": "AIXTRON SE retired 5,326 Verified Carbon Units in March 2024 for its 2023 climate contribution.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "aixtron-2024:changed",
+   "source": "real_certificate",
+   "premise": "Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 08 Mar 2024, 5,326 Verified Carbon Units (VCUs) were retired on behalf of: AIXTRON SE 2023 Klimaschutzbeitrag. VCU Serial Number",
+   "hypothesis": "AIXTRON SE retired 5,326 Verified Carbon Units in March 2021 for its 2020 climate contribution.",
+   "label": "changed",
+   "change": "year"
+  },
+  {
+   "id": "southampton-gs-2025:match",
+   "source": "real_certificate",
+   "premise": "This certificate issued on August 21th 2025, represents the retirement of 338 tCO2e to compensate for the emissions associated with the airport. GS1068 - Bursa-Hamitler Landfill Gas Collection and Energy Utilization Project. Quantity of Retired VER: 338. Serial Number:",
+   "hypothesis": "Southampton International Airport retired 338 tCO2e in August 2025 through the Bursa-Hamitler Landfill Gas Collection and Energy Utilization Project.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "southampton-gs-2025:changed",
+   "source": "real_certificate",
+   "premise": "This certificate issued on August 21th 2025, represents the retirement of 338 tCO2e to compensate for the emissions associated with the airport. GS1068 - Bursa-Hamitler Landfill Gas Collection and Energy Utilization Project. Quantity of Retired VER: 338. Serial Number:",
+   "hypothesis": "Southampton International Airport retired 338 tCO2e in August 2025 through a rice-husk biomass project in Cambodia.",
+   "label": "changed",
+   "change": "project_type"
+  },
+  {
+   "id": "easyjet-madre-p0:match",
+   "source": "real_certificate",
+   "premise": "1 Marion Kurdej De: environmental@markit.com Envoyé: vendredi 17 janvier 2020 11:30 À: Marion Kurdej Objet: Markit Environmental Registry - Unit Retirement Retirement Notification Dear Marion Kurdej, The following retirement has been completed in the Registry: Retirement Details: Account Name: easyJet Account ID: 103000000026410 Contact Name: NULL Contact Email: NULL Project Name: Madre de Dios Amazon REDD Project Vintage Year: 2017 Quantity: 804199 Credit Type: VCU (tCO2e) Serial Number: Retirement Certificate: Not Required Beneficial Owner: easyJet Domicile of Beneficial Owner: United Kingdom",
+   "hypothesis": "easyJet retired 804,199 tCO2e of vintage 2017 credits from the Madre de Dios Amazon REDD Project.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "easyjet-madre-p0:changed",
+   "source": "real_certificate",
+   "premise": "1 Marion Kurdej De: environmental@markit.com Envoyé: vendredi 17 janvier 2020 11:30 À: Marion Kurdej Objet: Markit Environmental Registry - Unit Retirement Retirement Notification Dear Marion Kurdej, The following retirement has been completed in the Registry: Retirement Details: Account Name: easyJet Account ID: 103000000026410 Contact Name: NULL Contact Email: NULL Project Name: Madre de Dios Amazon REDD Project Vintage Year: 2017 Quantity: 804199 Credit Type: VCU (tCO2e) Serial Number: Retirement Certificate: Not Required Beneficial Owner: easyJet Domicile of Beneficial Owner: United Kingdom",
+   "hypothesis": "easyJet retired 804,199 tCO2e of vintage 2012 credits from the Madre de Dios Amazon REDD Project.",
+   "label": "changed",
+   "change": "year"
+  },
+  {
+   "id": "easyjet-madre-p2:match",
+   "source": "real_certificate",
+   "premise": "EasyJet Airline Company Ltd This is to certify that has offset 804 199 tCO₂e related to Madre de Dios Amazon REDD Project, based on VCS VM0007 methodology Location: Vilcabamba-Amboró Corridor, Amazon, Peru Retired on behalf of easyJet for the emissions period 19/11/19 - 31/12/19 REF: A2020 - 3241 Signed by: Gerald Maradan, CEO EcoAct www.eco-act.com Date: 17/01/2020",
+   "hypothesis": "easyJet offset 804,199 tCO2e through the Madre de Dios Amazon REDD Project in Peru.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "easyjet-madre-p2:changed",
+   "source": "real_certificate",
+   "premise": "EasyJet Airline Company Ltd This is to certify that has offset 804 199 tCO₂e related to Madre de Dios Amazon REDD Project, based on VCS VM0007 methodology Location: Vilcabamba-Amboró Corridor, Amazon, Peru Retired on behalf of easyJet for the emissions period 19/11/19 - 31/12/19 REF: A2020 - 3241 Signed by: Gerald Maradan, CEO EcoAct www.eco-act.com Date: 17/01/2020",
+   "hypothesis": "easyJet offset 804,199 tCO2e through a wind farm in Kenya.",
+   "label": "changed",
+   "change": "country"
+  },
+  {
+   "id": "easyjet-madre-p3:match",
+   "source": "real_certificate",
+   "premise": "This is to certify that easyJet Airline Company Ltd has offset 327 947 tCO₂e related to Madre de Dios Amazon REDD Project, based on VCS VM0007 methodology Location: Vilcabamba-Amboró Corridor, Amazon, Peru Retired on behalf of easyJet for the aviation emissions, period 01/01/2020 - 31/03/2020 Signed by: Gerald Maradan, CEO EcoAct Date: 10/06/2020 www.eco-act.com REF: A2020 - 3781 REF: A2020 - 3782",
+   "hypothesis": "easyJet offset 327,947 tCO2e of aviation emissions for the first quarter of 2020 through the Madre de Dios Amazon REDD Project.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "easyjet-madre-p3:changed",
+   "source": "real_certificate",
+   "premise": "This is to certify that easyJet Airline Company Ltd has offset 327 947 tCO₂e related to Madre de Dios Amazon REDD Project, based on VCS VM0007 methodology Location: Vilcabamba-Amboró Corridor, Amazon, Peru Retired on behalf of easyJet for the aviation emissions, period 01/01/2020 - 31/03/2020 Signed by: Gerald Maradan, CEO EcoAct Date: 10/06/2020 www.eco-act.com REF: A2020 - 3781 REF: A2020 - 3782",
+   "hypothesis": "easyJet offset 327,947 tCO2e of aviation emissions for the first quarter of 2017 through the Madre de Dios Amazon REDD Project.",
+   "label": "changed",
+   "change": "year"
+  },
+  {
+   "id": "easyjet-madre-p4:match",
+   "source": "real_certificate",
+   "premise": "Certificate of Verified Carbon Unit (VCU) Retirement Additional Certifications: Additional details on this retirement can be found on the Verra Registry. Project name: VCU serial number: Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 09 Jun 2020, 80,131 Verified Carbon Units (VCUs) were retired on behalf of: EasyJet Airline Company Ltd Madre de Dios Amazon REDD Project Gold",
+   "hypothesis": "On 9 June 2020 easyJet retired 80,131 Verified Carbon Units from the Madre de Dios Amazon REDD Project.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "easyjet-madre-p4:changed",
+   "source": "real_certificate",
+   "premise": "Certificate of Verified Carbon Unit (VCU) Retirement Additional Certifications: Additional details on this retirement can be found on the Verra Registry. Project name: VCU serial number: Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 09 Jun 2020, 80,131 Verified Carbon Units (VCUs) were retired on behalf of: EasyJet Airline Company Ltd Madre de Dios Amazon REDD Project Gold",
+   "hypothesis": "On 9 June 2020 easyJet retired 80,131 Verified Carbon Units from a cement kiln waste-heat project in China.",
+   "label": "changed",
+   "change": "project_type"
+  },
+  {
+   "id": "easyjet-madre-p5:match",
+   "source": "real_certificate",
+   "premise": "Certificate of Verified Carbon Unit (VCU) Retirement Additional Certifications: Additional details on this retirement can be found on the Verra Registry. Project name: VCU serial number: Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 09 Jun 2020, 115,670 Verified Carbon Units (VCUs) were retired on behalf of: EasyJet Airline Company Ltd Madre de Dios Amazon REDD Project Gold",
+   "hypothesis": "easyJet retired 115,670 VCUs in June 2020 from the Madre de Dios Amazon REDD Project.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "easyjet-madre-p5:changed",
+   "source": "real_certificate",
+   "premise": "Certificate of Verified Carbon Unit (VCU) Retirement Additional Certifications: Additional details on this retirement can be found on the Verra Registry. Project name: VCU serial number: Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 09 Jun 2020, 115,670 Verified Carbon Units (VCUs) were retired on behalf of: EasyJet Airline Company Ltd Madre de Dios Amazon REDD Project Gold",
+   "hypothesis": "easyJet retired 115,670 VCUs in June 2020 from a solar power project in India.",
+   "label": "changed",
+   "change": "project_type"
+  },
+  {
+   "id": "easyjet-madre-p6:match",
+   "source": "real_certificate",
+   "premise": "Certificate of Verified Carbon Unit (VCU) Retirement Additional Certifications: Additional details on this retirement can be found on the Verra Registry. Project name: VCU serial number: Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 09 Jun 2020, 132,146 Verified Carbon Units (VCUs) were retired on behalf of: EasyJet Airline Company Ltd Madre de Dios Amazon REDD Project Gold",
+   "hypothesis": "On 9 June 2020 easyJet retired 132,146 Verified Carbon Units.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "easyjet-madre-p6:changed",
+   "source": "real_certificate",
+   "premise": "Certificate of Verified Carbon Unit (VCU) Retirement Additional Certifications: Additional details on this retirement can be found on the Verra Registry. Project name: VCU serial number: Verra, in its capacity as administrator of the Verra Registry, does hereby certify that on 09 Jun 2020, 132,146 Verified Carbon Units (VCUs) were retired on behalf of: EasyJet Airline Company Ltd Madre de Dios Amazon REDD Project Gold",
+   "hypothesis": "On 9 June 2020 Lufthansa retired 132,146 Verified Carbon Units.",
+   "label": "changed",
+   "change": "company"
+  },
+  {
+   "id": "gs-107749:match",
+   "source": "gold_standard_row",
+   "premise": "Project: Clean and Efficient Cooking and Heating Project, China. The project is in China. The credits are of vintage 2014. 113 credits were retired.",
+   "hypothesis": "We retired 113 Gold Standard credits from the project Clean and Efficient Cooking and Heating Project, China in China.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "gs-107749:changed",
+   "source": "gold_standard_row",
+   "premise": "Project: Clean and Efficient Cooking and Heating Project, China. The project is in China. The credits are of vintage 2014. 113 credits were retired.",
+   "hypothesis": "We retired 113 Gold Standard credits from the project Clean and Efficient Cooking and Heating Project, China in Norway.",
+   "label": "changed",
+   "change": "country"
+  },
+  {
+   "id": "gs-206776:match",
+   "source": "gold_standard_row",
+   "premise": "Project: Solar cooking in Chad, Iridimi (VPA1). The project is in Chad. The credits are of vintage 2018. 40 credits were retired.",
+   "hypothesis": "In our report: 40 credits of vintage 2018 from Solar cooking in Chad, Iridimi (VPA1), retired.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "gs-206776:changed",
+   "source": "gold_standard_row",
+   "premise": "Project: Solar cooking in Chad, Iridimi (VPA1). The project is in Chad. The credits are of vintage 2018. 40 credits were retired.",
+   "hypothesis": "In our report: 40 credits of vintage 2012 from Solar cooking in Chad, Iridimi (VPA1), retired.",
+   "label": "changed",
+   "change": "year"
+  },
+  {
+   "id": "gs-301470:match",
+   "source": "gold_standard_row",
+   "premise": "Project: TerraClear Ceramic Water Purifier Project in Lao PDR. The project is in Laos. The credits are of vintage 2016. 1 credits were retired.",
+   "hypothesis": "The retired credits come from the TerraClear Ceramic Water Purifier Project in Lao PDR, located in Laos.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "gs-301470:changed",
+   "source": "gold_standard_row",
+   "premise": "Project: TerraClear Ceramic Water Purifier Project in Lao PDR. The project is in Laos. The credits are of vintage 2016. 1 credits were retired.",
+   "hypothesis": "The retired credits come from a landfill gas project in Laos.",
+   "label": "changed",
+   "change": "project_type"
+  },
+  {
+   "id": "gs-304214:match",
+   "source": "gold_standard_row",
+   "premise": "Project: Ecofiltro Guatemala Improved Stoves and Water Purification Project. The project is in Guatemala. The credits are of vintage 2020. 267 credits were retired.",
+   "hypothesis": "We retired 267 Gold Standard credits from the project Ecofiltro Guatemala Improved Stoves and Water Purification Project in Guatemala.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "gs-304214:changed",
+   "source": "gold_standard_row",
+   "premise": "Project: Ecofiltro Guatemala Improved Stoves and Water Purification Project. The project is in Guatemala. The credits are of vintage 2020. 267 credits were retired.",
+   "hypothesis": "We retired 267 Gold Standard credits from the project Ecofiltro Guatemala Improved Stoves and Water Purification Project in Norway.",
+   "label": "changed",
+   "change": "country"
+  },
+  {
+   "id": "gs-368077:match",
+   "source": "gold_standard_row",
+   "premise": "Project: 120 MW Solar PV Plant by Juniper Green Sigma Private Ltd. in Gujarat. The project is in India. The credits are of vintage 2022. 2 credits were retired.",
+   "hypothesis": "In our report: 2 credits of vintage 2022 from 120 MW Solar PV Plant by Juniper Green Sigma Private Ltd. in Gujarat, retired.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "gs-368077:changed",
+   "source": "gold_standard_row",
+   "premise": "Project: 120 MW Solar PV Plant by Juniper Green Sigma Private Ltd. in Gujarat. The project is in India. The credits are of vintage 2022. 2 credits were retired.",
+   "hypothesis": "In our report: 2 credits of vintage 2016 from 120 MW Solar PV Plant by Juniper Green Sigma Private Ltd. in Gujarat, retired.",
+   "label": "changed",
+   "change": "year"
+  },
+  {
+   "id": "gs-607445:match",
+   "source": "gold_standard_row",
+   "premise": "Project: Small-scale solar electrical programme, South Africa – CPA-014. The project is in South Africa. The credits are of vintage 2025. 14,738 credits were retired.",
+   "hypothesis": "The retired credits come from the Small-scale solar electrical programme, South Africa – CPA-014, located in South Africa.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "gs-607445:changed",
+   "source": "gold_standard_row",
+   "premise": "Project: Small-scale solar electrical programme, South Africa – CPA-014. The project is in South Africa. The credits are of vintage 2025. 14,738 credits were retired.",
+   "hypothesis": "The retired credits come from a landfill gas project in South Africa.",
+   "label": "changed",
+   "change": "project_type"
+  },
+  {
+   "id": "gs-607447:match",
+   "source": "gold_standard_row",
+   "premise": "Project: Small-scale solar electrical programme, South Africa – CPA-013. The project is in South Africa. The credits are of vintage 2025. 16,354 credits were retired.",
+   "hypothesis": "We retired 16,354 Gold Standard credits from the project Small-scale solar electrical programme, South Africa – CPA-013 in South Africa.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "gs-607447:changed",
+   "source": "gold_standard_row",
+   "premise": "Project: Small-scale solar electrical programme, South Africa – CPA-013. The project is in South Africa. The credits are of vintage 2025. 16,354 credits were retired.",
+   "hypothesis": "We retired 16,354 Gold Standard credits from the project Small-scale solar electrical programme, South Africa – CPA-013 in Norway.",
+   "label": "changed",
+   "change": "country"
+  },
+  {
+   "id": "gs-607449:match",
+   "source": "gold_standard_row",
+   "premise": "Project: Small-scale solar electrical programme, South Africa – CPA-012. The project is in South Africa. The credits are of vintage 2025. 13,267 credits were retired.",
+   "hypothesis": "In our report: 13,267 credits of vintage 2025 from Small-scale solar electrical programme, South Africa – CPA-012, retired.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "gs-607449:changed",
+   "source": "gold_standard_row",
+   "premise": "Project: Small-scale solar electrical programme, South Africa – CPA-012. The project is in South Africa. The credits are of vintage 2025. 13,267 credits were retired.",
+   "hypothesis": "In our report: 13,267 credits of vintage 2019 from Small-scale solar electrical programme, South Africa – CPA-012, retired.",
+   "label": "changed",
+   "change": "year"
+  },
+  {
+   "id": "gs-607451:match",
+   "source": "gold_standard_row",
+   "premise": "Project: Small-scale solar electrical programme, South Africa – CPA-011. The project is in South Africa. The credits are of vintage 2025. 17,099 credits were retired.",
+   "hypothesis": "The retired credits come from the Small-scale solar electrical programme, South Africa – CPA-011, located in South Africa.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "gs-607451:changed",
+   "source": "gold_standard_row",
+   "premise": "Project: Small-scale solar electrical programme, South Africa – CPA-011. The project is in South Africa. The credits are of vintage 2025. 17,099 credits were retired.",
+   "hypothesis": "The retired credits come from a landfill gas project in South Africa.",
+   "label": "changed",
+   "change": "project_type"
+  },
+  {
+   "id": "gs-607453:match",
+   "source": "gold_standard_row",
+   "premise": "Project: Small-scale solar electrical programme, South Africa – CPA-010. The project is in South Africa. The credits are of vintage 2025. 12,567 credits were retired.",
+   "hypothesis": "We retired 12,567 Gold Standard credits from the project Small-scale solar electrical programme, South Africa – CPA-010 in South Africa.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "gs-607453:changed",
+   "source": "gold_standard_row",
+   "premise": "Project: Small-scale solar electrical programme, South Africa – CPA-010. The project is in South Africa. The credits are of vintage 2025. 12,567 credits were retired.",
+   "hypothesis": "We retired 12,567 Gold Standard credits from the project Small-scale solar electrical programme, South Africa – CPA-010 in Norway.",
+   "label": "changed",
+   "change": "country"
+  },
+  {
+   "id": "gs-607455:match",
+   "source": "gold_standard_row",
+   "premise": "Project: Small-scale solar electrical programme, South Africa – CPA-009. The project is in South Africa. The credits are of vintage 2025. 15,475 credits were retired.",
+   "hypothesis": "In our report: 15,475 credits of vintage 2025 from Small-scale solar electrical programme, South Africa – CPA-009, retired.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "gs-607455:changed",
+   "source": "gold_standard_row",
+   "premise": "Project: Small-scale solar electrical programme, South Africa – CPA-009. The project is in South Africa. The credits are of vintage 2025. 15,475 credits were retired.",
+   "hypothesis": "In our report: 15,475 credits of vintage 2019 from Small-scale solar electrical programme, South Africa – CPA-009, retired.",
+   "label": "changed",
+   "change": "year"
+  },
+  {
+   "id": "gs-609338:match",
+   "source": "gold_standard_row",
+   "premise": "Project: GS12494 VPA-1 Distribution of Improved Cookstove by Alphabet Greens. The project is in India. The credits are of vintage 2024. 2 credits were retired.",
+   "hypothesis": "The retired credits come from the GS12494 VPA-1 Distribution of Improved Cookstove by Alphabet Greens, located in India.",
+   "label": "match",
+   "change": null
+  },
+  {
+   "id": "gs-609338:changed",
+   "source": "gold_standard_row",
+   "premise": "Project: GS12494 VPA-1 Distribution of Improved Cookstove by Alphabet Greens. The project is in India. The credits are of vintage 2024. 2 credits were retired.",
+   "hypothesis": "The retired credits come from a landfill gas project in India.",
+   "label": "changed",
+   "change": "project_type"
+  }
+ ]
+}

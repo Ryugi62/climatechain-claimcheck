@@ -22,7 +22,7 @@ button.ghost{background:var(--bg);color:var(--ink);border:1px solid var(--line);
 .line{border-top:1px solid var(--line);padding:10px 0;font-size:14px;word-break:break-all}
 code{font:13px ui-monospace,Menlo,monospace}
 table{width:100%;table-layout:auto;border-collapse:collapse;font-size:14px}td,th{text-align:left;padding:6px 4px;border-top:1px solid var(--line)}
-.tag{display:inline-block;border-radius:8px;padding:2px 8px;font-size:12px;font-weight:700;border:1px solid currentColor}
+.tag.NO_SERIAL{color:var(--sub)}.tag{display:inline-block;border-radius:8px;padding:2px 8px;font-size:12px;font-weight:700;border:1px solid currentColor}
 label{font-size:14px}.small{font-size:13px}
 </style>
 </head>
@@ -43,6 +43,13 @@ label{font-size:14px}.small{font-size:13px}
     <div class="row"><button id="go">Check claim</button><span class="sub small">Examples:</span>
       <span id="examples" class="row" style="margin:0"></span></div>
     <div id="result" aria-live="polite"></div>
+    <div id="narr" hidden>
+      <h3 style="font-size:16px;margin:16px 0 4px">Wording check <span class="sub small">(helper, never changes the verdict)</span></h3>
+      <p class="small sub">Compares the words around the serial (project type, country, year) with the registry record using a small AI model that runs in your browser. Result: Backed, May conflict or No receipt. It can miss changed facts; the numbers are under "Measured, not promised". First use downloads about 90 MB once from huggingface.co.</p>
+      <div class="row"><button id="nbtn" class="ghost">Check wording</button><span id="nexamples" class="row" style="margin:0"></span></div>
+      <p id="nstatus" class="small sub" aria-live="polite"></p>
+      <div id="nresult" aria-live="polite"></div>
+    </div>
   </section>
 
   <section class="card">

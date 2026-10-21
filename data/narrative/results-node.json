@@ -1,0 +1,821 @@
+{
+ "thresholds": {
+  "entail": 0.7,
+  "contradict": 0.97
+ },
+ "model": "Xenova/nli-deberta-v3-xsmall q8",
+ "runtime": "node v24.20.0 onnxruntime-node",
+ "pairs": 72,
+ "match": {
+  "n": 36,
+  "backed": 29,
+  "may_conflict": 1,
+  "no_receipt": 6
+ },
+ "changed": {
+  "n": 36,
+  "backed": 0,
+  "may_conflict": 11,
+  "no_receipt": 25
+ },
+ "false_alarm_pct": 2.8,
+ "backed_recall_pct": 80.6,
+ "conflict_recall_on_changed_pct": 30.6,
+ "backed_on_changed_pct": 0,
+ "by_source": {
+  "real_certificate": {
+   "match": {
+    "n": 24,
+    "backed": 22,
+    "may_conflict": 1,
+    "no_receipt": 1
+   },
+   "changed": {
+    "n": 24,
+    "backed": 0,
+    "may_conflict": 7,
+    "no_receipt": 17
+   }
+  },
+  "gold_standard_row": {
+   "match": {
+    "n": 12,
+    "backed": 7,
+    "may_conflict": 0,
+    "no_receipt": 5
+   },
+   "changed": {
+    "n": 12,
+    "backed": 0,
+    "may_conflict": 4,
+    "no_receipt": 8
+   }
+  }
+ },
+ "changed_by_kind": {
+  "project_type": {
+   "n": 12,
+   "backed": 0,
+   "may_conflict": 4,
+   "no_receipt": 8
+  },
+  "year": {
+   "n": 11,
+   "backed": 0,
+   "may_conflict": 4,
+   "no_receipt": 7
+  },
+  "quantity": {
+   "n": 2,
+   "backed": 0,
+   "may_conflict": 1,
+   "no_receipt": 1
+  },
+  "country": {
+   "n": 8,
+   "backed": 0,
+   "may_conflict": 1,
+   "no_receipt": 7
+  },
+  "registry": {
+   "n": 1,
+   "backed": 0,
+   "may_conflict": 0,
+   "no_receipt": 1
+  },
+  "company": {
+   "n": 2,
+   "backed": 0,
+   "may_conflict": 1,
+   "no_receipt": 1
+  }
+ },
+ "latency_ms": {
+  "model_load": 6658,
+  "per_sentence_median": 10,
+  "per_sentence_p95": 17,
+  "per_sentence_max": 20
+ },
+ "rows": [
+  {
+   "id": "dolomiti-00:match",
+   "source": "real_certificate",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.989,
+   "contradict": 0.0014,
+   "neutral": 0.0096
+  },
+  {
+   "id": "dolomiti-00:changed",
+   "source": "real_certificate",
+   "label": "changed",
+   "change": "project_type",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.0059,
+   "contradict": 0.082,
+   "neutral": 0.9122
+  },
+  {
+   "id": "dolomiti-03:match",
+   "source": "real_certificate",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.9949,
+   "contradict": 0.0007,
+   "neutral": 0.0044
+  },
+  {
+   "id": "dolomiti-03:changed",
+   "source": "real_certificate",
+   "label": "changed",
+   "change": "year",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.0047,
+   "contradict": 0.9392,
+   "neutral": 0.0561
+  },
+  {
+   "id": "dolomiti-06:match",
+   "source": "real_certificate",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.9886,
+   "contradict": 0.0013,
+   "neutral": 0.0101
+  },
+  {
+   "id": "dolomiti-06:changed",
+   "source": "real_certificate",
+   "label": "changed",
+   "change": "quantity",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.0493,
+   "contradict": 0.9263,
+   "neutral": 0.0244
+  },
+  {
+   "id": "dolomiti-12:match",
+   "source": "real_certificate",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.9924,
+   "contradict": 0.0009,
+   "neutral": 0.0067
+  },
+  {
+   "id": "dolomiti-12:changed",
+   "source": "real_certificate",
+   "label": "changed",
+   "change": "country",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.0043,
+   "contradict": 0.0069,
+   "neutral": 0.9888
+  },
+  {
+   "id": "dolomiti-28:match",
+   "source": "real_certificate",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.9376,
+   "contradict": 0.0123,
+   "neutral": 0.0501
+  },
+  {
+   "id": "dolomiti-28:changed",
+   "source": "real_certificate",
+   "label": "changed",
+   "change": "project_type",
+   "receipt": "MAY_CONFLICT",
+   "entail": 0.0002,
+   "contradict": 0.9779,
+   "neutral": 0.0219
+  },
+  {
+   "id": "dolomiti-30:match",
+   "source": "real_certificate",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.9954,
+   "contradict": 0.001,
+   "neutral": 0.0036
+  },
+  {
+   "id": "dolomiti-30:changed",
+   "source": "real_certificate",
+   "label": "changed",
+   "change": "project_type",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.0035,
+   "contradict": 0.0026,
+   "neutral": 0.994
+  },
+  {
+   "id": "dolomiti-32:match",
+   "source": "real_certificate",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.9919,
+   "contradict": 0.001,
+   "neutral": 0.0071
+  },
+  {
+   "id": "dolomiti-32:changed",
+   "source": "real_certificate",
+   "label": "changed",
+   "change": "country",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.0003,
+   "contradict": 0.9519,
+   "neutral": 0.0478
+  },
+  {
+   "id": "dolomiti-38:match",
+   "source": "real_certificate",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.9953,
+   "contradict": 0.0008,
+   "neutral": 0.0038
+  },
+  {
+   "id": "dolomiti-38:changed",
+   "source": "real_certificate",
+   "label": "changed",
+   "change": "year",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.1166,
+   "contradict": 0.8556,
+   "neutral": 0.0278
+  },
+  {
+   "id": "dolomiti-39:match",
+   "source": "real_certificate",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.7751,
+   "contradict": 0.043,
+   "neutral": 0.1819
+  },
+  {
+   "id": "dolomiti-39:changed",
+   "source": "real_certificate",
+   "label": "changed",
+   "change": "country",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.0012,
+   "contradict": 0.047,
+   "neutral": 0.9518
+  },
+  {
+   "id": "dolomiti-41:match",
+   "source": "real_certificate",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.9933,
+   "contradict": 0.0006,
+   "neutral": 0.0062
+  },
+  {
+   "id": "dolomiti-41:changed",
+   "source": "real_certificate",
+   "label": "changed",
+   "change": "project_type",
+   "receipt": "MAY_CONFLICT",
+   "entail": 0.0001,
+   "contradict": 0.9858,
+   "neutral": 0.0141
+  },
+  {
+   "id": "dolomiti-45:match",
+   "source": "real_certificate",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.9908,
+   "contradict": 0.0008,
+   "neutral": 0.0084
+  },
+  {
+   "id": "dolomiti-45:changed",
+   "source": "real_certificate",
+   "label": "changed",
+   "change": "project_type",
+   "receipt": "MAY_CONFLICT",
+   "entail": 0.0002,
+   "contradict": 0.9963,
+   "neutral": 0.0034
+  },
+  {
+   "id": "storebrand-2021:match",
+   "source": "real_certificate",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.981,
+   "contradict": 0.0018,
+   "neutral": 0.0172
+  },
+  {
+   "id": "storebrand-2021:changed",
+   "source": "real_certificate",
+   "label": "changed",
+   "change": "year",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.0253,
+   "contradict": 0.9426,
+   "neutral": 0.032
+  },
+  {
+   "id": "storebrand-2022:match",
+   "source": "real_certificate",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.9782,
+   "contradict": 0.0039,
+   "neutral": 0.0179
+  },
+  {
+   "id": "storebrand-2022:changed",
+   "source": "real_certificate",
+   "label": "changed",
+   "change": "registry",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.0839,
+   "contradict": 0.0887,
+   "neutral": 0.8273
+  },
+  {
+   "id": "storebrand-2023:match",
+   "source": "real_certificate",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.988,
+   "contradict": 0.0009,
+   "neutral": 0.0111
+  },
+  {
+   "id": "storebrand-2023:changed",
+   "source": "real_certificate",
+   "label": "changed",
+   "change": "quantity",
+   "receipt": "MAY_CONFLICT",
+   "entail": 0.002,
+   "contradict": 0.995,
+   "neutral": 0.003
+  },
+  {
+   "id": "commerzbank-2025:match",
+   "source": "real_certificate",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.9867,
+   "contradict": 0.0023,
+   "neutral": 0.0111
+  },
+  {
+   "id": "commerzbank-2025:changed",
+   "source": "real_certificate",
+   "label": "changed",
+   "change": "year",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.3737,
+   "contradict": 0.5384,
+   "neutral": 0.0879
+  },
+  {
+   "id": "easyjet-kamuthi-2022:match",
+   "source": "real_certificate",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.973,
+   "contradict": 0.0064,
+   "neutral": 0.0206
+  },
+  {
+   "id": "easyjet-kamuthi-2022:changed",
+   "source": "real_certificate",
+   "label": "changed",
+   "change": "company",
+   "receipt": "MAY_CONFLICT",
+   "entail": 0.0045,
+   "contradict": 0.9883,
+   "neutral": 0.0072
+  },
+  {
+   "id": "aixtron-2024:match",
+   "source": "real_certificate",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.9601,
+   "contradict": 0.0029,
+   "neutral": 0.037
+  },
+  {
+   "id": "aixtron-2024:changed",
+   "source": "real_certificate",
+   "label": "changed",
+   "change": "year",
+   "receipt": "MAY_CONFLICT",
+   "entail": 0.0039,
+   "contradict": 0.9755,
+   "neutral": 0.0206
+  },
+  {
+   "id": "southampton-gs-2025:match",
+   "source": "real_certificate",
+   "label": "match",
+   "change": null,
+   "receipt": "NO_RECEIPT",
+   "entail": 0.0263,
+   "contradict": 0.0052,
+   "neutral": 0.9685
+  },
+  {
+   "id": "southampton-gs-2025:changed",
+   "source": "real_certificate",
+   "label": "changed",
+   "change": "project_type",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.006,
+   "contradict": 0.0469,
+   "neutral": 0.9471
+  },
+  {
+   "id": "easyjet-madre-p0:match",
+   "source": "real_certificate",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.7475,
+   "contradict": 0.1638,
+   "neutral": 0.0887
+  },
+  {
+   "id": "easyjet-madre-p0:changed",
+   "source": "real_certificate",
+   "label": "changed",
+   "change": "year",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.0121,
+   "contradict": 0.9515,
+   "neutral": 0.0364
+  },
+  {
+   "id": "easyjet-madre-p2:match",
+   "source": "real_certificate",
+   "label": "match",
+   "change": null,
+   "receipt": "MAY_CONFLICT",
+   "entail": 0.0085,
+   "contradict": 0.9863,
+   "neutral": 0.0052
+  },
+  {
+   "id": "easyjet-madre-p2:changed",
+   "source": "real_certificate",
+   "label": "changed",
+   "change": "country",
+   "receipt": "MAY_CONFLICT",
+   "entail": 0.0002,
+   "contradict": 0.997,
+   "neutral": 0.0028
+  },
+  {
+   "id": "easyjet-madre-p3:match",
+   "source": "real_certificate",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.8022,
+   "contradict": 0.1009,
+   "neutral": 0.0969
+  },
+  {
+   "id": "easyjet-madre-p3:changed",
+   "source": "real_certificate",
+   "label": "changed",
+   "change": "year",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.0744,
+   "contradict": 0.4182,
+   "neutral": 0.5075
+  },
+  {
+   "id": "easyjet-madre-p4:match",
+   "source": "real_certificate",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.7772,
+   "contradict": 0.0126,
+   "neutral": 0.2102
+  },
+  {
+   "id": "easyjet-madre-p4:changed",
+   "source": "real_certificate",
+   "label": "changed",
+   "change": "project_type",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.0024,
+   "contradict": 0.0084,
+   "neutral": 0.9892
+  },
+  {
+   "id": "easyjet-madre-p5:match",
+   "source": "real_certificate",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.8335,
+   "contradict": 0.0108,
+   "neutral": 0.1557
+  },
+  {
+   "id": "easyjet-madre-p5:changed",
+   "source": "real_certificate",
+   "label": "changed",
+   "change": "project_type",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.0013,
+   "contradict": 0.0041,
+   "neutral": 0.9946
+  },
+  {
+   "id": "easyjet-madre-p6:match",
+   "source": "real_certificate",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.849,
+   "contradict": 0.0103,
+   "neutral": 0.1408
+  },
+  {
+   "id": "easyjet-madre-p6:changed",
+   "source": "real_certificate",
+   "label": "changed",
+   "change": "company",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.1122,
+   "contradict": 0.1534,
+   "neutral": 0.7343
+  },
+  {
+   "id": "gs-107749:match",
+   "source": "gold_standard_row",
+   "label": "match",
+   "change": null,
+   "receipt": "NO_RECEIPT",
+   "entail": 0.0039,
+   "contradict": 0.004,
+   "neutral": 0.9921
+  },
+  {
+   "id": "gs-107749:changed",
+   "source": "gold_standard_row",
+   "label": "changed",
+   "change": "country",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.0021,
+   "contradict": 0.03,
+   "neutral": 0.9678
+  },
+  {
+   "id": "gs-206776:match",
+   "source": "gold_standard_row",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.934,
+   "contradict": 0.0019,
+   "neutral": 0.0641
+  },
+  {
+   "id": "gs-206776:changed",
+   "source": "gold_standard_row",
+   "label": "changed",
+   "change": "year",
+   "receipt": "MAY_CONFLICT",
+   "entail": 0.0081,
+   "contradict": 0.9793,
+   "neutral": 0.0125
+  },
+  {
+   "id": "gs-301470:match",
+   "source": "gold_standard_row",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.9893,
+   "contradict": 0.0015,
+   "neutral": 0.0092
+  },
+  {
+   "id": "gs-301470:changed",
+   "source": "gold_standard_row",
+   "label": "changed",
+   "change": "project_type",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.0005,
+   "contradict": 0.6929,
+   "neutral": 0.3066
+  },
+  {
+   "id": "gs-304214:match",
+   "source": "gold_standard_row",
+   "label": "match",
+   "change": null,
+   "receipt": "NO_RECEIPT",
+   "entail": 0.0104,
+   "contradict": 0.0018,
+   "neutral": 0.9878
+  },
+  {
+   "id": "gs-304214:changed",
+   "source": "gold_standard_row",
+   "label": "changed",
+   "change": "country",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.0011,
+   "contradict": 0.5774,
+   "neutral": 0.4215
+  },
+  {
+   "id": "gs-368077:match",
+   "source": "gold_standard_row",
+   "label": "match",
+   "change": null,
+   "receipt": "NO_RECEIPT",
+   "entail": 0.3494,
+   "contradict": 0.0032,
+   "neutral": 0.6474
+  },
+  {
+   "id": "gs-368077:changed",
+   "source": "gold_standard_row",
+   "label": "changed",
+   "change": "year",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.0048,
+   "contradict": 0.9669,
+   "neutral": 0.0284
+  },
+  {
+   "id": "gs-607445:match",
+   "source": "gold_standard_row",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.9929,
+   "contradict": 0.0008,
+   "neutral": 0.0063
+  },
+  {
+   "id": "gs-607445:changed",
+   "source": "gold_standard_row",
+   "label": "changed",
+   "change": "project_type",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.0001,
+   "contradict": 0.9676,
+   "neutral": 0.0323
+  },
+  {
+   "id": "gs-607447:match",
+   "source": "gold_standard_row",
+   "label": "match",
+   "change": null,
+   "receipt": "NO_RECEIPT",
+   "entail": 0.007,
+   "contradict": 0.0024,
+   "neutral": 0.9906
+  },
+  {
+   "id": "gs-607447:changed",
+   "source": "gold_standard_row",
+   "label": "changed",
+   "change": "country",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.0019,
+   "contradict": 0.015,
+   "neutral": 0.9831
+  },
+  {
+   "id": "gs-607449:match",
+   "source": "gold_standard_row",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.7857,
+   "contradict": 0.0027,
+   "neutral": 0.2116
+  },
+  {
+   "id": "gs-607449:changed",
+   "source": "gold_standard_row",
+   "label": "changed",
+   "change": "year",
+   "receipt": "MAY_CONFLICT",
+   "entail": 0.0051,
+   "contradict": 0.9775,
+   "neutral": 0.0174
+  },
+  {
+   "id": "gs-607451:match",
+   "source": "gold_standard_row",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.9927,
+   "contradict": 0.0009,
+   "neutral": 0.0064
+  },
+  {
+   "id": "gs-607451:changed",
+   "source": "gold_standard_row",
+   "label": "changed",
+   "change": "project_type",
+   "receipt": "MAY_CONFLICT",
+   "entail": 0.0001,
+   "contradict": 0.9818,
+   "neutral": 0.0181
+  },
+  {
+   "id": "gs-607453:match",
+   "source": "gold_standard_row",
+   "label": "match",
+   "change": null,
+   "receipt": "NO_RECEIPT",
+   "entail": 0.0089,
+   "contradict": 0.0021,
+   "neutral": 0.989
+  },
+  {
+   "id": "gs-607453:changed",
+   "source": "gold_standard_row",
+   "label": "changed",
+   "change": "country",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.0024,
+   "contradict": 0.0215,
+   "neutral": 0.9762
+  },
+  {
+   "id": "gs-607455:match",
+   "source": "gold_standard_row",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.7053,
+   "contradict": 0.0044,
+   "neutral": 0.2903
+  },
+  {
+   "id": "gs-607455:changed",
+   "source": "gold_standard_row",
+   "label": "changed",
+   "change": "year",
+   "receipt": "MAY_CONFLICT",
+   "entail": 0.0054,
+   "contradict": 0.9809,
+   "neutral": 0.0138
+  },
+  {
+   "id": "gs-609338:match",
+   "source": "gold_standard_row",
+   "label": "match",
+   "change": null,
+   "receipt": "BACKED",
+   "entail": 0.9892,
+   "contradict": 0.0011,
+   "neutral": 0.0097
+  },
+  {
+   "id": "gs-609338:changed",
+   "source": "gold_standard_row",
+   "label": "changed",
+   "change": "project_type",
+   "receipt": "NO_RECEIPT",
+   "entail": 0.001,
+   "contradict": 0.5598,
+   "neutral": 0.4392
+  }
+ ]
+}
