@@ -4,6 +4,7 @@ import { sampleRecords } from './src/adapters/sampleRecords.mjs';
 import { goldStandardLive } from './src/adapters/goldStandardLive.mjs';
 import { createTransformersNli } from './src/adapters/transformersNli.mjs';
 import { checkNarrative } from './src/application/checkNarrative.mjs';
+import { MATCH_LIMIT, wordingErrorTitle } from './src/domain/disclosure.mjs';
 import { extractClaim } from './src/domain/claim.mjs';
 import { checkBeneficiary } from './src/application/checkBeneficiary.mjs';
 import { sepoliaRegistry } from './src/adapters/sepoliaRegistry.mjs';
@@ -94,7 +95,7 @@ function renderBeneficiary(b, claimant) {
   const head = b.candidates.length ? `<p class="small">${b.candidates.length} candidate${b.candidates.length > 1 ? 's' : ''} &middot; total ${Number(b.total).toLocaleString()} t &middot; sentence ${b.claimed == null ? 'n/a' : Number(b.claimed).toLocaleString()} t.${rel}${scope}</p>` : '';
   const rows = b.candidates.slice(0, 6).map((c) => `<div class="line"><code>${esc(c.serial_number)}</code><br>${Number(c.number_of_credits).toLocaleString()} credits &middot; vintage ${esc(c.vintage)} &middot; retired ${esc(c.retired_on || 'n/a')} &middot; beneficiary: ${esc(c.beneficiary || c.note || 'n/a')}<br><button class="ghost use" data-serial="${esc(c.serial_number)}" data-n="${c.number_of_credits}" data-v="${esc(c.retired_on || '')}">Check this serial</button>${chainNote(c.serial_number)}</div>`).join('');
   const more = b.candidates.length > 6 ? `<p class="small sub">${b.candidates.length - 6} more candidates not shown.</p>` : '';
-  out.innerHTML = `<h3 style="font-size:16px;margin:16px 0 4px">No serial in the sentence: candidates for ${esc(claimant)} <span class="sub small">(registry lookup by beneficiary, not proof)</span></h3><div class="verdict ${cls}" style="font-size:24px">${label}</div>${head}${rows}${more}<p class="small sub">Candidates are Gold Standard records that name ${esc(claimant)} as the company the credits were retired for. A candidate total that equals the sentence is a lead, not an audit.</p>`;
+  out.innerHTML = `<h3 style="font-size:16px;margin:16px 0 4px">No serial in the sentence: candidates for ${esc(claimant)} <span class="sub small">(registry lookup by beneficiary, not proof)</span></h3><div class="verdict ${cls}" style="font-size:24px">${label}</div>${b.status === 'MATCH' ? `<p class="small limit"><b>${MATCH_LIMIT}</b></p>` : ''}${head}${rows}${more}<p class="small sub">Candidates are Gold Standard records that name ${esc(claimant)} as the company the credits were retired for. A candidate total that equals the sentence is a lead, not an audit.</p>`;
   out.querySelectorAll('button.use').forEach((bt) => {
     bt.onclick = () => {
       $('claim').value = `In ${bt.dataset.v.slice(0, 4) || 'the year'} ${claimant} retired ${Number(bt.dataset.n).toLocaleString('en-US')} tCO2e (serial ${bt.dataset.serial}).`;
@@ -118,7 +119,8 @@ async function runBeneficiary() {
 function render(r) {
   const lines = r.lines.map((l) => `<div class="line"><span class="tag ${l.verdict}">${LABEL[l.verdict]}</span> <code>${esc(l.serial)}</code><br>${esc(WHY[l.reason] || l.reason)}${l.source === 'chain' ? ` Answer read from the Sepolia contract <code>${esc(flow.contract.slice(0, 8))}...</code> just now: this range is already registered (claim hash <code>${esc(l.chainClaimHash.slice(0, 12))}...</code>, by ${esc(l.firstClaimant)}); overlap ${l.overlap.toLocaleString()} credits.` : l.overlap ? ` Overlap: ${l.overlap.toLocaleString()} credits, first used by ${esc(l.firstClaimant)} (this page's own memory, not the chain).` : ''}${l.evidence ? `${chainNote(l.serial)}<br><span class="sub">registry status ${esc(l.evidence.status)}, ${Number(l.evidence.number_of_credits).toLocaleString()} credits &middot; source ${esc(l.evidence.source_url)} &middot; fetched ${esc(l.evidence.fetched_at)}</span>` : ''}</div>`).join('');
   const q = r.quantity.claimed != null ? `<p class="small">Claimed ${r.quantity.claimed.toLocaleString()} t &middot; registry ${r.quantity.registry == null ? 'n/a' : r.quantity.registry.toLocaleString()} t</p>` : '';
-  $('result').innerHTML = `<div class="verdict ${r.verdict}">${LABEL[r.verdict]}</div><p>${esc(WHY[r.reason] || r.reason)}</p>${q}${lines}`;
+  const lim = r.verdict === 'MATCH' ? `<p class="small limit"><b>${MATCH_LIMIT}</b></p>` : '';
+  $('result').innerHTML = `<div class="verdict ${r.verdict}">${LABEL[r.verdict]}</div>${lim}<p>${esc(WHY[r.reason] || r.reason)}</p>${q}${lines}`;
 }
 
 async function run() {
@@ -171,6 +173,7 @@ async function init() {
   if (NARRATIVE) {
     $('narr').hidden = false;
     $('nbtn').onclick = runNarrative;
+    fetch('./data/narrative.json').then((x) => x.json()).then((n) => { $('ntitle').textContent = wordingErrorTitle(n); }).catch(() => {});
     const ok = ret[0];
     const nm = (ok.project_name || '').replace(/^GS\d+\s+(?:VPA\s*\d+\s+)?/i, '');
     const ctry = new Intl.DisplayNames(['en'], { type: 'region' }).of(ok.country_code);

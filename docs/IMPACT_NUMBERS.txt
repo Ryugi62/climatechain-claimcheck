@@ -1,0 +1,17 @@
+sentence | claimed t | Gold Standard registry total t | traced t (min)
+microsoft-2024 | 605,354 | 27,021 | 27,021
+apple-2024 | 324,100 | 0 | 0
+apple-2024 | 167,000 | 0 | 0
+easyjet-ara22 | 11,767,387 | 416,303 | 416,303
+studiosus-sr23 | 103,907 | 150,504 | 103,907
+studiosus-sr23 | 60,965 | 59,115 | 59,115
+telekom-cr24 | 35,167 | 10,000 | 10,000
+stockholm-exergi-24 | 97,000 | 98,266 | 97,000
+ey-carbon-negative | 723,000 | 117,076 | 117,076
+magis-sr25 | 24,048 | 3,312 | 3,312
+N=10 real sentences with a quantity (2 samples: 10 + 30 public reports)
+A=13,907,928 tCO2e claimed
+B=833,734 tCO2e covered by retired Gold Standard blocks under the same company name
+C=13,074,194 tCO2e not traceable to Gold Standard today (94.0%)
+exact quantity matches=0 of 10; sentences with no Gold Standard block found=2
+median claimed t=135,453; without the largest sentence: A=2,140,541

@@ -1,12 +1,19 @@
 # ClaimCheck
 
-**Paste one carbon-offset sentence from an ESG report. With a credit serial, ClaimCheck checks it against public Gold Standard retirement records. Most real reports print no serial (0 of 10 measured), so a sentence with only a company, a year and a quantity is looked up by the company named as beneficiary in the same registry. Either way the same credits can be registered on chain, and a second claim on them is refused. A separate wording check (Backed / May conflict / No receipt) compares the rest of the sentence with the record and never changes the verdict.**
+An ESG report says "we retired 100,000 t". Nobody can check that in seconds, and nothing stops a second company from citing the same credits.
 
-Live demo (no wallet, no login): https://ryugi62.github.io/climatechain-claimcheck/
+ClaimCheck checks the sentence against public Gold Standard retirement records (by credit serial, or by the company named as beneficiary when the report prints no serial), and a Sepolia contract refuses a second claim on the same credits. Roles: the registry record decides the verdict, the contract locks the credit range, and AI only warns about wording (optional, after a click, never in the verdict).
 
-Deployed on Sepolia testnet: [`0xbBC97a57c7f81F77dbA1b1b2FbC29898b87F7bDF`](https://sepolia.etherscan.io/address/0xbBC97a57c7f81F77dbA1b1b2FbC29898b87F7bDF) (chain 11155111, deployed 2026-10-21; transactions in the Testnet section).
+Evidence: 320/320 verdicts as expected, 83/83 second claims refused, 147 tests pass, [live revert transaction on Sepolia](https://sepolia.etherscan.io/tx/0x43ab85cf22d4f85514a8ed25e015d137a4efdeb6671e138cd1a192e380b3db8b) (`RangeOverlap`).
 
-Built for the IEEE ClimateChain Global Hackathon, Track 1 (Carbon Markets and Emissions Transparency: double counting, lack of transparency).
+Real reports: in the 10 real sentences with a tonne quantity that we found, companies claim 13,907,928 tCO2e; 833,734 t of it can be traced to retired Gold Standard blocks under the company's own name, leaving 13,074,194 t a reader cannot trace to Gold Standard today (other registries not looked up; 0 of 10 sentences equal the registry total; script and output: [docs/IMPACT_NUMBERS.txt](docs/IMPACT_NUMBERS.txt), `scripts/impact_numbers.py`).
+
+Limit: Gold Standard only, and a Match means the public record agrees with the sentence; it is not an audit. The optional wording check catches a changed fact only 10 times in 36 (27.8%) and raises a false alarm on matching wording 1 time in 36 (2.8%).
+
+Live demo (no wallet, no login): https://ryugi62.github.io/climatechain-claimcheck/ - Contract on Sepolia: [`0xbBC97a57c7f81F77dbA1b1b2FbC29898b87F7bDF`](https://sepolia.etherscan.io/address/0xbBC97a57c7f81F77dbA1b1b2FbC29898b87F7bDF) (chain 11155111, deployed 2026-10-21; transactions in the Testnet section). Built for the IEEE ClimateChain Global Hackathon, Track 1 (Carbon Markets and Emissions Transparency: double counting, lack of transparency).
+
+## How the three parts fit, and the wording check
+Most real reports print no serial (0 of 10 measured), so a sentence with only a company, a year and a quantity is looked up by the company named as beneficiary in the same registry. Either way the same credits can be registered on chain, and a second claim on them is refused. The separate wording check (Backed / May conflict / No receipt) compares the rest of the sentence with the record and never changes the verdict; on the page its box title and every Match card state the error rates and the Gold Standard limit.
 
 ## What is new, and what is not (similar tools)
 **Our own part: it starts from the report sentence, with or without a serial. Serial and quantity (or, with no serial, the company's retired blocks and their total) are checked against the public retirement record, and a second claim on the same serial range fails on chain, shown as one flow with one set of credits ([docs/flow-testnet.json](docs/flow-testnet.json)). None of the tools below does all three in one flow; each piece alone exists.** On-chain refusal of reused serials alone is not new (see the patent and EcoGuard rows).
@@ -48,7 +55,7 @@ Cost to keep running: hosting is static files on GitHub Pages ($0), registry rea
 | Sentence without a serial, first-time real sentences ([docs/BENEFICIARY_EVAL.md](docs/BENEFICIARY_EVAL.md)) | 3 of 10 reports contain a retirement sentence with a quantity; 2 of 10 reports get at least one registry candidate for their sentence; 0 of 10 have a candidate total equal to the sentence (registry total lower every time: Gold Standard only, other registries not looked up). 7 of 10 reports are from a company with retired Gold Standard blocks under its own name. Same 10 reports as the serial measurement (in-sample for that question, first-time sentences for this path) |
 | Wider sample of real company sentences ([docs/REAL_SENTENCE_HUNT.md](docs/REAL_SENTENCE_HUNT.md)) | 30 further public reports chosen by a registry-first rule written in that file: 6 of 30 reports contain a retirement sentence with a quantity; 6 of 30 get at least one registry candidate for their sentence; 0 of 30 have a candidate total equal to the sentence (nearest: 97,000 t in the sentence against 98,266 t in the registry). All 30 names come from the registry's own list of beneficiaries (the product finds blocks under the typed name for 27 of them), so this is an upper bound, not a prevalence. Separately, one real sentence found by a targeted search (not part of the 30): United Internet, Sustainability Report 2024, "the Business Access Segment retired 4,713 Gold Standard-compliant verified emission reductions", equals one retired Gold Standard block of 4,713 credits (`GS1-1-KE-GS11200-16-2022-25937-944-5656`) under the group company 1&1 Versatel; registered on Sepolia ([docs/real-sentence-testnet.json](docs/real-sentence-testnet.json)) |
 | One flow, one set of credits, Sepolia ([docs/flow-testnet.json](docs/flow-testnet.json)) | sentence without serial -> 2 Gold Standard candidates, total 131,201 t = the sentence -> both ranges registered (2 real transactions) -> second claim on the same range reverted with `RangeOverlap` (real transaction) |
-| Domain tests | 111 pass (`npm run test:domain`) |
+| Domain tests | 116 pass (`npm run test:domain`) |
 | Contract tests | 31 pass (`npm run test:contract`) |
 | Gas for one registration | about 162k first on the local test chain, about 223k at the 40th range of one batch; 683,777 on Sepolia for the same call because Sepolia charges about 5 times more per new storage slot (measured, see below) |
 
@@ -98,7 +105,7 @@ docs/          static demo page, THREAT_MODEL.md
 ## Run it
 ```
 npm install
-npm test                # 111 domain + 31 contract tests
+npm test                # 116 domain + 31 contract tests
 npm run eval:real       # extractor accuracy on real certificates -> data/eval/real-results.json
 node scripts/eval_beneficiary.mjs [--offline]   # sentence-without-serial path on 10 real reports -> docs/BENEFICIARY_EVAL.md
 IEEE_TESTNET_KEY_FILE=<keyfile> npx hardhat run --network testnet scripts/flow_testnet.cjs   # the one-flow Sepolia run
