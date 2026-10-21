@@ -36,6 +36,7 @@ Cost to keep running: hosting is static files on GitHub Pages ($0), registry rea
 | Issued but not retired, caught | 20/20 |
 | Second claimant refused by the ledger (same credits) | 60/60 full overlap, 23/23 partial overlap |
 | Live endpoint agrees with the stored sample | 11/11 (`data/eval/live-check.json`) |
+| Live lookup time, 15 single requests (Node fetch from the author's machine, not a browser) | median 1.8 s, min 1.7 s, max 2.2 s, 15/15 found (`scripts/live_latency.mjs`, `docs/LIVE_LATENCY.json`) |
 | Extraction on 10 held-out phrasings | serial 8/8, quantity 8/9 (miss: "12.5k tonnes") |
 | Real publisher documents (hand-labelled) | 24 retirement sentences from 6 publishers (Dolomiti Energia, Storebrand, Commerzbank, easyJet, AIXTRON, Southampton Airport); `data/real/` |
 | Extractor on those real sentences (`npm run eval:real`) | serial 18/18, quantity 18/18 after fixes; before fixes (the extractor as built in round 1): serial 8/18, quantity 1/18 |

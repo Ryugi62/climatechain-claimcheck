@@ -1,0 +1,86 @@
+{
+  "measured_at": "2026-10-21T00:57Z",
+  "n": 15,
+  "found": 15,
+  "median_ms": 1779,
+  "min_ms": 1692,
+  "max_ms": 2186,
+  "where": "Node fetch from the author machine (Korea), not the browser",
+  "rows": [
+    {
+      "serial": "GS1-1-MZ-GS7640-16-2025-31132-599-29917",
+      "found": true,
+      "ms": 1922
+    },
+    {
+      "serial": "GS1-1-ZA-GS12009-1-2024-31063-1-3224",
+      "found": true,
+      "ms": 1753
+    },
+    {
+      "serial": "GS1-1-ZA-GS12005-1-2025-31056-1-12567",
+      "found": true,
+      "ms": 2186
+    },
+    {
+      "serial": "GS1-1-IN-GS7572-2-2022-24457-133580-133581",
+      "found": true,
+      "ms": 1746
+    },
+    {
+      "serial": "GS1-1-IN-GS7572-2-2022-24457-133518-133525",
+      "found": true,
+      "ms": 1893
+    },
+    {
+      "serial": "GS1-1-IN-GS7572-2-2022-24457-133450-133450",
+      "found": true,
+      "ms": 1875
+    },
+    {
+      "serial": "GS1-1-TD-GS3445-3-2018-20018-2083-2084",
+      "found": true,
+      "ms": 1848
+    },
+    {
+      "serial": "GS1-1-TD-GS3445-3-2018-20018-2075-2075",
+      "found": true,
+      "ms": 1765
+    },
+    {
+      "serial": "GS1-1-TD-GS3445-3-2018-20018-2013-2052",
+      "found": true,
+      "ms": 1779
+    },
+    {
+      "serial": "GS1-1-CN-GS949-16-2014-5070-116085-116197",
+      "found": true,
+      "ms": 1725
+    },
+    {
+      "serial": "GS1-1-CN-GS949-16-2014-5070-50501-50526",
+      "found": true,
+      "ms": 2123
+    },
+    {
+      "serial": "GS1-1-GT-GS1321-16-2020-22609-102788-104058",
+      "found": true,
+      "ms": 2118
+    },
+    {
+      "serial": "GS1-1-GT-GS1321-16-2020-22609-86128-86327",
+      "found": true,
+      "ms": 1692
+    },
+    {
+      "serial": "GS1-1-GT-GS1321-16-2020-22609-66527-66571",
+      "found": true,
+      "ms": 1771
+    },
+    {
+      "serial": "GS1-1-LA-GS2095-16-2016-18487-10376-10376",
+      "found": true,
+      "ms": 1729
+    }
+  ]
+}
