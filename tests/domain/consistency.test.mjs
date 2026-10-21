@@ -20,7 +20,7 @@ test('README numbers equal results.json', () => {
 });
 
 test('README test counts equal the number of tests in the files', () => {
-  const domain = ['serial', 'claim', 'reconcile', 'ledger', 'check', 'consistency', 'real-samples', 'narrative', 'beneficiary'].map((n) => count(read(`tests/domain/${n}.test.mjs`), /^test\(/gm)).reduce((a, b) => a + b, 0);
+  const domain = ['serial', 'claim', 'reconcile', 'ledger', 'check', 'consistency', 'real-samples', 'narrative', 'beneficiary', 'gas-diagnosis', 'chainread'].map((n) => count(read(`tests/domain/${n}.test.mjs`), /^test\(/gm)).reduce((a, b) => a + b, 0);
   const contract = count(read('tests/contract/registry.test.cjs'), /^\s+it\(/gm);
   assert.ok(readme.includes(`${domain} pass`), `domain tests: ${domain}`);
   assert.ok(readme.includes(`${contract} pass`), `contract tests: ${contract}`);
@@ -28,7 +28,7 @@ test('README test counts equal the number of tests in the files', () => {
 });
 
 test('docs/ copies of the code are identical to src/', () => {
-  for (const f of ['domain/serial.mjs', 'domain/claim.mjs', 'domain/ledger.mjs', 'domain/reconcile.mjs', 'domain/beneficiary.mjs', 'application/checkClaim.mjs', 'application/checkBeneficiary.mjs', 'adapters/sampleRecords.mjs', 'adapters/goldStandardLive.mjs']) {
+  for (const f of ['domain/serial.mjs', 'domain/claim.mjs', 'domain/ledger.mjs', 'domain/reconcile.mjs', 'domain/beneficiary.mjs', 'application/checkClaim.mjs', 'application/checkBeneficiary.mjs', 'adapters/sampleRecords.mjs', 'adapters/goldStandardLive.mjs', 'domain/keccak.mjs', 'domain/chainAbi.mjs', 'adapters/sepoliaRegistry.mjs']) {
     assert.equal(read(`docs/src/${f}`), read(`src/${f}`), f);
   }
   assert.equal(read('docs/data/results.json'), read('data/eval/results.json'));

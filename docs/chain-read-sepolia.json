@@ -1,0 +1,25 @@
+{
+  "readAt": "2026-10-21T03:05:13.336Z",
+  "rpcUrl": "https://ethereum-sepolia-rpc.publicnode.com",
+  "contract": "0xbBC97a57c7f81F77dbA1b1b2FbC29898b87F7bDF",
+  "serial": "GS1-1-MU-GS12147-21-2022-27150-1257-62800",
+  "sentence": "In 2022 we retired 61,544 tCO2e (serial GS1-1-MU-GS12147-21-2022-27150-1257-62800).",
+  "claims": {
+    "Company B": {
+      "verdict": "DUPLICATE",
+      "source": "chain",
+      "firstClaimant": "Google",
+      "overlap": 61544,
+      "chainClaimHash": "0xec003f491c5f1d66f8f18071096ca655a13487ca46e6412182c01e1d3d6024ae",
+      "chainError": null
+    },
+    "Google": {
+      "verdict": "MATCH",
+      "source": null,
+      "firstClaimant": null,
+      "overlap": null,
+      "chainClaimHash": null,
+      "chainError": null
+    }
+  }
+}

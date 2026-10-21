@@ -13,6 +13,8 @@ An on-chain registry contract makes (3) enforceable: registering a serial range 
 
 5. **(Sentence without a serial, added 2026-10-21)** when the sentence names no serial, find the Gold Standard retirement records that list the company as the beneficiary (`retirement_using_entity.name`, or a note "on behalf of <company>") and compare their total with the quantity in the sentence. The result is a list of **candidates** with a total, never a proof, and it never changes the five verdicts above.
 
+6. **(Chain read, added 2026-10-21)** the "already claimed" test (3) can be answered by *reading the deployed registry contract* instead of the page's own memory. The page then shows Double use only because the contract says the range is taken.
+
 Hackathon track: Track 1, Carbon Markets & Emissions Transparency (double counting, lack of transparency).
 
 ## 2. Non-goals (비목표)
@@ -70,6 +72,15 @@ Hackathon track: Track 1, Carbon Markets & Emissions Transparency (double counti
 - **G20 Isolation.** Given a sentence with a serial, the beneficiary path is not used; given a sentence without one, `checkClaim` still returns NO_SERIAL (regression 0). Only RETIRED records count.
 - **G21 One credit, one story.** Given a candidate from G15, when its serial range is registered on chain and a second claimant registers an overlapping range, then the transaction reverts with `RangeOverlap` (G7) and the web page shows the same serial in the sentence check and in the chain record.
 
+- **G22 Chain read.** Given a range registered on the contract (batch K, [a,b], claimHash h), when claimant B checks a sentence with a serial range in K that overlaps [a,b], and h is neither B's own claim hash nor the hash of a known claim by B, then the verdict is DUPLICATE with `source: chain`, the overlap in credits and the stored claimHash; the chain is read through `conflictsWith`, `rangeCount`, `rangeAt` (no transaction, no wallet).
+- **G23 Own claim.** Given the range was registered under a claim hash that is known to belong to claimant B (hash of `claim:<B>:<sentence>` for the sentence being checked, or an entry of the known-claims list), when B checks it, then the chain does not make it DUPLICATE (verdict by the normal rules).
+- **G24 Chain unreachable.** Given the RPC fails, then the verdict is exactly what it is without the chain port and the result carries `chainError`; the chain never turns a failure into DUPLICATE and never changes MISMATCH/NOT_FOUND into MATCH.
+- **G25 No chain port.** Given no chain port, then every result is identical to before (regression 0; the local Ledger still answers G5).
+- **G26 Same encoding.** The batch key is hashed on chain as keccak256 of the UTF-8 string `registry:project:vintage:batch`; the JS keccak and ABI encoding in the page equal ethers' output for the same inputs (checked in tests), so the page asks the contract the same question a wallet would.
+
+### Who registers, and why (adoption path; design, partly out of scope)
+The registrant is the party that checks reports for others: an assurance provider or auditor who verifies a report's offset sentence against the public record and then writes the range to the registry. Its reason is liability: it signs "these credits back claim X" and wants to see in public that nobody else was told the same. A reporting company can register nothing itself (the contract admits only attestors). Today the attestor set is one owner address in the prototype (see Limits). Designed, not built: the owner role moves to a 2-of-3 multisig of independent assurance providers and `register` needs two attestor signatures; this changes the contract and the deployed Sepolia address and is outside the scope of this change (no G/W/T above depends on it).
+
 ## 6. Numeric success conditions (성공 조건; measured, not promised)
 | # | Condition | Measured by |
 |---|---|---|
@@ -87,6 +98,8 @@ Hackathon track: Track 1, Carbon Markets & Emissions Transparency (double counti
 | S13 | All existing tests still pass, plus new narrative tests (written first, seen failing) | `npm test` |
 | S14 | Beneficiary path: >= 12 new unit tests written first and seen failing; on the 10 real reports of `docs/SERIAL_PREVALENCE.md` report how many reports have a retirement sentence, how many of those get >= 1 candidate, how many totals equal the sentence (honest, including 0) | `docs/BENEFICIARY_EVAL.md` |
 | S15 | One real Gold Standard range goes sentence -> candidate -> Sepolia registration -> second claim reverts, with tx hashes | `docs/flow-testnet.json` |
+| S16 | The gas gap between the local chain (162k) and Sepolia (684k) is explained by measurement: same bytecode, same calldata, same slot count, per-slot price ratio; README states it and no claim says "not investigated" | `docs/gas-diagnosis.json`, `tests/domain/gas-diagnosis.test.mjs` |
+| S17 | Chain read: >= 10 new tests written first and seen failing (keccak and ABI equal ethers, G22-G25, adapter against the local Hardhat chain); one real Sepolia read shows Company B DUPLICATE from the contract | `npm test`, `docs/chain-read-sepolia.json` |
 | S8 | Cost per registration on chain reported in gas | contract test output |
 
 ### Pre-registration for S9-S12 (2026-10-21, before any model run)

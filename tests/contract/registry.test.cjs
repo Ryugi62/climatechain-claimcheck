@@ -194,3 +194,29 @@ describe('RetirementRegistry', () => {
     });
   });
 });
+
+describe('chain read adapter against the real contract (S17)', () => {
+  it('reads overlaps through eth_call only, with the page code', async () => {
+    const { reg, attestor } = await deploy();
+    const { sepoliaRegistry } = await import('../../src/adapters/sepoliaRegistry.mjs');
+    const batch = 'GOLD_STANDARD:GS12147:2022:27150';
+    const h = ethers.id('claim:Google:s');
+    await (await reg.connect(attestor).register(ethers.id(batch), 1257n, 62800n, h, ev)).wait();
+    await (await reg.connect(attestor).register(ethers.id(batch), 100000n, 100010n, h, ev)).wait();
+    const addr = await reg.getAddress();
+    const fetchImpl = async (_url, init) => {
+      const { method, params, id } = JSON.parse(init.body);
+      const result = await ethers.provider.send(method, params);
+      return { ok: true, json: async () => ({ jsonrpc: '2.0', id, result }) };
+    };
+    const chain = sepoliaRegistry({ rpcUrl: 'local', address: addr, fetchImpl });
+    const hit = await chain.overlaps({ batchKey: batch, start: 1257, end: 62800 });
+    expect(hit.length).to.equal(1);
+    expect(hit[0].claimHash).to.equal(h);
+    expect(hit[0].start).to.equal(1257);
+    const part = await chain.overlaps({ batchKey: batch, start: 62700, end: 70000 });
+    expect(part.length).to.equal(1);
+    expect(await chain.overlaps({ batchKey: batch, start: 62801, end: 99999 })).to.deep.equal([]);
+    expect(await chain.overlaps({ batchKey: 'GOLD_STANDARD:GS12147:2021:27149', start: 1, end: 5 })).to.deep.equal([]);
+  });
+});

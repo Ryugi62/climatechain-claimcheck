@@ -20,3 +20,5 @@ Zero-cost parts and why:
 - The contract itself charges no fee.
 
 Reviewer view: a verification is free; recording it on chain costs about two to three cents on L1 and under one cent on an L2 at today's prices.
+
+Caveat measured 2026-10-21 ([docs/gas-diagnosis.json](gas-diagnosis.json)): the gas figures above follow the storage price of the local test chain, which a read-only probe shows is also today's Ethereum mainnet price (about 22.3k per new storage slot). The Sepolia testnet already charges about 111k per new slot (5.03 times), so the same registration cost 683,777 gas there. If mainnet adopts that schedule the L1 figures would rise by about the same factor and the "two to three cents" would become roughly ten cents; this is a calculation from the measured ratio, not a forecast.

@@ -6,6 +6,8 @@ import { createTransformersNli } from './src/adapters/transformersNli.mjs';
 import { checkNarrative } from './src/application/checkNarrative.mjs';
 import { extractClaim } from './src/domain/claim.mjs';
 import { checkBeneficiary } from './src/application/checkBeneficiary.mjs';
+import { sepoliaRegistry } from './src/adapters/sepoliaRegistry.mjs';
+import { claimHashOf } from './src/domain/chainAbi.mjs';
 
 // Feature flag (SPEC kill switch): false hides the whole narrative check; the verdict path does not depend on it.
 const NARRATIVE = true;
@@ -16,6 +18,7 @@ const ledger = new Ledger();
 let rows = [];
 let lastRecords = null;
 let flow = null; // docs/flow-testnet.json: the same credits on the Sepolia testnet
+const RPC = 'https://ethereum-sepolia-rpc.publicnode.com'; // free public endpoint, read calls only
 const EXPLORER = 'https://eth-sepolia.blockscout.com/tx/';
 const shortTx = (h) => `${h.slice(0, 10)}...${h.slice(-6)}`;
 const setStatus = (t) => { $('nstatus').textContent = t; };
@@ -111,7 +114,7 @@ async function runBeneficiary() {
 }
 
 function render(r) {
-  const lines = r.lines.map((l) => `<div class="line"><span class="tag ${l.verdict}">${LABEL[l.verdict]}</span> <code>${esc(l.serial)}</code><br>${esc(WHY[l.reason] || l.reason)}${l.overlap ? ` Overlap: ${l.overlap.toLocaleString()} credits, first used by ${esc(l.firstClaimant)}.` : ''}${l.evidence ? `${chainNote(l.serial)}<br><span class="sub">registry status ${esc(l.evidence.status)}, ${Number(l.evidence.number_of_credits).toLocaleString()} credits &middot; source ${esc(l.evidence.source_url)} &middot; fetched ${esc(l.evidence.fetched_at)}</span>` : ''}</div>`).join('');
+  const lines = r.lines.map((l) => `<div class="line"><span class="tag ${l.verdict}">${LABEL[l.verdict]}</span> <code>${esc(l.serial)}</code><br>${esc(WHY[l.reason] || l.reason)}${l.source === 'chain' ? ` Answer read from the Sepolia contract <code>${esc(flow.contract.slice(0, 8))}...</code> just now: this range is already registered (claim hash <code>${esc(l.chainClaimHash.slice(0, 12))}...</code>, by ${esc(l.firstClaimant)}); overlap ${l.overlap.toLocaleString()} credits.` : l.overlap ? ` Overlap: ${l.overlap.toLocaleString()} credits, first used by ${esc(l.firstClaimant)} (this page's own memory, not the chain).` : ''}${l.evidence ? `${chainNote(l.serial)}<br><span class="sub">registry status ${esc(l.evidence.status)}, ${Number(l.evidence.number_of_credits).toLocaleString()} credits &middot; source ${esc(l.evidence.source_url)} &middot; fetched ${esc(l.evidence.fetched_at)}</span>` : ''}</div>`).join('');
   const q = r.quantity.claimed != null ? `<p class="small">Claimed ${r.quantity.claimed.toLocaleString()} t &middot; registry ${r.quantity.registry == null ? 'n/a' : r.quantity.registry.toLocaleString()} t</p>` : '';
   $('result').innerHTML = `<div class="verdict ${r.verdict}">${LABEL[r.verdict]}</div><p>${esc(WHY[r.reason] || r.reason)}</p>${q}${lines}`;
 }
@@ -121,13 +124,18 @@ async function run() {
   lastRecords = records;
   $('nresult').innerHTML = '';
   $('bresult').innerHTML = '';
-  const r = await checkClaim({ text: $('claim').value, claimant: $('claimant').value.trim() || 'anonymous', commit: $('commit').checked }, { records, ledger });
+  const chain = flow && $('chain').checked ? sepoliaRegistry({ rpcUrl: RPC, address: flow.contract }) : null;
+  const knownClaims = flow ? [{ claimant: flow.claimant, claimHash: claimHashOf(flow.claimant, flow.sentence) }] : [];
+  const r = await checkClaim({ text: $('claim').value, claimant: $('claimant').value.trim() || 'anonymous', commit: $('commit').checked }, { records, ledger, chain, knownClaims });
   render(r);
+  window.__result = r;
+  if (r.chainError) $('result').insertAdjacentHTML('beforeend', `<p class="small sub">The Sepolia registry could not be read (${esc(r.chainError)}). The verdict above is from the stored records and this page only; untick "read the Sepolia registry" to hide this note.</p>`);
   if (r.verdict === 'NO_SERIAL' && $('live').checked) await runBeneficiary();
   else if (r.verdict === 'NO_SERIAL') $('bresult').innerHTML = '<p class="small sub">Tick "live lookup" to look for candidates by company name in the Gold Standard registry.</p>';
 }
 
 async function init() {
+  try { flow = await (await fetch('./flow-testnet.json')).json(); } catch { flow = null; }
   rows = await (await fetch('./data/credits-sample.json')).json();
   const res = await (await fetch('./data/results.json')).json();
   $('n-records').textContent = res.records.total;
@@ -147,7 +155,7 @@ async function init() {
   $('claim').value = ex.Match;
   for (const [k, v] of Object.entries(ex)) {
     const bt = document.createElement('button'); bt.className = 'ghost'; bt.textContent = k;
-    bt.onclick = () => { $('claim').value = v; if (k === 'No serial, company') { $('live').checked = true; $('claimant').value = 'Company A'; } run(); };
+    bt.onclick = () => { $('claim').value = v; if (k === 'No serial, company') { $('live').checked = true; $('claimant').value = 'Google'; } run(); };
     $('examples').appendChild(bt);
   }
   $('go').onclick = run;
@@ -165,7 +173,7 @@ async function init() {
     }
   }
   try {
-    flow = await (await fetch('./flow-testnet.json')).json();
+    if (!flow) throw new Error('no flow');
     const rows2 = [...flow.registered.map((x, i) => `<tr><td>Registered on Sepolia (candidate ${i + 1})</td><td><code>${esc(x.serial)}</code></td><td><span class="MATCH">Registered</span> <a href="${EXPLORER}${x.tx.hash}"><code>${shortTx(x.tx.hash)}</code></a> (${x.tx.gasUsed.toLocaleString()} gas)</td></tr>`),
       `<tr><td>Second claimant, same range</td><td><code>${esc(flow.secondClaim.serial)}</code></td><td><span class="DUPLICATE">Refused: ${esc(flow.secondClaim.revert)}</span> <a href="${EXPLORER}${flow.secondClaim.tx.hash}"><code>${shortTx(flow.secondClaim.tx.hash)}</code></a></td></tr>`].join('');
     $('flow').innerHTML = `<p class="small">Sentence: &ldquo;${esc(flow.sentence)}&rdquo;<br><span class="sub">${esc(flow.note)} Gold Standard lookup by beneficiary: ${flow.check.candidates.length} candidates, total ${flow.check.total.toLocaleString()} t, equals the sentence.</span></p><table><tr><th>Step</th><th>Serial</th><th>Result on chain</th></tr>${rows2}</table>`;

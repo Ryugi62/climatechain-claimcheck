@@ -1,0 +1,87 @@
+{
+  "measuredAt": "2026-10-21T02:57:38.277Z",
+  "compiler": {
+    "version": "0.8.24",
+    "settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "evmVersion": "cancun",
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode",
+            "evm.deployedBytecode",
+            "evm.methodIdentifiers",
+            "metadata"
+          ],
+          "": [
+            "ast"
+          ]
+        }
+      }
+    }
+  },
+  "sepoliaTx": "0xec12e7852eaf117c14594119ec54553faeba119bbb4006bda5a68c5c254cd1eb",
+  "sepoliaGasUsed": 683777,
+  "bytecodeLengthLocal": 2376,
+  "bytecodeLengthSepolia": 2376,
+  "bytecodeEqualWithoutMetadata": true,
+  "bytecodeEqualFull": true,
+  "localGasUsedSameCalldata": 161857,
+  "local": {
+    "sstoreCount": 6,
+    "sstoreCosts": [
+      20000,
+      20000,
+      22100,
+      22100,
+      20000,
+      20000
+    ]
+  },
+  "sepolia": {
+    "sstoreCount": 6,
+    "sstoreCosts": [
+      108020,
+      108020,
+      110020,
+      110020,
+      108020,
+      108020
+    ],
+    "slotsWrittenInRegistry": 6
+  },
+  "probe": {
+    "sepolia": {
+      "oneSlot": 126105,
+      "fourSlots": 459883
+    },
+    "mainnetReadOnly": {
+      "oneSlot": 43482,
+      "fourSlots": 110441
+    },
+    "local": {
+      "oneSlot": 43106,
+      "fourSlots": 109424
+    }
+  },
+  "sepoliaHeader": {
+    "block": 11959590,
+    "hasBlockAccessListHash": true,
+    "hasSlotNumber": true
+  },
+  "mainnetHeader": {
+    "block": 26238127,
+    "hasBlockAccessListHash": false,
+    "hasSlotNumber": false
+  },
+  "perNewSlotGas": {
+    "local": 22106,
+    "sepolia": 111259,
+    "mainnetReadOnly": 22320,
+    "sepoliaOverLocal": 5.03
+  }
+}

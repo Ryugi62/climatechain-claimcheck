@@ -1,8 +1,20 @@
 // judge(): compare an extracted claim with registry records and the ledger.
 const ORDER = ['MATCH', 'MISMATCH', 'NOT_FOUND', 'DUPLICATE']; // later = worse
 
-function judgeSerial(range, record, ledger, claimant, sourceError) {
+function chainDuplicate(range, chain) {
+  const rows = (chain && chain.rows.get(range.raw)) || [];
+  const theirs = rows.filter((r) => !chain.own.has(String(r.claimHash).toLowerCase()));
+  if (!theirs.length) return null;
+  const overlap = theirs.reduce((a, r) => a + Math.min(r.end, range.end) - Math.max(r.start, range.start) + 1, 0);
+  const first = theirs[0];
+  const named = chain.known.find((k) => String(k.claimHash).toLowerCase() === String(first.claimHash).toLowerCase());
+  return { overlap, firstClaimant: named ? named.claimant : `an earlier claim ${String(first.claimHash).slice(0, 10)}`, chainClaimHash: first.claimHash, chainAttestor: first.attestor };
+}
+
+function judgeSerial(range, record, ledger, claimant, sourceError, chain) {
   const line = { serial: range.raw, registry: range.registry, quantity: range.quantity };
+  const onChain = chainDuplicate(range, chain);
+  if (onChain) return { ...line, verdict: 'DUPLICATE', reason: 'already_claimed', source: 'chain', ...onChain };
   const dup = ledger.conflicts(range, claimant);
   if (dup.length) {
     return { ...line, verdict: 'DUPLICATE', reason: 'already_claimed', overlap: dup.reduce((a, d) => a + d.overlap, 0), firstClaimant: dup[0].claimant };
@@ -19,9 +31,9 @@ function judgeSerial(range, record, ledger, claimant, sourceError) {
   return { ...line, verdict: 'MATCH', reason: 'retired', evidence };
 }
 
-export function judge({ claim, claimant, lookup, ledger, errors = {} }) {
+export function judge({ claim, claimant, lookup, ledger, errors = {}, chain = null }) {
   if (!claim.serials.length) return { verdict: 'NO_SERIAL', reason: 'no_serial', lines: [], quantity: { claimed: claim.quantity, registry: null } };
-  const lines = claim.serials.map((s) => judgeSerial(s, lookup(s), ledger, claimant, errors[s.raw]));
+  const lines = claim.serials.map((s) => judgeSerial(s, lookup(s), ledger, claimant, errors[s.raw], chain));
   let verdict = 'MATCH';
   let reason = 'retired';
   for (const l of lines) if (ORDER.indexOf(l.verdict) > ORDER.indexOf(verdict)) { verdict = l.verdict; reason = l.reason; }
