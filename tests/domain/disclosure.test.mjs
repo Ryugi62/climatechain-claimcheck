@@ -47,3 +47,10 @@ test('G30 the README first screen is short: a limit line and at most 5 evidence 
   assert.ok(lines.slice(0, 12).some((l) => l.startsWith('Limit:') && l.includes('Gold Standard')));
   assert.ok(lines.slice(0, 12).some((l) => l.includes('sepolia.etherscan.io/tx/')));
 });
+
+test('G31 the Inflated example inflates the same record as the Match example (36,445 against 33,131), so the demo shows one record', () => {
+  const app = read('docs/app.js');
+  assert.ok(app.includes("Math.round(a.number_of_credits * 1.1) + 1"));
+  assert.ok(app.includes("(serial ${a.serial_number}).`,\n    'Not retired'"));
+  assert.equal(Math.round(33131 * 1.1) + 1, 36445);
+});

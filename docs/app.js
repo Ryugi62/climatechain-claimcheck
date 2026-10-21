@@ -147,11 +147,11 @@ async function init() {
   $('fetched').textContent = res.records.fetched_at[0].slice(0, 10);
   const ret = rows.filter((r) => r.status === 'RETIRED');
   const iss = rows.find((r) => r.status !== 'RETIRED');
-  const a = ret[0], b = ret[3];
+  const a = ret[0];
   const fmt = (n) => n.toLocaleString('en-US');
   const ex = {
     'Match': `In 2025 we retired ${fmt(a.number_of_credits)} tCO2e of Gold Standard credits (serial ${a.serial_number}).`,
-    'Inflated': `In 2025 we retired ${fmt(Math.round(b.number_of_credits * 1.1) + 1)} tCO2e (serial ${b.serial_number}).`,
+    'Inflated': `In 2025 we retired ${fmt(Math.round(a.number_of_credits * 1.1) + 1)} tCO2e (serial ${a.serial_number}).`,
     'Not retired': `We retired ${fmt(iss.number_of_credits)} tCO2e, serial ${iss.serial_number}.`,
     'Unknown': `We retired 500 tCO2e, serial GS1-1-IN-GS5500-16-2025-39999-1-500.`,
     'No serial': 'We are carbon neutral thanks to high-quality offsets.',
