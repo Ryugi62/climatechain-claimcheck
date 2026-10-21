@@ -56,3 +56,27 @@ test('G31 the Inflated example inflates the same record as the Match example (36
   assert.ok(app.includes("(serial ${a.serial_number}).`,\n    'Not retired'"));
   assert.equal(Math.round(33131 * 1.1) + 1, 36445);
 });
+
+test('G33 the big title never contradicts the card below it: a no-serial sentence checked by company name says so', async () => {
+  const { verdictTitle, lineText } = await import('../../src/domain/disclosure.mjs');
+  assert.equal(verdictTitle('NO_SERIAL', { byCompany: true }), 'No serial: checked by company name');
+  assert.equal(verdictTitle('NO_SERIAL', { byCompany: false }), 'No serial to check');
+  assert.equal(verdictTitle('MISMATCH'), 'Mismatch');
+  assert.equal(lineText('quantity_differs'), 'Serial found, retired in the registry; the quantity in the sentence differs.');
+  const app = read('docs/app.js');
+  assert.ok(app.includes('verdictTitle(') && app.includes('lineText('));
+  assert.equal(read('docs/src/domain/disclosure.mjs'), read('src/domain/disclosure.mjs'));
+});
+
+test('G34 the page intro promises only what the contract does: a second registration of an overlapping serial range reverts', () => {
+  const html = read('docs/index.html');
+  assert.ok(html.includes('a second registration of an overlapping serial range reverts'));
+  assert.ok(!html.includes('refuses to count the same credits twice'));
+});
+
+test('G35 the double-use text says what the registry holds: a serial range registered by an earlier claim, not that credits "were used"; the demo registrations are named as ours', () => {
+  const app = read('docs/app.js');
+  assert.ok(app.includes("already_claimed: 'This serial range was already registered by an earlier claim in this registry.'"));
+  assert.ok(!app.includes('These credits were already used'));
+  assert.ok(app.includes('registered by us for the demo'));
+});

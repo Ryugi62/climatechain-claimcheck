@@ -104,3 +104,16 @@ test('every result carries the evidence it used', () => {
   assert.equal(r.lines[0].evidence.source_url, 'u');
   assert.equal(r.lines[0].evidence.fetched_at, 't');
 });
+
+test('G32 overall MISMATCH by quantity: no line card shows Match, the line says the serial was found but the quantity differs', () => {
+  const r = run(`We retired 36,445 tCO2e, ${GS}`, [rec()]);
+  assert.equal(r.verdict, 'MISMATCH');
+  assert.ok(r.lines.every((l) => l.verdict !== 'MATCH'));
+  assert.equal(r.lines[0].reason, 'quantity_differs');
+  assert.equal(r.lines[0].evidence.status, 'RETIRED');
+});
+
+test('G32b overall MATCH keeps its Match line (no change when the quantity agrees)', () => {
+  const r = run(`We retired 33,131 tCO2e, ${GS}`, [rec()]);
+  assert.equal(r.lines[0].verdict, 'MATCH');
+});

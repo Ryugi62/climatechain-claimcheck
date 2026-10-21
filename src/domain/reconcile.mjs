@@ -41,6 +41,8 @@ export function judge({ claim, claimant, lookup, ledger, errors = {}, chain = nu
   const quantity = { claimed: claim.quantity, registry: registrySum };
   if (verdict === 'MATCH' && claim.quantity != null && claim.quantity !== registrySum) {
     verdict = 'MISMATCH'; reason = 'quantity_differs';
+    // the sentence total differs, so no serial card may say Match under a Mismatch title
+    for (const l of lines) if (l.verdict === 'MATCH') { l.verdict = 'MISMATCH'; l.reason = 'quantity_differs'; }
   }
   if (verdict === 'MISMATCH' && reason === 'retired') reason = 'quantity_differs';
   return { verdict, reason, lines, quantity };

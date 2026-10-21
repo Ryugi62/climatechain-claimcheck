@@ -29,7 +29,7 @@ label{font-size:14px}.small{font-size:13px}
 <body>
 <main>
   <h1>ClaimCheck</h1>
-  <p class="sub">Paste one carbon-offset sentence from an ESG report. With a serial, we check it against <b>public Gold Standard retirement records</b>. Without a serial, we look up the company as the records' beneficiary and compare the total. An on-chain registry then refuses to count the same credits twice.</p>
+  <p class="sub">Paste one carbon-offset sentence from an ESG report. With a serial, we check it against <b>public Gold Standard retirement records</b>. Without a serial, we look up the company as the records' beneficiary and compare the total. On a Sepolia testnet registry, a second registration of an overlapping serial range reverts.</p>
   <p class="small sub">Data note: lookups use a stored sample of <span id="n-records">140</span> real registry records (fetched <span id="fetched">2026-10-17</span>). Tick "live lookup" to ask the registry's public read endpoint for your own serial. No wallet, no login. Chain part: the registry contract is deployed on the Sepolia testnet (below).</p>
 
   <section class="card" aria-label="Check a claim">
