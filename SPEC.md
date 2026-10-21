@@ -17,7 +17,7 @@ Hackathon track: Track 1, Carbon Markets & Emissions Transparency (double counti
 - No token, no minting of carbon credits, no trading, no price, no investment feature.
 - No model training. Claim parsing is deterministic (rules), not a learned model. The verdict (MATCH, MISMATCH, NOT_FOUND, DUPLICATE, NO_SERIAL) is produced by the rules and the ledger only; the narrative check never feeds into it.
 - The narrative check runs a pre-trained natural-language-inference model (Xenova/nli-deberta-v3-xsmall, int8) for inference only in the viewer's browser. We do no training, no fine-tuning, no server. It is off the verdict path and can be switched off by the `NARRATIVE` feature flag.
-- No paid API, no paid RPC. Local Hardhat chain only; registry data only from free public endpoints.
+- No paid API, no paid RPC, no mainnet. Local Hardhat chain for tests; the only public chain is the free Sepolia testnet (free public RPC, free faucet ETH, no real funds); registry data only from free public endpoints.
 - No personal data. Only public serial numbers and project names.
 - No judgement of project quality (additionality, permanence). We only check "retired? how many? twice?".
 - Not an audit opinion. A MATCH means "the public record agrees with the sentence", nothing more.
@@ -83,7 +83,7 @@ Hackathon track: Track 1, Carbon Markets & Emissions Transparency (double counti
 - Only Gold Standard records are fetched. Verra's search is browser-only; no stable free API was found (see README).
 - Rule-based extraction misses unusual wordings; recall is reported, not hidden.
 - The narrative check is a small pre-trained model: it can miss a changed number and can be wrong on unusual wording. Its recall on changed facts is reported next to its false alarms. It needs a one-time model download (about 90 MB) from huggingface.co after a click; everything else works offline from the bundled files.
-- The chain part runs on a local Hardhat network; no public testnet address.
+- Tests run on a local Hardhat network. The same contract is deployed on the Sepolia testnet (address in README); trust sits in the attestor set.
 - The bundled record sample is a small sample, not a mirror of the registry. Live lookup (one request per serial) is available when the viewer's browser can reach the registry.
 
 ## 8. UI acceptance (UI 수용기준)

@@ -1,0 +1,107 @@
+{
+ "measured": "2026-10-21",
+ "reports": 10,
+ "reportsWithSerial": 0,
+ "rows": [
+  {
+   "id": "microsoft-2024",
+   "publisher": "Microsoft",
+   "url": "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/msc/documents/presentations/CSR/Microsoft-2024-Environmental-Sustainability-Report.pdf",
+   "chars": 270501,
+   "offsetWords": 10,
+   "registryWords": 0,
+   "serialsFound": 0,
+   "serials": []
+  },
+  {
+   "id": "apple-2024",
+   "publisher": "Apple",
+   "url": "https://www.apple.com/environment/pdf/Apple_Environmental_Progress_Report_2024.pdf",
+   "chars": 361531,
+   "offsetWords": 38,
+   "registryWords": 7,
+   "serialsFound": 0,
+   "serials": []
+  },
+  {
+   "id": "google-2024",
+   "publisher": "Google",
+   "url": "https://www.gstatic.com/gumdrop/sustainability/google-2024-environmental-report.pdf",
+   "chars": 360678,
+   "offsetWords": 5,
+   "registryWords": 1,
+   "serialsFound": 0,
+   "serials": []
+  },
+  {
+   "id": "easyjet-ar24",
+   "publisher": "easyJet (annual report FY24, sustainability section)",
+   "url": "https://s203.q4cdn.com/522538739/files/doc_downloads/2024/12/easyJet_AR24_web.pdf",
+   "chars": 863026,
+   "offsetWords": 37,
+   "registryWords": 2,
+   "serialsFound": 0,
+   "serials": []
+  },
+  {
+   "id": "easyjet-ara22",
+   "publisher": "easyJet (2022 sustainability extract of the annual report)",
+   "url": "https://www.easyjet.com/ejcms/cache/medialibrary/files/sustainability/easyjet_2022_ara_sustainability_221215.pdf",
+   "chars": 107201,
+   "offsetWords": 8,
+   "registryWords": 2,
+   "serialsFound": 0,
+   "serials": []
+  },
+  {
+   "id": "commerzbank-nfr23",
+   "publisher": "Commerzbank (non-financial report 2023)",
+   "url": "https://www.commerzbank.de/ms/documents/en/non-financial-report-2023.pdf",
+   "chars": 462649,
+   "offsetWords": 2,
+   "registryWords": 0,
+   "serialsFound": 0,
+   "serials": []
+  },
+  {
+   "id": "storebrand-ar23",
+   "publisher": "Storebrand (annual report 2023)",
+   "url": "https://www.storebrand.no/en/investor-relations/annual-reports/_/attachment/inline/356bc0b6-e4c5-496b-bb96-820365979d15:c7b2d6ec72e04cdc4c32afdc7de4198eebf3ccee/2023-annual-report-storbrand-asa.pdf",
+   "chars": 1110465,
+   "offsetWords": 16,
+   "registryWords": 0,
+   "serialsFound": 0,
+   "serials": []
+  },
+  {
+   "id": "storebrand-cf23",
+   "publisher": "Storebrand (carbon footprint report 2023)",
+   "url": "https://www.storebrand.no/en/sustainability/sustainability-library/_/attachment/inline/53a275c4-ed2f-4895-982b-960fe87e3b4b:809b5e4d5f5af6630610c37cec57c99c89046644/2023-Storebrand-carbon-footprint-report.pdf",
+   "chars": 13828,
+   "offsetWords": 0,
+   "registryWords": 0,
+   "serialsFound": 0,
+   "serials": []
+  },
+  {
+   "id": "aixtron-sr23",
+   "publisher": "AIXTRON (sustainability report 2023)",
+   "url": "https://www.aixtron.com/investoren/publikationen/2023/en/Sustainability%20Report%202023.pdf",
+   "chars": 146158,
+   "offsetWords": 1,
+   "registryWords": 0,
+   "serialsFound": 0,
+   "serials": []
+  },
+  {
+   "id": "netflix-esg24",
+   "publisher": "Netflix (ESG report 2024)",
+   "url": "https://s22.q4cdn.com/959853165/files/doc_downloads/2025/6/2024-Netflix-Environmental-Social-Governance-Report.pdf",
+   "chars": 114484,
+   "offsetWords": 33,
+   "registryWords": 3,
+   "serialsFound": 0,
+   "serials": []
+  }
+ ]
+}

@@ -37,5 +37,21 @@
       "916910855"
     ]
   },
-  "note": "Registered range is the retirement stated on a Verra certificate that Commerzbank AG publishes (data/real/samples.json)."
+  "note": "Registered range is the retirement stated on a Verra certificate that Commerzbank AG publishes (data/real/samples.json).",
+  "overlapTx": {
+    "hash": "0x43ab85cf22d4f85514a8ed25e015d137a4efdeb6671e138cd1a192e380b3db8b",
+    "status": 0,
+    "block": 11958923,
+    "gasUsed": 25496,
+    "range": [
+      "916907412",
+      "916910755"
+    ],
+    "revert": "RangeOverlap",
+    "args": [
+      "0xcf708ef039cbaa41bbfe214018fb7d4e3ac083a58a7f9733400c0833fe8d48ba",
+      "916907312",
+      "916910855"
+    ]
+  }
 }
