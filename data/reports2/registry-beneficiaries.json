@@ -1,0 +1,765 @@
+{
+ "fetched": "2026-10-21",
+ "pages": 150,
+ "page_size": 20,
+ "query": "status=RETIRED&is_using_entity_displayable=true",
+ "blocks_read": 3000,
+ "distinct_beneficiaries": 151,
+ "rows": [
+  {
+   "beneficiary": "Eni Plenitude s.p.a. Societ\u00e0 Benefit",
+   "blocks": 5,
+   "credits": 499679
+  },
+  {
+   "beneficiary": "Eni Plenitude spa Societ\u00e0 Benefit",
+   "blocks": 7,
+   "credits": 488132
+  },
+  {
+   "beneficiary": "Shell",
+   "blocks": 2,
+   "credits": 358821
+  },
+  {
+   "beneficiary": "ENGIE Energ\u00eda Chile S.A",
+   "blocks": 3,
+   "credits": 277208
+  },
+  {
+   "beneficiary": "EY Global Services Limited",
+   "blocks": 2,
+   "credits": 117076
+  },
+  {
+   "beneficiary": "Studiosus Reisen M\u00fcnchen GmbH",
+   "blocks": 7,
+   "credits": 107723
+  },
+  {
+   "beneficiary": "Hilti Corporation",
+   "blocks": 4,
+   "credits": 72187
+  },
+  {
+   "beneficiary": "Centralpoint B.V. h.o.d.n. Dustin Nederland",
+   "blocks": 16,
+   "credits": 72175
+  },
+  {
+   "beneficiary": "Good Energy Limited",
+   "blocks": 3,
+   "credits": 42000
+  },
+  {
+   "beneficiary": "Air Canada",
+   "blocks": 3,
+   "credits": 37629
+  },
+  {
+   "beneficiary": "Climate Hero AB",
+   "blocks": 1,
+   "credits": 25000
+  },
+  {
+   "beneficiary": "Quota di compensazione emissioni 2025 \u2013 Carnj Societ\u00e0 Cooperativa Agricola",
+   "blocks": 1,
+   "credits": 24728
+  },
+  {
+   "beneficiary": "Interparking",
+   "blocks": 2,
+   "credits": 15639
+  },
+  {
+   "beneficiary": "Sahibinden Bilgi Teknolojileri Paz. ve Tic. A.\u015e.",
+   "blocks": 1,
+   "credits": 14718
+  },
+  {
+   "beneficiary": "Grupo Orizon",
+   "blocks": 1,
+   "credits": 12897
+  },
+  {
+   "beneficiary": "Farasis Energy (Zhenjiang) Co., Ltd",
+   "blocks": 1,
+   "credits": 12431
+  },
+  {
+   "beneficiary": "indigo passengers",
+   "blocks": 2,
+   "credits": 12358
+  },
+  {
+   "beneficiary": "UNESCO",
+   "blocks": 1,
+   "credits": 12221
+  },
+  {
+   "beneficiary": "Quota di compensazione emissioni 2025 \u2013 Fileni Alimentare S.p.A",
+   "blocks": 1,
+   "credits": 11984
+  },
+  {
+   "beneficiary": "Marco Polo Reisen GmbH",
+   "blocks": 2,
+   "credits": 11952
+  },
+  {
+   "beneficiary": "LifeGate Climate Action per PostePay",
+   "blocks": 1,
+   "credits": 11402
+  },
+  {
+   "beneficiary": "Groenbalans BV",
+   "blocks": 3,
+   "credits": 10300
+  },
+  {
+   "beneficiary": "Deutsche Telekom AG",
+   "blocks": 4,
+   "credits": 9525
+  },
+  {
+   "beneficiary": "Aviva Zero",
+   "blocks": 2,
+   "credits": 9509
+  },
+  {
+   "beneficiary": "Deutsche Apotheker- und \u00c4rztebank eG",
+   "blocks": 2,
+   "credits": 8600
+  },
+  {
+   "beneficiary": "Magis Energia SpA",
+   "blocks": 3,
+   "credits": 8296
+  },
+  {
+   "beneficiary": "Protinus IT B.V.",
+   "blocks": 3,
+   "credits": 8080
+  },
+  {
+   "beneficiary": "Temasek Holdings (Private) Limited",
+   "blocks": 2,
+   "credits": 7000
+  },
+  {
+   "beneficiary": "UNOPS",
+   "blocks": 1,
+   "credits": 6174
+  },
+  {
+   "beneficiary": "Airflo B.V.",
+   "blocks": 2,
+   "credits": 5679
+  },
+  {
+   "beneficiary": "InterGlobe Aviation",
+   "blocks": 1,
+   "credits": 5438
+  },
+  {
+   "beneficiary": "ESCRS Trading Ltd.",
+   "blocks": 2,
+   "credits": 5386
+  },
+  {
+   "beneficiary": "Turkcell \u0130leti\u015fim Hizmetleri A.\u015e. ve T\u00fcrkiye\u2019de faaliyet g\u00f6steren di\u011fer \u015firketler",
+   "blocks": 1,
+   "credits": 5085
+  },
+  {
+   "beneficiary": "Retired under the name of Perk SL - for the purpose of Green Trip Q3 2026",
+   "blocks": 1,
+   "credits": 5000
+  },
+  {
+   "beneficiary": "Retired under the name of Perk SL - for the purpose of Green Trip Q2 2026",
+   "blocks": 1,
+   "credits": 5000
+  },
+  {
+   "beneficiary": "SOCIETY FOR WORLDWIDE INTERBANK FINANCIAL TELECOMMUNICATION SC, also known as \u2018Swift\u2019",
+   "blocks": 1,
+   "credits": 4654
+  },
+  {
+   "beneficiary": "Gasversorgung Unterfranken GmbH (gasuf)",
+   "blocks": 1,
+   "credits": 4607
+  },
+  {
+   "beneficiary": "Atmoz Consulting AB",
+   "blocks": 6,
+   "credits": 4514
+  },
+  {
+   "beneficiary": "Postkodlotteriet AB.",
+   "blocks": 2,
+   "credits": 4287
+  },
+  {
+   "beneficiary": "Bechtle B.V.",
+   "blocks": 2,
+   "credits": 4197
+  },
+  {
+   "beneficiary": "Acumatica, Inc.",
+   "blocks": 1,
+   "credits": 4089
+  },
+  {
+   "beneficiary": "Larnaka International Airport",
+   "blocks": 1,
+   "credits": 4000
+  },
+  {
+   "beneficiary": "Computacenter B.V.",
+   "blocks": 1,
+   "credits": 3947
+  },
+  {
+   "beneficiary": "Universit\u00e4t Z\u00fcrich",
+   "blocks": 1,
+   "credits": 3924
+  },
+  {
+   "beneficiary": "Furthr ltd",
+   "blocks": 1,
+   "credits": 3500
+  },
+  {
+   "beneficiary": "Lindblad Expeditions Family of Companies",
+   "blocks": 1,
+   "credits": 2853
+  },
+  {
+   "beneficiary": "Ove Arup and Partners International Limited",
+   "blocks": 1,
+   "credits": 2500
+  },
+  {
+   "beneficiary": "Less Than Zero (Pty) Ltd",
+   "blocks": 2,
+   "credits": 2500
+  },
+  {
+   "beneficiary": "Bullfrog Power Inc.",
+   "blocks": 1,
+   "credits": 2469
+  },
+  {
+   "beneficiary": "Pro Warehouse",
+   "blocks": 2,
+   "credits": 2341
+  },
+  {
+   "beneficiary": "Instituut Fysieke Veiligheid",
+   "blocks": 1,
+   "credits": 2327
+  },
+  {
+   "beneficiary": "EV Wind Park SH.P.K.",
+   "blocks": 1,
+   "credits": 2190
+  },
+  {
+   "beneficiary": "Laird Norton Enterprises",
+   "blocks": 1,
+   "credits": 2154
+  },
+  {
+   "beneficiary": "MAG Airport Limited",
+   "blocks": 1,
+   "credits": 2000
+  },
+  {
+   "beneficiary": "My Hanse Explorer",
+   "blocks": 1,
+   "credits": 2000
+  },
+  {
+   "beneficiary": "Banco ABC",
+   "blocks": 1,
+   "credits": 1835
+  },
+  {
+   "beneficiary": "Arneg UK",
+   "blocks": 1,
+   "credits": 1751
+  },
+  {
+   "beneficiary": "Brussels South Charleroi Airport",
+   "blocks": 1,
+   "credits": 1740
+  },
+  {
+   "beneficiary": "Federated Hermes Limited",
+   "blocks": 1,
+   "credits": 1691
+  },
+  {
+   "beneficiary": "Pafos International Airport",
+   "blocks": 2,
+   "credits": 1500
+  },
+  {
+   "beneficiary": "SLTN IT Products BV",
+   "blocks": 1,
+   "credits": 1471
+  },
+  {
+   "beneficiary": "Patch buyers",
+   "blocks": 2,
+   "credits": 1328
+  },
+  {
+   "beneficiary": "Ostrum Asset Management",
+   "blocks": 2,
+   "credits": 1310
+  },
+  {
+   "beneficiary": "Rothschild & Co",
+   "blocks": 1,
+   "credits": 1291
+  },
+  {
+   "beneficiary": "CJSC Belarusian Telecommunications Network ve Belarus\u2019da faaliyet g\u00f6steren di\u011fer \u015firketler",
+   "blocks": 1,
+   "credits": 1247
+  },
+  {
+   "beneficiary": "Environmental Defense Fund",
+   "blocks": 1,
+   "credits": 1243
+  },
+  {
+   "beneficiary": "ALARKO HOLD\u0130NG A.\u015e.",
+   "blocks": 2,
+   "credits": 1131
+  },
+  {
+   "beneficiary": "ClimeCo Green Customers",
+   "blocks": 37,
+   "credits": 1127
+  },
+  {
+   "beneficiary": "Corporaci\u00f3n Andina de Fomento",
+   "blocks": 3,
+   "credits": 1100
+  },
+  {
+   "beneficiary": "EPA Victoria",
+   "blocks": 1,
+   "credits": 1050
+  },
+  {
+   "beneficiary": "Wyndham City Council",
+   "blocks": 1,
+   "credits": 1015
+  },
+  {
+   "beneficiary": "LifeStraw",
+   "blocks": 1,
+   "credits": 865
+  },
+  {
+   "beneficiary": "Department of Internal Affairs (New Zealand)",
+   "blocks": 6,
+   "credits": 859
+  },
+  {
+   "beneficiary": "Allsafe GmbH & Co. KG",
+   "blocks": 2,
+   "credits": 817
+  },
+  {
+   "beneficiary": "\u6c5f\u82cf\u6fb3\u601d\u67cf\u6069\u88c5\u9970\u6750\u6599\u6709\u9650\u516c\u53f8 Jiangsu Osborne Decorative Materials Co., Ltd",
+   "blocks": 1,
+   "credits": 807
+  },
+  {
+   "beneficiary": "Farnborough Airport Ltd",
+   "blocks": 1,
+   "credits": 800
+  },
+  {
+   "beneficiary": "Beddeleem NV",
+   "blocks": 1,
+   "credits": 700
+  },
+  {
+   "beneficiary": "RDR SpA SB",
+   "blocks": 1,
+   "credits": 686
+  },
+  {
+   "beneficiary": "Marine Money",
+   "blocks": 1,
+   "credits": 663
+  },
+  {
+   "beneficiary": "Onboard Earth",
+   "blocks": 1,
+   "credits": 658
+  },
+  {
+   "beneficiary": "Guardians of New Zealand Superannuation",
+   "blocks": 1,
+   "credits": 600
+  },
+  {
+   "beneficiary": "J P Boden & Co Ltd",
+   "blocks": 1,
+   "credits": 582
+  },
+  {
+   "beneficiary": "IQ-EQ Group Holdings S.\u00e0 r.l",
+   "blocks": 1,
+   "credits": 550
+  },
+  {
+   "beneficiary": "Microsoft",
+   "blocks": 1,
+   "credits": 500
+  },
+  {
+   "beneficiary": "OR Royalties Inc.",
+   "blocks": 1,
+   "credits": 500
+  },
+  {
+   "beneficiary": "GenZero",
+   "blocks": 1,
+   "credits": 498
+  },
+  {
+   "beneficiary": "Stockholm Exergi",
+   "blocks": 1,
+   "credits": 492
+  },
+  {
+   "beneficiary": "Eureko Sigorta A.\u015e.",
+   "blocks": 1,
+   "credits": 461
+  },
+  {
+   "beneficiary": "Enabling Qapital AG",
+   "blocks": 1,
+   "credits": 440
+  },
+  {
+   "beneficiary": "Warren and Mahoney Limited",
+   "blocks": 1,
+   "credits": 423
+  },
+  {
+   "beneficiary": "University of Technology Sydney",
+   "blocks": 1,
+   "credits": 397
+  },
+  {
+   "beneficiary": "The New Zealand Lotteries Commission (Lotto New Zealand)",
+   "blocks": 2,
+   "credits": 362
+  },
+  {
+   "beneficiary": "Var Group SpA",
+   "blocks": 1,
+   "credits": 311
+  },
+  {
+   "beneficiary": "Hub Australia Pty Ltd",
+   "blocks": 1,
+   "credits": 300
+  },
+  {
+   "beneficiary": "Midlands Holdings Limited",
+   "blocks": 1,
+   "credits": 300
+  },
+  {
+   "beneficiary": "K\u0131br\u0131s Mobile Telekom\u00fcnikasyon Limited \u015eirketi ve Kuzey K\u0131br\u0131s T\u00fcrk Cumhuriyetin\u2019de faaliyet g\u00f6steren di\u011fer \u015firketler",
+   "blocks": 1,
+   "credits": 298
+  },
+  {
+   "beneficiary": "Rivertex Technical Fabrics Group BV",
+   "blocks": 1,
+   "credits": 294
+  },
+  {
+   "beneficiary": "FairClimateFund Website Sales to Individual- and or Small Business End Users",
+   "blocks": 6,
+   "credits": 285
+  },
+  {
+   "beneficiary": "Laird Norton Company",
+   "blocks": 1,
+   "credits": 262
+  },
+  {
+   "beneficiary": "Marmot Tours LTD",
+   "blocks": 1,
+   "credits": 250
+  },
+  {
+   "beneficiary": "Patch Technologies, Inc.",
+   "blocks": 1,
+   "credits": 250
+  },
+  {
+   "beneficiary": "Maycroft Group Limited",
+   "blocks": 1,
+   "credits": 250
+  },
+  {
+   "beneficiary": "ChrysCapital Group",
+   "blocks": 1,
+   "credits": 246
+  },
+  {
+   "beneficiary": "Meram Elektrik Perakende Sat\u0131\u015f A.\u015e.",
+   "blocks": 2,
+   "credits": 242
+  },
+  {
+   "beneficiary": "Emma Lewisham Limited",
+   "blocks": 1,
+   "credits": 231
+  },
+  {
+   "beneficiary": "Energy 350",
+   "blocks": 1,
+   "credits": 207
+  },
+  {
+   "beneficiary": "Boston Manor Park Live",
+   "blocks": 1,
+   "credits": 165
+  },
+  {
+   "beneficiary": "AIRBUS Transport International",
+   "blocks": 1,
+   "credits": 135
+  },
+  {
+   "beneficiary": "EcoSecurities Group Limited",
+   "blocks": 1,
+   "credits": 131
+  },
+  {
+   "beneficiary": "Bush and Beach (2013) Limited",
+   "blocks": 1,
+   "credits": 130
+  },
+  {
+   "beneficiary": "Greater London Authority",
+   "blocks": 1,
+   "credits": 127
+  },
+  {
+   "beneficiary": "Fredblad Arkitekter",
+   "blocks": 1,
+   "credits": 122
+  },
+  {
+   "beneficiary": "CyberUK 2026",
+   "blocks": 1,
+   "credits": 110
+  },
+  {
+   "beneficiary": "ALTEK ALARKO ELEKTR\u0130K SANTRALLARI TES\u0130S \u0130\u015eLETME VE T\u0130CARET A.\u015e.",
+   "blocks": 1,
+   "credits": 107
+  },
+  {
+   "beneficiary": "Maicon Infrakraft AB",
+   "blocks": 1,
+   "credits": 100
+  },
+  {
+   "beneficiary": "ODARAMA REZERVASYON ORGANIZASYON KIRALAMA AS",
+   "blocks": 1,
+   "credits": 100
+  },
+  {
+   "beneficiary": "Quasar Expeditions Patagonia SpA",
+   "blocks": 1,
+   "credits": 87
+  },
+  {
+   "beneficiary": "Chesnara Plc",
+   "blocks": 1,
+   "credits": 80
+  },
+  {
+   "beneficiary": "Stanton Williams Limited",
+   "blocks": 1,
+   "credits": 74
+  },
+  {
+   "beneficiary": "The Stone Family Foundation",
+   "blocks": 1,
+   "credits": 59
+  },
+  {
+   "beneficiary": "AVTEL Holdings Pte Ltd",
+   "blocks": 1,
+   "credits": 55
+  },
+  {
+   "beneficiary": "\u6c5f\u82cf\u4ec5\u4e00\u8054\u5408\u667a\u9020\u6709\u9650\u516c\u53f8 JOYEA  Co.,Ltd",
+   "blocks": 1,
+   "credits": 54
+  },
+  {
+   "beneficiary": "Dimsi Incoming Operator srl",
+   "blocks": 1,
+   "credits": 52
+  },
+  {
+   "beneficiary": "GOOD Search",
+   "blocks": 1,
+   "credits": 50
+  },
+  {
+   "beneficiary": "Agilitas Private Equity Services",
+   "blocks": 1,
+   "credits": 50
+  },
+  {
+   "beneficiary": "Barnes Beagley Doher Limited",
+   "blocks": 1,
+   "credits": 49
+  },
+  {
+   "beneficiary": "Fondazione Terna",
+   "blocks": 1,
+   "credits": 47
+  },
+  {
+   "beneficiary": "Namatours Sarl",
+   "blocks": 1,
+   "credits": 42
+  },
+  {
+   "beneficiary": "Urner Kantonalbank",
+   "blocks": 1,
+   "credits": 40
+  },
+  {
+   "beneficiary": "Berner Kantonalbank",
+   "blocks": 1,
+   "credits": 40
+  },
+  {
+   "beneficiary": "Co2mission",
+   "blocks": 4,
+   "credits": 31
+  },
+  {
+   "beneficiary": "Nevotex AB",
+   "blocks": 1,
+   "credits": 29
+  },
+  {
+   "beneficiary": "commited",
+   "blocks": 1,
+   "credits": 29
+  },
+  {
+   "beneficiary": "Graub\u00fcndner Kantonalbank",
+   "blocks": 1,
+   "credits": 20
+  },
+  {
+   "beneficiary": "Mitsui O.S.K. Lines, Ltd.",
+   "blocks": 1,
+   "credits": 19
+  },
+  {
+   "beneficiary": "Bayfields Group Limited",
+   "blocks": 1,
+   "credits": 19
+  },
+  {
+   "beneficiary": "CC Anchor Pte. Ltd - Colliers Real Estate Management",
+   "blocks": 1,
+   "credits": 16
+  },
+  {
+   "beneficiary": "Seriveneta SRL SB",
+   "blocks": 1,
+   "credits": 16
+  },
+  {
+   "beneficiary": "Changeworks Resources For Life",
+   "blocks": 1,
+   "credits": 15
+  },
+  {
+   "beneficiary": "Trivector",
+   "blocks": 1,
+   "credits": 13
+  },
+  {
+   "beneficiary": "Don't Panic London",
+   "blocks": 1,
+   "credits": 10
+  },
+  {
+   "beneficiary": "CCM Architects Limited",
+   "blocks": 1,
+   "credits": 6
+  },
+  {
+   "beneficiary": "Waugh Infrastructure Management Limited",
+   "blocks": 1,
+   "credits": 6
+  },
+  {
+   "beneficiary": "R.S.I. Srl",
+   "blocks": 1,
+   "credits": 5
+  },
+  {
+   "beneficiary": "Normedi AB",
+   "blocks": 1,
+   "credits": 3
+  },
+  {
+   "beneficiary": "Altensis \u0130n\u015faat Enerji San. ve Tic. Ltd. \u015eti.",
+   "blocks": 1,
+   "credits": 2
+  },
+  {
+   "beneficiary": "Aturto ,Itanagar, Arunachal Pradesh, India",
+   "blocks": 1,
+   "credits": 2
+  },
+  {
+   "beneficiary": "KUVEYT T\u00dcRK KATILIM BANKASI A.\u015e.",
+   "blocks": 1,
+   "credits": 2
+  },
+  {
+   "beneficiary": "OZYEGIN UNIVERSITESI",
+   "blocks": 1,
+   "credits": 1
+  },
+  {
+   "beneficiary": "\u6c5f\u82cf\u5927\u6676\u65b0\u5851\u79d1\u6280\u6709\u9650\u516c\u53f8 Jiangsu Dajing New Plastic Technology Co., Ltd",
+   "blocks": 1,
+   "credits": 1
+  },
+  {
+   "beneficiary": "\u82cf\u5dde\u4e2d\u8f66\u8f68\u9053\u4ea4\u901a\u8f66\u8f86\u6709\u9650\u516c\u53f8 Suzhou CRRC Rail Transport Co., Ltd",
+   "blocks": 1,
+   "credits": 1
+  }
+ ]
+}

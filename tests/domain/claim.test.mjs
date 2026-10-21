@@ -64,3 +64,9 @@ test('reads "thousand" and German Tonnen', () => {
   assert.equal(extractClaim('approximately 33 thousand tonnes of CO2e').quantity, 33000);
   assert.equal(extractClaim('750 Tonnen CO2e stillgelegt').quantity, 750);
 });
+
+test('G27 a quantity may carry a standard or quality word before the credit unit', () => {
+  assert.equal(extractClaim('In fiscal year 2024, the Business Access Segment retired 4,713 Gold Standard-compliant verified emission reductions (VERs).').quantity, 4713);
+  assert.equal(extractClaim('We retired 1,200 Verra certified credits.').quantity, 1200);
+  assert.equal(extractClaim('We hired 4,713 Gold Standard auditors.').quantity, null);
+});

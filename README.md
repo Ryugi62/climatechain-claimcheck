@@ -46,8 +46,9 @@ Cost to keep running: hosting is static files on GitHub Pages ($0), registry rea
 | Wording check on 72 frozen pairs (browser, [docs/NARRATIVE_EVAL.md](docs/NARRATIVE_EVAL.md)) | false May conflict on matching wording 2.8% (1/36), Backed on matching wording 80.6% (29/36), median 95 ms per sentence. Weakness: of 36 changed sentences only 27.8% (10/36) were flagged May conflict, the rest ended as No receipt, none as Backed |
 | Do real reports print a serial? ([docs/SERIAL_PREVALENCE.md](docs/SERIAL_PREVALENCE.md)) | 0 of 10 public sustainability/annual reports contain a credit serial; such sentences still return No serial from the serial check |
 | Sentence without a serial, first-time real sentences ([docs/BENEFICIARY_EVAL.md](docs/BENEFICIARY_EVAL.md)) | 3 of 10 reports contain a retirement sentence with a quantity; 2 of 10 reports get at least one registry candidate for their sentence; 0 of 10 have a candidate total equal to the sentence (registry total lower every time: Gold Standard only, other registries not looked up). 7 of 10 reports are from a company with retired Gold Standard blocks under its own name. Same 10 reports as the serial measurement (in-sample for that question, first-time sentences for this path) |
+| Wider sample of real company sentences ([docs/REAL_SENTENCE_HUNT.md](docs/REAL_SENTENCE_HUNT.md)) | 30 further public reports chosen by a registry-first rule written in that file: 6 of 30 reports contain a retirement sentence with a quantity; 6 of 30 get at least one registry candidate for their sentence; 0 of 30 have a candidate total equal to the sentence (nearest: 97,000 t in the sentence against 98,266 t in the registry). All 30 names come from the registry's own list of beneficiaries (the product finds blocks under the typed name for 27 of them), so this is an upper bound, not a prevalence. Separately, one real sentence found by a targeted search (not part of the 30): United Internet, Sustainability Report 2024, "the Business Access Segment retired 4,713 Gold Standard-compliant verified emission reductions", equals one retired Gold Standard block of 4,713 credits (`GS1-1-KE-GS11200-16-2022-25937-944-5656`) under the group company 1&1 Versatel; registered on Sepolia ([docs/real-sentence-testnet.json](docs/real-sentence-testnet.json)) |
 | One flow, one set of credits, Sepolia ([docs/flow-testnet.json](docs/flow-testnet.json)) | sentence without serial -> 2 Gold Standard candidates, total 131,201 t = the sentence -> both ranges registered (2 real transactions) -> second claim on the same range reverted with `RangeOverlap` (real transaction) |
-| Domain tests | 107 pass (`npm run test:domain`) |
+| Domain tests | 111 pass (`npm run test:domain`) |
 | Contract tests | 31 pass (`npm run test:contract`) |
 | Gas for one registration | about 162k first on the local test chain, about 223k at the 40th range of one batch; 683,777 on Sepolia for the same call because Sepolia charges about 5 times more per new storage slot (measured, see below) |
 
@@ -97,7 +98,7 @@ docs/          static demo page, THREAT_MODEL.md
 ## Run it
 ```
 npm install
-npm test                # 107 domain + 31 contract tests
+npm test                # 111 domain + 31 contract tests
 npm run eval:real       # extractor accuracy on real certificates -> data/eval/real-results.json
 node scripts/eval_beneficiary.mjs [--offline]   # sentence-without-serial path on 10 real reports -> docs/BENEFICIARY_EVAL.md
 IEEE_TESTNET_KEY_FILE=<keyfile> npx hardhat run --network testnet scripts/flow_testnet.cjs   # the one-flow Sepolia run

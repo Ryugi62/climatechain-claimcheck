@@ -3,7 +3,10 @@ import { findSerials, stripSerials } from './serial.mjs';
 // number + unit. Units: t, tCO2(e), tonnes, tons, kt, Mt, credits, VCUs, VERs, "million tonnes"
 const NUM = '(\\d{1,3}(?:\\.\\d{3})+,\\d+|\\d{1,3}(?:,\\d{3})+(?:\\.\\d+)?|\\d{1,3}(?:[ \\u00a0\\u202f]\\d{3})+|\\d{1,3}(?:\\.\\d{3})+(?!\\d)|\\d+(?:[.,]\\d+)?)';
 const UNIT = '(?:\\s*(million|thousand|m)\\b)?\\s*(verified\\s+carbon\\s+units?|verified\\s+emission\\s+reductions?|mtco2e?|ktco2e?|tco2e?|tonnes?|tons?|tonnen|metrics?\\s+tons?|mt|kt|t|(?:carbon\\s+)?credits?|vcus?|vers?)(?![a-z])';
-const QTY_RE = new RegExp(`${NUM}${UNIT}`, 'i');
+// G27: "4,713 Gold Standard-compliant verified emission reductions": standard/quality words may sit between the number and a credit unit.
+const QUAL = '(?:(?:gold\\s+standard|verra|vcs|certified|high-quality|[a-z]+-(?:compliant|certified))[\\s-]*(?:compliant|certified)?\\s+)';
+const CREDIT_UNIT = '(?:verified\\s+carbon\\s+units?|verified\\s+emission\\s+reductions?|(?:carbon\\s+)?credits?|vcus?|vers?)';
+const QTY_RE = new RegExp(`${NUM}(?:${UNIT}|\\s+${QUAL}+(${CREDIT_UNIT})(?![a-z]))`, 'i');
 
 function parseNumber(t) {
   if (/^\d{1,3}(\.\d{3})+,\d+$/.test(t)) return Number(t.replace(/\./g, '').replace(',', '.'));
@@ -26,7 +29,7 @@ export function extractClaim(text) {
     const before = body.slice(Math.max(0, m.index - 1), m.index);
     if (/[\d.,-]/.test(before)) continue;
     let n = parseNumber(m[1]);
-    const unit = m[3].toLowerCase().replace(/\s+/g, '');
+    const unit = (m[3] || m[4]).toLowerCase().replace(/\s+/g, '');
     if (m[2]) n *= m[2].toLowerCase() === 'thousand' ? 1e3 : 1e6;
     else if (unit.startsWith('mt')) n *= 1e6;
     else if (unit.startsWith('kt')) n *= 1e3;

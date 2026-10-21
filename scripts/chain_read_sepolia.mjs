@@ -18,5 +18,15 @@ for (const who of ['Company B', flow.claimant]) {
   const r = await checkClaim({ text, claimant: who }, { records, ledger: new Ledger(), chain, knownClaims });
   out.claims[who] = { verdict: r.verdict, source: r.lines[0].source || null, firstClaimant: r.lines[0].firstClaimant || null, overlap: r.lines[0].overlap || null, chainClaimHash: r.lines[0].chainClaimHash || null, chainError: r.chainError || null };
 }
+// the real company-written sentence (arm B), registered on chain by scripts/register_real_testnet.cjs
+const real = JSON.parse(fs.readFileSync('docs/real-sentence-testnet.json', 'utf8'));
+const rtext = `In 2022 ${real.claimant} retired ${real.credits.toLocaleString('en-US')} tCO2e (serial ${real.serial}).`;
+const rrecords = { find: async (x) => (x.raw === real.serial ? { serial_number: real.serial, status: 'RETIRED', number_of_credits: real.credits } : null) };
+const rknown = [...knownClaims, { claimant: real.claimant, claimHash: claimHashOf(real.claimant, real.sentence) }];
+out.real = { serial: real.serial, registrationTx: real.tx.hash, claims: {} };
+for (const who of ['Company B', real.claimant]) {
+  const r = await checkClaim({ text: rtext, claimant: who }, { records: rrecords, ledger: new Ledger(), chain, knownClaims: rknown });
+  out.real.claims[who] = { verdict: r.verdict, source: r.lines[0].source || null, firstClaimant: r.lines[0].firstClaimant || null, overlap: r.lines[0].overlap || null, chainClaimHash: r.lines[0].chainClaimHash || null, chainError: r.chainError || null };
+}
 fs.writeFileSync('docs/chain-read-sepolia.json', JSON.stringify(out, null, 2) + '\n');
 console.log(JSON.stringify(out, null, 2));

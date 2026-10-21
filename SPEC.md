@@ -76,6 +76,7 @@ Hackathon track: Track 1, Carbon Markets & Emissions Transparency (double counti
 - **G23 Own claim.** Given the range was registered under a claim hash that is known to belong to claimant B (hash of `claim:<B>:<sentence>` for the sentence being checked, or an entry of the known-claims list), when B checks it, then the chain does not make it DUPLICATE (verdict by the normal rules).
 - **G24 Chain unreachable.** Given the RPC fails, then the verdict is exactly what it is without the chain port and the result carries `chainError`; the chain never turns a failure into DUPLICATE and never changes MISMATCH/NOT_FOUND into MATCH.
 - **G25 No chain port.** Given no chain port, then every result is identical to before (regression 0; the local Ledger still answers G5).
+- **G27 Quality words before a credit unit.** Given "retired 4,713 Gold Standard-compliant verified emission reductions", then the quantity is 4,713; given "4,713 Gold Standard auditors", then no quantity.
 - **G26 Same encoding.** The batch key is hashed on chain as keccak256 of the UTF-8 string `registry:project:vintage:batch`; the JS keccak and ABI encoding in the page equal ethers' output for the same inputs (checked in tests), so the page asks the contract the same question a wallet would.
 
 ### Who registers, and why (adoption path; design, partly out of scope)
@@ -100,6 +101,7 @@ The registrant is the party that checks reports for others: an assurance provide
 | S15 | One real Gold Standard range goes sentence -> candidate -> Sepolia registration -> second claim reverts, with tx hashes | `docs/flow-testnet.json` |
 | S16 | The gas gap between the local chain (162k) and Sepolia (684k) is explained by measurement: same bytecode, same calldata, same slot count, per-slot price ratio; README states it and no claim says "not investigated" | `docs/gas-diagnosis.json`, `tests/domain/gas-diagnosis.test.mjs` |
 | S17 | Chain read: >= 10 new tests written first and seen failing (keccak and ABI equal ethers, G22-G25, adapter against the local Hardhat chain); one real Sepolia read shows Company B DUPLICATE from the contract | `npm test`, `docs/chain-read-sepolia.json` |
+| S18 | Wider real-sentence sample: >= 30 first-time public reports chosen by a rule written in `docs/REAL_SENTENCE_HUNT.md`; count of reports with a retirement sentence, with candidates and with an equal total, honest including 0; a search-first match is reported separately and never counted in n/30 | `docs/REAL_SENTENCE_HUNT.md`, `data/reports2/results.json`, `tests/domain/hunt.test.mjs` |
 | S8 | Cost per registration on chain reported in gas | contract test output |
 
 ### Pre-registration for S9-S12 (2026-10-21, before any model run)

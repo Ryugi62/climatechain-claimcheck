@@ -1,0 +1,21 @@
+{
+  "network": "testnet",
+  "chainId": "11155111",
+  "contract": "0xbBC97a57c7f81F77dbA1b1b2FbC29898b87F7bDF",
+  "source": "https://report.united-internet.de/sustainability/2024/environment/climate-change-mitigation-and-climate-change/ghg-removals-and-ghg-mitigation-projects-financed-through-carbon-credits.html",
+  "sentence": "In fiscal year 2024, the Business Access Segment retired 4,713 Gold Standard-compliant verified emission reductions (VERs).",
+  "claimant": "1&1 Versatel",
+  "serial": "GS1-1-KE-GS11200-16-2022-25937-944-5656",
+  "batchKey": "GOLD_STANDARD:GS11200:2022:25937",
+  "range": [
+    944,
+    5656
+  ],
+  "credits": 4713,
+  "tx": {
+    "hash": "0xac3987738034dfa7e3abe17b74e01039d4efc00a0bda42bc5e2d5bc4f76de08f",
+    "status": 1,
+    "gasUsed": 683789,
+    "block": 11959712
+  }
+}

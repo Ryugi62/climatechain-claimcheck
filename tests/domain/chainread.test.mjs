@@ -110,4 +110,9 @@ test('S17 the recorded real Sepolia read shows Company B DUPLICATE from the chai
   assert.equal(d.claims['Company B'].source, 'chain');
   assert.equal(d.claims['Company B'].overlap, 61544);
   assert.equal(d.claims['Google'].verdict, 'MATCH');
+  assert.equal(d.real.claims['Company B'].verdict, 'DUPLICATE');
+  assert.equal(d.real.claims['Company B'].source, 'chain');
+  assert.equal(d.real.claims['Company B'].firstClaimant, '1&1 Versatel');
+  assert.equal(d.real.claims['Company B'].overlap, 4713);
+  assert.equal(d.real.claims['1&1 Versatel'].verdict, 'MATCH');
 });

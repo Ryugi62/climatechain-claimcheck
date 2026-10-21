@@ -1,5 +1,5 @@
 {
-  "readAt": "2026-10-21T03:05:13.336Z",
+  "readAt": "2026-10-21T03:22:25.951Z",
   "rpcUrl": "https://ethereum-sepolia-rpc.publicnode.com",
   "contract": "0xbBC97a57c7f81F77dbA1b1b2FbC29898b87F7bDF",
   "serial": "GS1-1-MU-GS12147-21-2022-27150-1257-62800",
@@ -20,6 +20,28 @@
       "overlap": null,
       "chainClaimHash": null,
       "chainError": null
+    }
+  },
+  "real": {
+    "serial": "GS1-1-KE-GS11200-16-2022-25937-944-5656",
+    "registrationTx": "0xac3987738034dfa7e3abe17b74e01039d4efc00a0bda42bc5e2d5bc4f76de08f",
+    "claims": {
+      "Company B": {
+        "verdict": "DUPLICATE",
+        "source": "chain",
+        "firstClaimant": "1&1 Versatel",
+        "overlap": 4713,
+        "chainClaimHash": "0xbd907ac1dc6bb0466073f82895796853a0732283f87916849d07153eedf58daa",
+        "chainError": null
+      },
+      "1&1 Versatel": {
+        "verdict": "MATCH",
+        "source": null,
+        "firstClaimant": null,
+        "overlap": null,
+        "chainClaimHash": null,
+        "chainError": null
+      }
     }
   }
 }

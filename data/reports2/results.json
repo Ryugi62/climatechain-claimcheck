@@ -1,0 +1,1961 @@
+{
+ "measured": "2026-10-21",
+ "reports": 30,
+ "with_sentence": 6,
+ "sentence_with_candidates": 6,
+ "sentence_quantity_equal": 0,
+ "company_has_gs_records": 27,
+ "rows": [
+  {
+   "id": "engie-chile-ir",
+   "publisher": "ENGIE Energia Chile (integrated report, English)",
+   "claimant": "ENGIE Energía Chile",
+   "url": "https://www.engie.cl/wp-content/uploads/2024/10/ENGIE-2024-Integrated-Report-Ingles.pdf",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 5,
+    "total": 548905
+   },
+   "results": []
+  },
+  {
+   "id": "hilti-sr",
+   "publisher": "Hilti Group (sustainability report)",
+   "claimant": "Hilti",
+   "url": "https://www.hilti.co.uk/content/dam/documents/Media-Release/company-report/hilti-sustainability-report.pdf",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 14,
+    "total": 225795
+   },
+   "results": []
+  },
+  {
+   "id": "goodenergy-ar24",
+   "publisher": "Good Energy (annual report 2024)",
+   "claimant": "Good Energy",
+   "url": "https://www.goodenergy.co.uk/wp-content/uploads/2025/04/Good-Energy-Annual-Report-2024.pdf",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 7,
+    "total": 50237
+   },
+   "results": []
+  },
+  {
+   "id": "dustin-ar2324",
+   "publisher": "Dustin Group (annual and sustainability report 2023/24)",
+   "claimant": "Dustin",
+   "url": "https://mb.cision.com/Main/11857/4067914/3119707.pdf",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 5,
+    "total": 19
+   },
+   "results": []
+  },
+  {
+   "id": "eni-plenitude-24",
+   "publisher": "Eni Plenitude (annual report and sustainability report 2024, Italian)",
+   "claimant": "Eni Plenitude",
+   "url": "https://eniplenitude.com/content/dam/enigaseluce/documenti/pdf/footer/bilanci/Bilancio_Plenitude_2024.pdf",
+   "sentences": 1,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 90,
+    "total": 4551876
+   },
+   "results": [
+    {
+     "page": 65,
+     "text": "Relativamente al gas consumato dai clienti, saranno compensate 3,1416 milioni di tCO2eq tramite l’acquisto di crediti di carbonio di elevata qualità, ottenuti principalmente da Natural Climate Solutions.",
+     "text_en": "Eni Plenitude offset 3,141,600 tCO2eq through carbon credits.",
+     "result": {
+      "claimant": "Eni Plenitude",
+      "candidates": [
+       {
+        "serial_number": "GS1-1-SO-GS12285-16-2024-30723-182481-199679",
+        "number_of_credits": 17199,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2026-10-16",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nel Q4-2025, aventi un’offerta che prevede questo servizio \n",
+        "project_name": "GS10789 GS10790 RVPA-52 Efficient and Clean  cooking for Households in Somalia",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-SO-GS12285-16-2024-30723-145985-182480",
+        "number_of_credits": 36496,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2026-10-16",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nel Q4-2025, aventi un’offerta che prevede questo servizio \n",
+        "project_name": "GS10789 GS10790 RVPA-52 Efficient and Clean  cooking for Households in Somalia",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-SO-GS12285-16-2024-30723-1-145984",
+        "number_of_credits": 145984,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2026-10-16",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nel Q4-2025, aventi un’offerta che prevede questo servizio \n",
+        "project_name": "GS10789 GS10790 RVPA-52 Efficient and Clean  cooking for Households in Somalia",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-BR-GS12047-21-2024-30258-1-101885",
+        "number_of_credits": 101885,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2026-10-16",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nel Q4-2025, aventi un’offerta che prevede questo servizio \n",
+        "project_name": "Ecoparque Candeias Landfill Gas Project",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-BR-GS12047-21-2023-30257-1-198115",
+        "number_of_credits": 198115,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2026-10-16",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nel Q4-2025, aventi un’offerta che prevede questo servizio \n",
+        "project_name": "Ecoparque Candeias Landfill Gas Project",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-SO-GS12285-16-2024-29932-14034-17454",
+        "number_of_credits": 3421,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2026-02-25",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nell’anno 2025 fino al 30-09, aventi un’offerta che prevede questo servizio",
+        "project_name": "GS10789 GS10790 RVPA-52 Efficient and Clean  cooking for Households in Somalia",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-SO-GS12285-16-2024-29932-350-14033",
+        "number_of_credits": 13684,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2026-02-25",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nell’anno 2025 fino al 30-09, aventi un’offerta che prevede questo servizio",
+        "project_name": "GS10789 GS10790 RVPA-52 Efficient and Clean  cooking for Households in Somalia",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-SO-GS12285-16-2023-29931-160061-199080",
+        "number_of_credits": 39020,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2026-02-25",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nell’anno 2025 fino al 30-09, aventi un’offerta che prevede questo servizio",
+        "project_name": "GS10789 GS10790 RVPA-52 Efficient and Clean  cooking for Households in Somalia",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-SO-GS12285-16-2023-29931-3982-160060",
+        "number_of_credits": 156079,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2026-02-25",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nell’anno 2025 fino al 30-09, aventi un’offerta che prevede questo servizio",
+        "project_name": "GS10789 GS10790 RVPA-52 Efficient and Clean  cooking for Households in Somalia",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-SO-GS12285-16-2022-29930-42537-52906",
+        "number_of_credits": 10370,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2026-02-25",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nell’anno 2025 fino al 30-09, aventi un’offerta che prevede questo servizio",
+        "project_name": "GS10789 GS10790 RVPA-52 Efficient and Clean  cooking for Households in Somalia",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-SO-GS12285-16-2022-29930-6499-42536",
+        "number_of_credits": 36038,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2026-02-25",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nell’anno 2025 fino al 30-09, aventi un’offerta che prevede questo servizio",
+        "project_name": "GS10789 GS10790 RVPA-52 Efficient and Clean  cooking for Households in Somalia",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-SO-GS10790-16-2024-29902-4685-234204",
+        "number_of_credits": 229520,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2026-02-25",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nell’anno 2025 fino al 30-09, aventi un’offerta che prevede questo servizio",
+        "project_name": "GS10789 VPA1: Efficient and Clean Cooking for households in Somalia",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-BR-GS3434-5-2024-29693-1636-64404",
+        "number_of_credits": 62769,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2026-10-16",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nel Q4-2025, aventi un’offerta che prevede questo servizio \n",
+        "project_name": "GS3434 Uberlândia landfills I and II",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-BR-GS3434-5-2024-29692-2692-134581",
+        "number_of_credits": 131890,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2026-10-16",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nel Q4-2025, aventi un’offerta che prevede questo servizio \n",
+        "project_name": "GS3434 Uberlândia landfills I and II",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-BR-GS12047-21-2023-29048-163489-466834",
+        "number_of_credits": 303346,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2025-10-20",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nel Q4 2024, aventi un’offerta che prevede questo servizio",
+        "project_name": "Ecoparque Candeias Landfill Gas Project",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-BR-GS3434-5-2023-29045-96401-196400",
+        "number_of_credits": 100000,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2026-10-16",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nel Q4-2025, aventi un’offerta che prevede questo servizio \n",
+        "project_name": "GS3434 Uberlândia landfills I and II",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-BR-GS3434-5-2023-29045-96054-96400",
+        "number_of_credits": 347,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2026-10-16",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nel Q4-2025, aventi un’offerta che prevede questo servizio \n",
+        "project_name": "GS3434 Uberlândia landfills I and II",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-BR-GS3434-5-2023-29045-91060-96053",
+        "number_of_credits": 4994,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2026-10-16",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nel Q4-2025, aventi un’offerta che prevede questo servizio \n",
+        "project_name": "GS3434 Uberlândia landfills I and II",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-BR-GS12062-5-2023-28461-12167-95877",
+        "number_of_credits": 83711,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2026-02-25",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nell’anno 2025 fino al 30-09, aventi un’offerta che prevede questo servizio",
+        "project_name": "CTL Landfill Gas Project",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-KE-GS5642-16-2024-27988-1247-62326",
+        "number_of_credits": 61080,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2026-02-25",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nell’anno 2025 fino al 30-09, aventi un’offerta che prevede questo servizio",
+        "project_name": "Burn Stoves Project in Kenya",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-KE-GS5642-16-2023-27987-163071-253630",
+        "number_of_credits": 90560,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2026-02-25",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nell’anno 2025 fino al 30-09, aventi un’offerta che prevede questo servizio",
+        "project_name": "Burn Stoves Project in Kenya",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-SO-GS10790-16-2024-27390-129523-129593",
+        "number_of_credits": 71,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2025-10-20",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nel Q4 2024, aventi un’offerta che prevede questo servizio",
+        "project_name": "GS10789 VPA1: Efficient and Clean Cooking for households in Somalia",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-SO-GS10790-16-2024-27390-2594-129522",
+        "number_of_credits": 126929,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "GS10789 VPA1: Efficient and Clean Cooking for households in Somalia",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-SO-GS10790-16-2023-27389-672034-678688",
+        "number_of_credits": 6655,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2025-10-20",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nel Q4 2024, aventi un’offerta che prevede questo servizio",
+        "project_name": "GS10789 VPA1: Efficient and Clean Cooking for households in Somalia",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-SO-GS10790-16-2023-27389-378689-672033",
+        "number_of_credits": 293345,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2025-02-28",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nell’anno 2024 fino al 30 -09, aventi un’offerta che prevede questo servizio ",
+        "project_name": "GS10789 VPA1: Efficient and Clean Cooking for households in Somalia",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-SO-GS10790-16-2023-27389-267212-368688",
+        "number_of_credits": 101477,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2026-02-25",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nell’anno 2025 fino al 30-09, aventi un’offerta che prevede questo servizio",
+        "project_name": "GS10789 VPA1: Efficient and Clean Cooking for households in Somalia",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-SO-GS10790-16-2023-27389-117212-267211",
+        "number_of_credits": 150000,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2026-02-25",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nell’anno 2025 fino al 30-09, aventi un’offerta che prevede questo servizio",
+        "project_name": "GS10789 VPA1: Efficient and Clean Cooking for households in Somalia",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-SO-GS10790-16-2023-27389-57212-117211",
+        "number_of_credits": 60000,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2025-10-20",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nel Q4 2024, aventi un’offerta che prevede questo servizio",
+        "project_name": "GS10789 VPA1: Efficient and Clean Cooking for households in Somalia",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-SO-GS10790-16-2023-27389-17212-57211",
+        "number_of_credits": 40000,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2025-02-28",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nell’anno 2024 fino al 30-09, aventi un’offerta che prevede questo servizio",
+        "project_name": "GS10789 VPA1: Efficient and Clean Cooking for households in Somalia",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-NG-GS11265-16-2023-27305-1086-36444",
+        "number_of_credits": 35359,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "Safe Water Programme – Nigeria – VPA 07",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-NG-GS11264-16-2023-27304-707-35313",
+        "number_of_credits": 34607,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "Safe Water Programme – Nigeria – VPA 06",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-NG-GS11263-16-2023-27303-14593-47626",
+        "number_of_credits": 33034,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "Safe Water Programme – Nigeria – VPA 05",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-NG-GS11263-16-2023-27303-953-14592",
+        "number_of_credits": 13640,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "Safe Water Programme – Nigeria – VPA 05",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-NG-GS11262-16-2023-27302-789-39433",
+        "number_of_credits": 38645,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "Safe Water Programme – Nigeria – VPA 04",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-NG-GS11261-16-2023-27301-803-40129",
+        "number_of_credits": 39327,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "Safe Water Programme – Nigeria – VPA 03",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-NG-GS11260-16-2023-27300-831-41549",
+        "number_of_credits": 40719,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "Safe Water Programme – Nigeria – VPA 02",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-NG-GS11259-16-2023-27299-830-41498",
+        "number_of_credits": 40669,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "Safe Water Programme – Nigeria – VPA 01",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-BR-GS12047-21-2021-27245-431744-599029",
+        "number_of_credits": 167286,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2025-10-20",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nel Q4 2024, aventi un’offerta che prevede questo servizio",
+        "project_name": "Ecoparque Candeias Landfill Gas Project",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-BR-GS12062-5-2023-26985-162354-227374",
+        "number_of_credits": 65021,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2026-02-25",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nell’anno 2025 fino al 30-09, aventi un’offerta che prevede questo servizio",
+        "project_name": "CTL Landfill Gas Project",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-BR-GS12062-5-2023-26985-157354-162353",
+        "number_of_credits": 5000,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2026-02-25",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nell’anno 2025 fino al 30-09, aventi un’offerta che prevede questo servizio",
+        "project_name": "CTL Landfill Gas Project",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-BR-GS12062-5-2023-26985-152354-157353",
+        "number_of_credits": 5000,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2026-02-25",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nell’anno 2025 fino al 30-09, aventi un’offerta che prevede questo servizio",
+        "project_name": "CTL Landfill Gas Project",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=3&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-BR-GS12062-5-2021-26983-923092-955359",
+        "number_of_credits": 32268,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2026-02-25",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nell’anno 2025 fino al 30-09, aventi un’offerta che prevede questo servizio",
+        "project_name": "CTL Landfill Gas Project",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=3&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-BR-GS12062-5-2021-26983-775591-920590",
+        "number_of_credits": 145000,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2026-02-25",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nell’anno 2025 fino al 30-09, aventi un’offerta che prevede questo servizio",
+        "project_name": "CTL Landfill Gas Project",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=3&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-BR-GS12062-5-2021-26983-628091-773090",
+        "number_of_credits": 145000,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2026-02-25",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di Plenitude nell’anno 2025 fino al 30-09, aventi un’offerta che prevede questo servizio",
+        "project_name": "CTL Landfill Gas Project",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=3&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS10921-16-2023-26354-145-4634",
+        "number_of_credits": 4490,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 023",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=3&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS10920-16-2023-26353-148-7387",
+        "number_of_credits": 7240,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 022",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=3&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS10919-16-2023-26352-148-7387",
+        "number_of_credits": 7240,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 021",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=3&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS10918-16-2023-26351-317-15831",
+        "number_of_credits": 15515,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 020",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=3&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS10916-16-2023-26349-317-15831",
+        "number_of_credits": 15515,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 018",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=3&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS10906-16-2022-26197-614-15552",
+        "number_of_credits": 14939,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 008",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=3&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS10905-16-2022-26195-643-32149",
+        "number_of_credits": 31507,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 007",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=3&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS10904-16-2022-26193-597-29826",
+        "number_of_credits": 29230,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 006",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=3&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS10903-16-2022-26191-687-34309",
+        "number_of_credits": 33623,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 005",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=3&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS10902-16-2022-26189-340-16965",
+        "number_of_credits": 16626,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 004 ",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=3&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS10901-16-2022-26187-245-12241",
+        "number_of_credits": 11997,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 003",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=3&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS10900-16-2022-26185-247-12324",
+        "number_of_credits": 12078,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 002",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=3&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11232-16-2022-25720-472-1487",
+        "number_of_credits": 1016,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "BioLite Improved Cook stoves Programme - CPA 019 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=3&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11231-16-2022-25719-534-26690",
+        "number_of_credits": 26157,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "BioLite Improved Cook stoves Programme - CPA 018 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=3&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11230-16-2022-25718-498-24893",
+        "number_of_credits": 24396,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "BioLite Improved Cook stoves Programme - CPA 017 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=3&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11229-16-2022-25717-483-24144",
+        "number_of_credits": 23662,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "BioLite Improved Cook stoves Programme - CPA 016 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=3&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11228-16-2022-25716-543-27132",
+        "number_of_credits": 26590,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "BioLite Improved Cook stoves Programme - CPA 015 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=4&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11227-16-2022-25715-560-27962",
+        "number_of_credits": 27403,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "BioLite Improved Cook stoves Programme - CPA 014 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=4&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS447-16-2022-24668-551604-747757",
+        "number_of_credits": 196154,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "Improved Cookstoves for Social Impact in Ugandan Communities",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=4&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS447-16-2022-24668-547758-551603",
+        "number_of_credits": 3846,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2024-02-29",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": null,
+        "project_name": "Improved Cookstoves for Social Impact in Ugandan Communities",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=4&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11534-16-2021-24517-1-23652",
+        "number_of_credits": 23652,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-02-29",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": null,
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 045 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=4&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11533-16-2021-24516-1-24215",
+        "number_of_credits": 24215,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-02-29",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": null,
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 044 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=4&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11532-16-2021-24514-1-24804",
+        "number_of_credits": 24804,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-02-29",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": null,
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 043 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=4&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11531-16-2021-24513-1-25565",
+        "number_of_credits": 25565,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-02-29",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": null,
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 042 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=4&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11530-16-2021-24512-1-26096",
+        "number_of_credits": 26096,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-02-29",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": null,
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 041 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=4&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11529-16-2021-24511-1-26307",
+        "number_of_credits": 26307,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-02-29",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": null,
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 040 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=4&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11528-16-2021-24510-1-26422",
+        "number_of_credits": 26422,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-02-29",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": null,
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 039 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=4&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11527-16-2021-24509-1-26625",
+        "number_of_credits": 26625,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-02-29",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": null,
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 038 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=4&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11526-16-2021-24508-1-26869",
+        "number_of_credits": 26869,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-02-29",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": null,
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 037 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=4&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11525-16-2021-24507-1-27160",
+        "number_of_credits": 27160,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-02-29",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": null,
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 036 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=4&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11524-16-2021-24506-1-27402",
+        "number_of_credits": 27402,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-02-29",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": null,
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 035 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=4&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11523-16-2021-24505-1-27615",
+        "number_of_credits": 27615,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-02-29",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": null,
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 034 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=4&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11522-16-2021-24504-1-27825",
+        "number_of_credits": 27825,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-02-29",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": null,
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 033 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=4&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11521-16-2021-24503-1-27884",
+        "number_of_credits": 27884,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-02-29",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": null,
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 032 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=4&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11520-16-2021-24502-1-27869",
+        "number_of_credits": 27869,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-02-29",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": null,
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 031 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=4&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11519-16-2021-24501-1-10006",
+        "number_of_credits": 10006,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-02-29",
+        "beneficiary": "Eni Plenitude s.p.a. Società Benefit",
+        "note": null,
+        "project_name": "Up Energy Improved Cookstoves Programme, Uganda – CPA No 030 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=4&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11236-16-2021-24483-1-21610",
+        "number_of_credits": 21610,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "BioLite Improved Cook stoves Programme - CPA 028 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=5&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11235-16-2021-24482-1-749",
+        "number_of_credits": 749,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "BioLite Improved Cook stoves Programme - CPA 022 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=5&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11234-16-2021-24481-1-748",
+        "number_of_credits": 748,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "BioLite Improved Cook stoves Programme - CPA 021 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=5&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11233-16-2021-24480-1-798",
+        "number_of_credits": 798,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "BioLite Improved Cook stoves Programme - CPA 020 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=5&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11232-16-2021-24479-1-21906",
+        "number_of_credits": 21906,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "BioLite Improved Cook stoves Programme - CPA 019 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=5&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11231-16-2021-24478-1-24931",
+        "number_of_credits": 24931,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "BioLite Improved Cook stoves Programme - CPA 018 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=5&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11230-16-2021-24477-1-23186",
+        "number_of_credits": 23186,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "BioLite Improved Cook stoves Programme - CPA 017 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=5&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11229-16-2021-24476-1-22717",
+        "number_of_credits": 22717,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "BioLite Improved Cook stoves Programme - CPA 016 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=5&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11228-16-2021-24475-1-26460",
+        "number_of_credits": 26460,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "BioLite Improved Cook stoves Programme - CPA 015 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=5&query=Eni%20Plenitude"
+       },
+       {
+        "serial_number": "GS1-1-UG-GS11227-16-2021-24474-1-27671",
+        "number_of_credits": 27671,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-10-01",
+        "beneficiary": "Eni Plenitude spa Società Benefit",
+        "note": "Compensazione della Co2 prodotta durante il consumo di gas naturale da parte dei clienti retail di\nPlenitude nel quarto trimestre 2023, aventi un’offerta che prevede questo servizio",
+        "project_name": "BioLite Improved Cook stoves Programme - CPA 014 supported by Republic of Korea",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=5&query=Eni%20Plenitude"
+       }
+      ],
+      "allCandidates": 90,
+      "total": 4551876,
+      "claimed": null,
+      "year": null,
+      "yearScope": "all",
+      "status": "NO_QUANTITY",
+      "reason": "sentence_has_no_quantity"
+     }
+    }
+   ]
+  },
+  {
+   "id": "studiosus-sr23",
+   "publisher": "Studiosus Reisen (Nachhaltigkeitsbericht 2023/24, German)",
+   "claimant": "Studiosus",
+   "url": "https://www.studiosus.com/nachhaltigkeitsbericht/2023/epaper/Nachhaltigkeitsbericht-2023.pdf",
+   "sentences": 2,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 30,
+    "total": 324315
+   },
+   "results": [
+    {
+     "page": 97,
+     "text": "2023 wurden dafür insgesamt 103.907,00 t CO2e kompensiert.",
+     "text_en": "In 2023 Studiosus offset 103,907 t CO2e.",
+     "result": {
+      "claimant": "Studiosus",
+      "candidates": [
+       {
+        "serial_number": "GS1-1-IN-GS10782-5-2023-30214-5745-37349",
+        "number_of_credits": 31605,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2026-09-03",
+        "beneficiary": "Studiosus Reisen München GmbH",
+        "note": "Retired on behalf of Studiosus Reisen München GmbH",
+        "project_name": "Household biogas plants in rural parts of Central India",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Studiosus"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS10782-5-2023-30214-839-5744",
+        "number_of_credits": 4906,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2026-09-03",
+        "beneficiary": "Studiosus Reisen München GmbH",
+        "note": "Retired on behalf of Studiosus Reisen München GmbH",
+        "project_name": "Household biogas plants in rural parts of Central India",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Studiosus"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS11394-4-2023-28580-31842-46841",
+        "number_of_credits": 15000,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2026-08-27",
+        "beneficiary": "Studiosus Reisen München GmbH",
+        "note": "Retired on behalf of Studiosus Reisen München GmbH",
+        "project_name": "India Dairy Biogas Program",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Studiosus"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS11655-4-2023-28455-1-13177",
+        "number_of_credits": 13177,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2026-01-07",
+        "beneficiary": "Studiosus Reisen München GmbH",
+        "note": "Retired on behalf of Studiosus Reisen München GmbH \n",
+        "project_name": "Implementation of clean energy technology in rural areas of India-1 ",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Studiosus"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS11190-4-2023-27508-92-2787",
+        "number_of_credits": 2696,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2026-01-13",
+        "beneficiary": "Studiosus Reisen München GmbH",
+        "note": "Retired on behalf of Studiosus Reisen München GmbH",
+        "project_name": "Household biogas plants in selected districts of Assam",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Studiosus"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS6275-4-2023-26728-70-1949",
+        "number_of_credits": 1880,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2026-01-13",
+        "beneficiary": "Studiosus Reisen München GmbH",
+        "note": "Retired on behalf of Studiosus Reisen München GmbH",
+        "project_name": "Domestic Biogas Project for rural households in India",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Studiosus"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS11655-4-2023-26256-22620-39321",
+        "number_of_credits": 16702,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2026-01-07",
+        "beneficiary": "Studiosus Reisen München GmbH",
+        "note": "Retired on behalf of Studiosus Reisen München GmbH ",
+        "project_name": "Implementation of clean energy technology in rural areas of India-1 ",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Studiosus"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS11655-4-2023-26256-1-6484",
+        "number_of_credits": 6484,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2024-08-13",
+        "beneficiary": "Studiosus Reisen München GmbH",
+        "note": "Retired on behalf of Studiosus Reisen München GmbH\n",
+        "project_name": "Implementation of clean energy technology in rural areas of India-1 ",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Studiosus"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS11988-4-2023-26229-1-22038",
+        "number_of_credits": 22038,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2024-08-13",
+        "beneficiary": "Studiosus Reisen München GmbH",
+        "note": "Retired on behalf of Studiosus Reisen München GmbH",
+        "project_name": "Smokeless living in rural areas of India",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Studiosus"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS11656-4-2023-26227-19018-40033",
+        "number_of_credits": 21016,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2024-08-13",
+        "beneficiary": "Studiosus Reisen München GmbH",
+        "note": "Retired on behalf of Studiosus Reisen München GmbH\n",
+        "project_name": "Implementation of clean energy technology in rural areas of India-2 ",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Studiosus"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS11394-4-2023-25992-19751-34750",
+        "number_of_credits": 15000,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2026-02-25",
+        "beneficiary": "Studiosus Reisen München GmbH",
+        "note": "Retired on behalf of Studiosus Reisen München GmbH",
+        "project_name": "India Dairy Biogas Program",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Studiosus"
+       }
+      ],
+      "allCandidates": 30,
+      "total": 150504,
+      "claimed": 103907,
+      "year": 2023,
+      "yearScope": "year",
+      "status": "MISMATCH",
+      "reason": "total_differs",
+      "relation": "registry_higher"
+     }
+    },
+    {
+     "page": 97,
+     "text": "Insgesamt wurden 2022 60.965,00 t C02e kompensiert.",
+     "text_en": "In 2022 Studiosus offset 60,965 t CO2e.",
+     "result": {
+      "claimant": "Studiosus",
+      "candidates": [
+       {
+        "serial_number": "GS1-1-IN-GS10782-5-2022-30213-72-3560",
+        "number_of_credits": 3489,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2026-09-03",
+        "beneficiary": "Studiosus Reisen München GmbH",
+        "note": "Retired on behalf of Studiosus Reisen München GmbH",
+        "project_name": "Household biogas plants in rural parts of Central India",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Studiosus"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS7510-4-2022-28595-303-15119",
+        "number_of_credits": 14817,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2026-01-13",
+        "beneficiary": "Studiosus Reisen München GmbH",
+        "note": "Retired on behalf of Studiosus Reisen München GmbH",
+        "project_name": "Household biogas plants installed in rural areas of Madhya Pradesh , India",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Studiosus"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS11190-4-2022-27507-184-7613",
+        "number_of_credits": 7430,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2026-01-13",
+        "beneficiary": "Studiosus Reisen München GmbH",
+        "note": "Retired on behalf of Studiosus Reisen München GmbH",
+        "project_name": "Household biogas plants in selected districts of Assam",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Studiosus"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS6275-4-2022-26727-272-7581",
+        "number_of_credits": 7310,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2026-01-13",
+        "beneficiary": "Studiosus Reisen München GmbH",
+        "note": "Retired on behalf of Studiosus Reisen München GmbH",
+        "project_name": "Domestic Biogas Project for rural households in India",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Studiosus"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS11655-4-2022-26255-1-12761",
+        "number_of_credits": 12761,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2024-08-13",
+        "beneficiary": "Studiosus Reisen München GmbH",
+        "note": "Retired on behalf of Studiosus Reisen München GmbH\n",
+        "project_name": "Implementation of clean energy technology in rural areas of India-1 ",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Studiosus"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS11988-4-2022-26228-1-4352",
+        "number_of_credits": 4352,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2024-08-13",
+        "beneficiary": "Studiosus Reisen München GmbH",
+        "note": "Retired on behalf of Studiosus Reisen München GmbH\n",
+        "project_name": "Smokeless living in rural areas of India",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Studiosus"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS11656-4-2022-26226-3201-10749",
+        "number_of_credits": 7549,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2024-08-13",
+        "beneficiary": "Studiosus Reisen München GmbH",
+        "note": "Retired on behalf of Studiosus Reisen München GmbH\n",
+        "project_name": "Implementation of clean energy technology in rural areas of India-2 ",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Studiosus"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS7510-4-2022-24703-26394-27800",
+        "number_of_credits": 1407,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2026-01-13",
+        "beneficiary": "Studiosus Reisen München GmbH",
+        "note": "Retired on behalf of Studiosus Reisen München GmbH",
+        "project_name": "Household biogas plants installed in rural areas of Madhya Pradesh , India",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Studiosus"
+       }
+      ],
+      "allCandidates": 30,
+      "total": 59115,
+      "claimed": 60965,
+      "year": 2022,
+      "yearScope": "year",
+      "status": "MISMATCH",
+      "reason": "total_differs",
+      "relation": "registry_lower"
+     }
+    }
+   ]
+  },
+  {
+   "id": "studiosus-sr26",
+   "publisher": "Studiosus Reisen (Nachhaltigkeitsbericht 2025/26, German)",
+   "claimant": "Studiosus",
+   "url": "https://nachhaltigkeitsbericht.studiosus.com/nachhaltigkeitsbericht/2025/epaper/Nachhaltigkeitsbericht-2026.pdf",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 30,
+    "total": 324315
+   },
+   "results": []
+  },
+  {
+   "id": "telekom-cr24",
+   "publisher": "Deutsche Telekom (corporate responsibility report 2024)",
+   "claimant": "Deutsche Telekom",
+   "url": "https://report.telekom.com/cr-report/2024/_assets/downloads/entire-dtag-cr24.pdf",
+   "sentences": 1,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 5,
+    "total": 10000
+   },
+   "results": [
+    {
+     "page": 42,
+     "text": "The total amount of CO2 allowances outside our value chain that were verified according to recognized quality standards and cancelled in the reporting period is 35,167 metric tons of CO2e.",
+     "text_en": null,
+     "result": {
+      "claimant": "Deutsche Telekom",
+      "candidates": [
+       {
+        "serial_number": "GS1-1-CR-GS2913-22-2024-30183-8343-10992",
+        "number_of_credits": 2650,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2026-09-25",
+        "beneficiary": "Deutsche Telekom AG",
+        "note": "Retirement to neutralize Deutsche Telekom AG’s Scope 1 and 2 residual emissions for the year 2026",
+        "project_name": "BaumInvest Reforestation Project ",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Deutsche%20Telekom"
+       },
+       {
+        "serial_number": "GS1-1-CR-GS2913-22-2023-30182-3286-6410",
+        "number_of_credits": 3125,
+        "vintage": "2023",
+        "status": "RETIRED",
+        "retired_on": "2026-09-25",
+        "beneficiary": "Deutsche Telekom AG",
+        "note": "Retirement to neutralize Deutsche Telekom AG’s Scope 1 and 2 residual emissions for the year 2026",
+        "project_name": "BaumInvest Reforestation Project ",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Deutsche%20Telekom"
+       },
+       {
+        "serial_number": "GS1-1-CR-GS2913-22-2022-30181-1-3125",
+        "number_of_credits": 3125,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2026-09-25",
+        "beneficiary": "Deutsche Telekom AG",
+        "note": "Retirement to neutralize Deutsche Telekom AG’s Scope 1 and 2 residual emissions for the year 2026",
+        "project_name": "BaumInvest Reforestation Project ",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Deutsche%20Telekom"
+       },
+       {
+        "serial_number": "GS1-1-CR-GS2913-22-2021-30180-1292-1916",
+        "number_of_credits": 625,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2026-09-25",
+        "beneficiary": "Deutsche Telekom AG",
+        "note": "Retirement to neutralize Deutsche Telekom AG’s Scope 1 and 2 residual emissions for the year 2026",
+        "project_name": "BaumInvest Reforestation Project ",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Deutsche%20Telekom"
+       },
+       {
+        "serial_number": "GS1-1-CR-GS2913-22-2024-4020-1-475",
+        "number_of_credits": 475,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2026-09-25",
+        "beneficiary": "Deutsche Telekom AG",
+        "note": "Retirement to neutralize Deutsche Telekom AG’s Scope 1 and 2 residual emissions for the year 2026",
+        "project_name": "BaumInvest Reforestation Project ",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Deutsche%20Telekom"
+       }
+      ],
+      "allCandidates": 5,
+      "total": 10000,
+      "claimed": 35167,
+      "year": null,
+      "yearScope": "all",
+      "status": "MISMATCH",
+      "reason": "total_differs",
+      "relation": "registry_lower"
+     }
+    }
+   ]
+  },
+  {
+   "id": "rothschild-sr24",
+   "publisher": "Rothschild & Co (sustainability statement 2024, French)",
+   "claimant": "Rothschild & Co",
+   "url": "https://www.rothschildandco.com/siteassets/publications/rothschildandco/group/2024/fr_randco_sustainability_report_2024.pdf",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 5,
+    "total": 5500
+   },
+   "results": []
+  },
+  {
+   "id": "stockholm-exergi-24",
+   "publisher": "Stockholm Exergi (annual and sustainability report 2024)",
+   "claimant": "Stockholm Exergi",
+   "url": "https://mb.cision.com/Main/15781/4125465/3351320.pdf",
+   "sentences": 1,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 41,
+    "total": 631934
+   },
+   "results": [
+    {
+     "page": 126,
+     "text": "Inköp av koldioxidkrediter 1) kton CO2-e - 97 84 13% 1) Preliminärt, ej verifierat värde för 2024.",
+     "text_en": "In 2024 Stockholm Exergi purchased 97,000 tCO2e of carbon credits.",
+     "result": {
+      "claimant": "Stockholm Exergi",
+      "candidates": [
+       {
+        "serial_number": "GS1-1-IN-GS11655-4-2024-29896-1-492",
+        "number_of_credits": 492,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2026-05-21",
+        "beneficiary": "Stockholm Exergi",
+        "note": "On behalf of Stockholm Exergi - Emissions 2025",
+        "project_name": "Implementation of clean energy technology in rural areas of India-1 ",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Stockholm%20Exergi"
+       },
+       {
+        "serial_number": "GS1-1-NG-GS12409-16-2024-29307-411-18410",
+        "number_of_credits": 18000,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2026-05-21",
+        "beneficiary": "Stockholm Exergi",
+        "note": "On behalf of Stockholm Exergi - Emissions 2025",
+        "project_name": "Safe Water Programme – Nigeria - VPA 93",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Stockholm%20Exergi"
+       },
+       {
+        "serial_number": "GS1-1-TG-GS12069-16-2024-29056-1-2919",
+        "number_of_credits": 2919,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2026-05-21",
+        "beneficiary": "Stockholm Exergi",
+        "note": "On behalf of Stockholm Exergi - Emissions 2025",
+        "project_name": "Arborify Cookstoves Togo",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Stockholm%20Exergi"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS11655-4-2024-28456-24738-37199",
+        "number_of_credits": 12462,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2026-05-21",
+        "beneficiary": "Stockholm Exergi",
+        "note": "On behalf of Stockholm Exergi - Emissions 2025",
+        "project_name": "Implementation of clean energy technology in rural areas of India-1 ",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Stockholm%20Exergi"
+       },
+       {
+        "serial_number": "GS1-1-ER-GS5125-16-2021-26912-1332-1671",
+        "number_of_credits": 340,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-06-10",
+        "beneficiary": "Stockholm Exergi",
+        "note": "On behalf of Stockholm Exergi - Emissions 2023",
+        "project_name": "Eritrea Community Boreholes",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Stockholm%20Exergi"
+       },
+       {
+        "serial_number": "GS1-1-TR-GS3852-5-2021-25063-1-10000",
+        "number_of_credits": 10000,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-08-06",
+        "beneficiary": "Stockholm Exergi",
+        "note": "On behalf of Stockholm Exergi - Emissions 2023",
+        "project_name": "Tokat Landfill Gas to Electricty Project",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Stockholm%20Exergi"
+       },
+       {
+        "serial_number": "GS1-1-IN-GS11490-16-2021-25020-201-10200",
+        "number_of_credits": 10000,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-06-10",
+        "beneficiary": "Stockholm Exergi",
+        "note": "On behalf of Stockholm Exergi - Emissions 2023",
+        "project_name": "GS11450 - MicroEnergy Credits – Microfinance for Clean Energy Product Lines – India - CPA 33 - GS11490",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Stockholm%20Exergi"
+       },
+       {
+        "serial_number": "GS1-1-ER-GS5125-16-2021-24651-11589-15598",
+        "number_of_credits": 4010,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-06-10",
+        "beneficiary": "Stockholm Exergi",
+        "note": "On behalf of Stockholm Exergi - Emissions 2023",
+        "project_name": "Eritrea Community Boreholes",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Stockholm%20Exergi"
+       },
+       {
+        "serial_number": "GS1-1-ER-GS5125-16-2021-24651-312-5961",
+        "number_of_credits": 5650,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-06-10",
+        "beneficiary": "Stockholm Exergi",
+        "note": "On behalf of Stockholm Exergi - Emissions 2023",
+        "project_name": "Eritrea Community Boreholes",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Stockholm%20Exergi"
+       },
+       {
+        "serial_number": "GS1-1-MZ-GS7640-16-2022-24573-17650-37649",
+        "number_of_credits": 20000,
+        "vintage": "2022",
+        "status": "RETIRED",
+        "retired_on": "2024-06-10",
+        "beneficiary": "Stockholm Exergi",
+        "note": "On behalf of Stockholm Exergi - Emissions 2023",
+        "project_name": "GS7591 VPA 20 Central Mozambique Safe Water Programme",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Stockholm%20Exergi"
+       },
+       {
+        "serial_number": "GS1-1-CN-GS1703-4-2021-24053-174-3270",
+        "number_of_credits": 3097,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-06-10",
+        "beneficiary": "Stockholm Exergi",
+        "note": "On behalf of Stockholm Exergi - Emissions 2023",
+        "project_name": "GS1239 Sichuan Rural Poor-Household Biogas Development Programme PoA- CPA Nb. SCHHBG-2012-012",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Stockholm%20Exergi"
+       },
+       {
+        "serial_number": "GS1-1-CN-GS1702-4-2021-24052-174-8668",
+        "number_of_credits": 8495,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-06-10",
+        "beneficiary": "Stockholm Exergi",
+        "note": "On behalf of Stockholm Exergi - Emissions 2023",
+        "project_name": "GS1239 Sichuan Rural Poor-Household Biogas Development Programme PoA- CPA Nb. SCHHBG-2012-011",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Stockholm%20Exergi"
+       },
+       {
+        "serial_number": "GS1-1-CN-GS1701-4-2021-24051-5868-8668",
+        "number_of_credits": 2801,
+        "vintage": "2021",
+        "status": "RETIRED",
+        "retired_on": "2024-06-10",
+        "beneficiary": "Stockholm Exergi",
+        "note": "On behalf of Stockholm Exergi - Emissions 2023",
+        "project_name": "GS1239 Sichuan Rural Poor-Household Biogas Development Programme PoA- CPA Nb. SCHHBG-2012-010",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=2&query=Stockholm%20Exergi"
+       }
+      ],
+      "allCandidates": 41,
+      "total": 98266,
+      "claimed": 97000,
+      "year": 2024,
+      "yearScope": "year",
+      "status": "MISMATCH",
+      "reason": "total_differs",
+      "relation": "registry_higher"
+     }
+    }
+   ]
+  },
+  {
+   "id": "apobank-csr24",
+   "publisher": "apoBank (CSR report 2024, German)",
+   "claimant": "apoBank",
+   "url": "https://www.apobank.de/dam/jcr:4bfb96d9-6dc7-4c2d-918e-9da9b89e08b8/csr-bericht-apobank-geschaeftsjahr-2024.pdf",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NOT_FOUND",
+    "candidates": 0,
+    "total": 0
+   },
+   "results": []
+  },
+  {
+   "id": "farasis-esg24",
+   "publisher": "Farasis Energy (ESG report 2024, Chinese)",
+   "claimant": "Farasis Energy",
+   "url": "https://static.cninfo.com.cn/finalpage/2025-04-30/1223418137.PDF",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 9,
+    "total": 142279
+   },
+   "results": []
+  },
+  {
+   "id": "alarko-sr24",
+   "publisher": "Alarko Holding (sustainability report 2024, Turkish)",
+   "claimant": "Alarko Holding",
+   "url": "https://www.alarko.com.tr/media/zztfjxj0/alarko-holding-2024-tsrs-uyumlu-suerdueruelebilirlik-raporu_14082025_final.pdf",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 3,
+    "total": 1399
+   },
+   "results": []
+  },
+  {
+   "id": "caf-impact24",
+   "publisher": "CAF development bank (impact and allocation report 2024)",
+   "claimant": "CAF",
+   "url": "https://www.caf.com/media/4681160/impact-and-allocation-report-2024.pdf",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 1,
+    "total": 4
+   },
+   "results": []
+  },
+  {
+   "id": "charleroi-sdr22",
+   "publisher": "Brussels South Charleroi Airport (sustainable development report 2022)",
+   "claimant": "Brussels South Charleroi Airport",
+   "url": "https://www.brussels-charleroi-airport.com/sites/default/files/inline-files/2022_BSCA_Sustainable%20Development%20Report_EN.pdf",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 2,
+    "total": 3480
+   },
+   "results": []
+  },
+  {
+   "id": "hermes-airports-sr",
+   "publisher": "Hermes Airports (sustainability report)",
+   "claimant": "Hermes Airports",
+   "url": "https://www.hermesairports.com/media/cms/Final_Hermes_Sustainability_Report_3E7CAC4617433.pdf",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NOT_FOUND",
+    "candidates": 0,
+    "total": 0
+   },
+   "results": []
+  },
+  {
+   "id": "bullfrog-overview24",
+   "publisher": "Bullfrog Power (overview 2024)",
+   "claimant": "Bullfrog Power",
+   "url": "https://go.bullfrogpower.com/hubfs/Bullfrog%20Power%20Overview%20-%202024.pdf",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 13,
+    "total": 23784
+   },
+   "results": []
+  },
+  {
+   "id": "uzh-kurzbericht",
+   "publisher": "University of Zurich (short sustainability report)",
+   "claimant": "University of Zurich",
+   "url": "https://www.sustainability.uzh.ch/dam/jcr:49f82b05-6b9e-4c64-b0ae-a8b3cea3ba65/20260617_UZH_Kurzbericht_Nachhaltigkeit.pdf",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NOT_FOUND",
+    "candidates": 0,
+    "total": 0
+   },
+   "results": []
+  },
+  {
+   "id": "abc-sr23",
+   "publisher": "Banco ABC Brasil (sustainability report 2023, Portuguese)",
+   "claimant": "Banco ABC",
+   "url": "https://www.abcbrasil.com.br/media/2529/relatorio-de-sustentabilidade-2023-pt.pdf",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 1,
+    "total": 1835
+   },
+   "results": []
+  },
+  {
+   "id": "orizon-sr23",
+   "publisher": "Grupo Orizon (sustainability report 2023, Portuguese)",
+   "claimant": "Orizon",
+   "url": "https://orizonvr.com.br/novo_site/wp-content/uploads/2024/06/grupoOrizon_RelatorioSust2023.pdf",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 1,
+    "total": 14173
+   },
+   "results": []
+  },
+  {
+   "id": "arup-ar2425",
+   "publisher": "Arup (annual report 2024/25, Our planet, web)",
+   "claimant": "Arup",
+   "url": "https://www.arup.com/about-us/corporate-reports/annual-report-2024-25/our-planet/",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 5,
+    "total": 13146
+   },
+   "results": []
+  },
+  {
+   "id": "fedhermes-offset",
+   "publisher": "Federated Hermes (emissions offset approach, web)",
+   "claimant": "Federated Hermes",
+   "url": "https://www.hermes-investment.com/fi/en/professional/?p=10926",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 2,
+    "total": 2872
+   },
+   "results": []
+  },
+  {
+   "id": "ey-carbon-negative",
+   "publisher": "EY (carbon negative achievement, web)",
+   "claimant": "EY",
+   "url": "https://www.ey.com/en_us/insights/sustainability/carbon-negative-achievement",
+   "sentences": 1,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 2,
+    "total": 117076
+   },
+   "results": [
+    {
+     "page": 9,
+     "text": "In FY22, these 10 projects helped us to offset 723k tCO2e, representing 121% of our FY22 emissions and confirming our carbon negative position.",
+     "text_en": "In 2022 EY offset 723,000 tCO2e.",
+     "result": {
+      "claimant": "EY",
+      "candidates": [
+       {
+        "serial_number": "GS1-1-IN-GS12794-21-2024-30293-1-10000",
+        "number_of_credits": 10000,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2026-05-07",
+        "beneficiary": "EY Global Services Limited",
+        "note": "Retired on behalf of EY Global Services Limited to compensate for FY26 emissions",
+        "project_name": "GS12793 Mitti Labs: Supporting Climate Smart Rice Farming In Telangana ",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=3&query=EY"
+       },
+       {
+        "serial_number": "GS1-1-BR-GS12047-21-2024-30258-103721-210796",
+        "number_of_credits": 107076,
+        "vintage": "2024",
+        "status": "RETIRED",
+        "retired_on": "2026-10-05",
+        "beneficiary": "EY Global Services Limited",
+        "note": "Retired on behalf of EY Global Services Limited to compensate for FY26 emissions",
+        "project_name": "Ecoparque Candeias Landfill Gas Project",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=4&query=EY"
+       }
+      ],
+      "allCandidates": 2,
+      "total": 117076,
+      "claimed": 723000,
+      "year": 2022,
+      "yearScope": "all",
+      "status": "MISMATCH",
+      "reason": "total_differs",
+      "relation": "registry_lower"
+     }
+    }
+   ]
+  },
+  {
+   "id": "magis-sr25",
+   "publisher": "Gruppo Magis (consolidated sustainability report 2025, Italian)",
+   "claimant": "Magis Energia",
+   "url": "https://www.gruppomagis.it/documents/d/agsmaim/magis_report_sostenibilita_2025-digital",
+   "sentences": 1,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 3,
+    "total": 8296
+   },
+   "results": [
+    {
+     "page": 183,
+     "text": "Tale compensazione, nel 2025, è stata pari a 24.048 tCO₂, realizzata tramite l’acquisto, per conto del cliente, di crediti di carbonio certificati.",
+     "text_en": "In 2025 Magis offset 24,048 tCO2 through certified carbon credits.",
+     "result": {
+      "claimant": "Magis Energia",
+      "candidates": [
+       {
+        "serial_number": "GS1-1-KE-GS11544-16-2025-30292-1-3312",
+        "number_of_credits": 3312,
+        "vintage": "2025",
+        "status": "RETIRED",
+        "retired_on": "2026-09-18",
+        "beneficiary": "Magis Energia SpA",
+        "note": "These credits were retired on behalf of Magis Energia SpA as part of their sustainability strategy",
+        "project_name": "Maji Safi, Maisha Bora Project",
+        "source_url": "https://public-api.goldstandard.org/credits?size=20&page=1&query=Magis%20Energia"
+       }
+      ],
+      "allCandidates": 3,
+      "total": 3312,
+      "claimed": 24048,
+      "year": 2025,
+      "yearScope": "year",
+      "status": "MISMATCH",
+      "reason": "total_differs",
+      "relation": "registry_lower"
+     }
+    }
+   ]
+  },
+  {
+   "id": "bechtle-ar24",
+   "publisher": "Bechtle (annual report 2024 with sustainability statement)",
+   "claimant": "Bechtle",
+   "url": "https://reports.bechtle.com/annual-report/2024/_assets/downloads/entire-bechtle-ar24.pdf",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 12,
+    "total": 6776
+   },
+   "results": []
+  },
+  {
+   "id": "hilti-sr23",
+   "publisher": "Hilti Group (sustainability report 2023)",
+   "claimant": "Hilti",
+   "url": "https://hilti.nl/content/dam/documents/e3/e3_nl/Hilti%20Sustainability%20Report%202023.pdf",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 14,
+    "total": 225795
+   },
+   "results": []
+  },
+  {
+   "id": "stockholm-exergi-23",
+   "publisher": "Stockholm Exergi (annual report 2023, English)",
+   "claimant": "Stockholm Exergi",
+   "url": "https://www.stockholmexergi.se/wp-content/uploads/2024/03/Arsredovisning-2023_ENG_240326_pages.pdf",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 41,
+    "total": 631934
+   },
+   "results": []
+  },
+  {
+   "id": "orizon-sr22",
+   "publisher": "Grupo Orizon (sustainability report 2022, Portuguese)",
+   "claimant": "Orizon",
+   "url": "https://orizonvr.com.br/novo_site/wp-content/uploads/2023/05/ORIZON_RS_2022_final.pdf",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 1,
+    "total": 14173
+   },
+   "results": []
+  },
+  {
+   "id": "engie-memoria23",
+   "publisher": "ENGIE Energia Chile (annual report 2023, English)",
+   "claimant": "ENGIE Energía Chile",
+   "url": "https://www.engie.cl/wp-content/uploads/2024/10/INGLES-ENGIE-MEMORIA-COMPLETA-1.pdf",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 5,
+    "total": 548905
+   },
+   "results": []
+  },
+  {
+   "id": "dustin-ar-older",
+   "publisher": "Dustin Group (annual and sustainability report, earlier edition)",
+   "claimant": "Dustin",
+   "url": "https://mb.cision.com/Main/11857/3668968/1679100.pdf",
+   "sentences": 0,
+   "company_probe": {
+    "status": "NO_QUANTITY",
+    "candidates": 5,
+    "total": 19
+   },
+   "results": []
+  }
+ ]
+}

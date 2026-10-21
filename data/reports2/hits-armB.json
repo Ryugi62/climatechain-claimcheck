@@ -1,0 +1,31 @@
+[
+ {
+  "id": "interface-offset24",
+  "publisher": "Interface Inc. (carbon offset report 2024)",
+  "url": "https://s205.q4cdn.com/354928249/files/doc_downloads/esg-resources/2025/Interface_Carbon-Offset-Report_2024.pdf",
+  "bytes": 27400,
+  "hits": [],
+  "pages": 1
+ },
+ {
+  "id": "sc-vcmd24",
+  "publisher": "Standard Chartered (California voluntary carbon markets disclosure 2024)",
+  "url": "https://www.sc.com/en/uploads/sites/66/content/docs/California-Voluntary-Carbon-Markets-Disclosure-2024-response.pdf",
+  "bytes": 226653,
+  "hits": [],
+  "pages": 5
+ },
+ {
+  "id": "unitedinternet-sr24",
+  "publisher": "United Internet (sustainability report 2024, web page)",
+  "url": "https://report.united-internet.de/sustainability/2024/environment/climate-change-mitigation-and-climate-change/ghg-removals-and-ghg-mitigation-projects-financed-through-carbon-credits.html",
+  "bytes": 74775,
+  "hits": [
+   {
+    "page": 2,
+    "text": "The volume of credits corresponds to a real reduction of 4.713 tonnes of CO 2 e."
+   }
+  ],
+  "pages": 2
+ }
+]

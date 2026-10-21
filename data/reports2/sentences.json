@@ -1,0 +1,12 @@
+{
+ "note": "Retirement/offset sentences with a tonne quantity, copied verbatim from the text layer of the 30 reports of manifest.json (candidate pass: scripts/hunt_extract.py, then a loose regex pass and a manual read of every hit; sentences about plans, avoided emissions per year, SAF certificates and project capacity are not retirement sentences and are left out). `text` is verbatim; where the report is not in English `text_en` is our one-line English rendering used for the product run (the product reads English only), marked by `translated: true`. Written down before the matcher ran.",
+ "sentences": [
+  { "report": "telekom-cr24", "page": 42, "text": "The total amount of CO2 allowances outside our value chain that were verified according to recognized quality standards and cancelled in the reporting period is 35,167 metric tons of CO2e.", "year": 2024 },
+  { "report": "studiosus-sr23", "page": 97, "text": "2023 wurden dafür insgesamt 103.907,00 t CO2e kompensiert.", "text_en": "In 2023 Studiosus offset 103,907 t CO2e.", "translated": true, "year": 2023 },
+  { "report": "studiosus-sr23", "page": 97, "text": "Insgesamt wurden 2022 60.965,00 t C02e kompensiert.", "text_en": "In 2022 Studiosus offset 60,965 t CO2e.", "translated": true, "year": 2022 },
+  { "report": "eni-plenitude-24", "page": 65, "text": "Relativamente al gas consumato dai clienti, saranno compensate 3,1416 milioni di tCO2eq tramite l’acquisto di crediti di carbonio di elevata qualità, ottenuti principalmente da Natural Climate Solutions.", "text_en": "Eni Plenitude offset 3,141,600 tCO2eq through carbon credits.", "translated": true, "year": 2024 },
+  { "report": "magis-sr25", "page": 183, "text": "Tale compensazione, nel 2025, è stata pari a 24.048 tCO₂, realizzata tramite l’acquisto, per conto del cliente, di crediti di carbonio certificati.", "text_en": "In 2025 Magis offset 24,048 tCO2 through certified carbon credits.", "translated": true, "year": 2025 },
+  { "report": "stockholm-exergi-24", "page": 126, "text": "Inköp av koldioxidkrediter 1) kton CO2-e - 97 84 13% 1) Preliminärt, ej verifierat värde för 2024.", "text_en": "In 2024 Stockholm Exergi purchased 97,000 tCO2e of carbon credits.", "translated": true, "year": 2024 },
+  { "report": "ey-carbon-negative", "page": 9, "text": "In FY22, these 10 projects helped us to offset 723k tCO2e, representing 121% of our FY22 emissions and confirming our carbon negative position.", "text_en": "In 2022 EY offset 723,000 tCO2e.", "translated": true, "year": 2022 }
+ ]
+}

@@ -17,6 +17,7 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&l
 const ledger = new Ledger();
 let rows = [];
 let lastRecords = null;
+let realFlow = null; // docs/real-sentence-testnet.json: the real United Internet sentence registered on Sepolia
 let flow = null; // docs/flow-testnet.json: the same credits on the Sepolia testnet
 const RPC = 'https://ethereum-sepolia-rpc.publicnode.com'; // free public endpoint, read calls only
 const EXPLORER = 'https://eth-sepolia.blockscout.com/tx/';
@@ -75,6 +76,7 @@ const WHY = {
 };
 
 function chainNote(serial) {
+  if (realFlow && realFlow.serial === serial) return `<br><span class="sub">On the Sepolia testnet this same serial range is registered: <a href="${EXPLORER}${realFlow.tx.hash}"><code>${shortTx(realFlow.tx.hash)}</code></a> (${realFlow.tx.gasUsed.toLocaleString()} gas).</span>`;
   if (!flow) return '';
   const reg = flow.registered.find((x) => x.serial === serial);
   if (!reg) return '';
@@ -125,7 +127,7 @@ async function run() {
   $('nresult').innerHTML = '';
   $('bresult').innerHTML = '';
   const chain = flow && $('chain').checked ? sepoliaRegistry({ rpcUrl: RPC, address: flow.contract }) : null;
-  const knownClaims = flow ? [{ claimant: flow.claimant, claimHash: claimHashOf(flow.claimant, flow.sentence) }] : [];
+  const knownClaims = [...(flow ? [{ claimant: flow.claimant, claimHash: claimHashOf(flow.claimant, flow.sentence) }] : []), ...(realFlow ? [{ claimant: realFlow.claimant, claimHash: claimHashOf(realFlow.claimant, realFlow.sentence) }] : [])];
   const r = await checkClaim({ text: $('claim').value, claimant: $('claimant').value.trim() || 'anonymous', commit: $('commit').checked }, { records, ledger, chain, knownClaims });
   render(r);
   window.__result = r;
@@ -136,6 +138,7 @@ async function run() {
 
 async function init() {
   try { flow = await (await fetch('./flow-testnet.json')).json(); } catch { flow = null; }
+  try { realFlow = await (await fetch('./real-sentence-testnet.json')).json(); } catch { realFlow = null; }
   rows = await (await fetch('./data/credits-sample.json')).json();
   const res = await (await fetch('./data/results.json')).json();
   $('n-records').textContent = res.records.total;
@@ -152,10 +155,16 @@ async function init() {
     'No serial': 'We are carbon neutral thanks to high-quality offsets.',
     'No serial, company': 'In 2024 Google retired 131,201 tCO2e of Gold Standard credits through Cool Effect.',
   };
+  if (realFlow) ex['Real report sentence'] = realFlow.sentence;
   $('claim').value = ex.Match;
   for (const [k, v] of Object.entries(ex)) {
     const bt = document.createElement('button'); bt.className = 'ghost'; bt.textContent = k;
-    bt.onclick = () => { $('claim').value = v; if (k === 'No serial, company') { $('live').checked = true; $('claimant').value = 'Google'; } run(); };
+    bt.onclick = () => {
+      $('claim').value = v; $('realnote').innerHTML = '';
+      if (k === 'No serial, company') { $('live').checked = true; $('claimant').value = 'Google'; }
+      if (k === 'Real report sentence') { $('live').checked = true; $('claimant').value = realFlow.claimant; $('realnote').innerHTML = `<p class="small sub">This sentence was written by the company: United Internet, Sustainability Report 2024 (<a href="${esc(realFlow.source)}">source page</a>). It names the segment, not the legal entity; United Internet's Business Access segment is the business of 1&amp;1 Versatel, so the company box says ${esc(realFlow.claimant)}.</p>`; }
+      run();
+    };
     $('examples').appendChild(bt);
   }
   $('go').onclick = run;
