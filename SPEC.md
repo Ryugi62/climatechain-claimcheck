@@ -9,11 +9,14 @@ Given one sentence from an ESG / sustainability report that claims a carbon offs
 
 An on-chain registry contract makes (3) enforceable: registering a serial range that overlaps an already registered range for the same batch reverts.
 
+4. **(Narrative check, added 2026-10-21)** whether the *wording* around the serial (business type, country, vintage/year, who retired, how many) is supported by the registry record, shown next to the verdict as **Backed**, **May conflict** or **No receipt**. This is a helper display. It never changes the verdict.
+
 Hackathon track: Track 1, Carbon Markets & Emissions Transparency (double counting, lack of transparency).
 
 ## 2. Non-goals (비목표)
 - No token, no minting of carbon credits, no trading, no price, no investment feature.
-- No model training. Claim parsing is deterministic (rules), not a learned model.
+- No model training. Claim parsing is deterministic (rules), not a learned model. The verdict (MATCH, MISMATCH, NOT_FOUND, DUPLICATE, NO_SERIAL) is produced by the rules and the ledger only; the narrative check never feeds into it.
+- The narrative check runs a pre-trained natural-language-inference model (Xenova/nli-deberta-v3-xsmall, int8) for inference only in the viewer's browser. We do no training, no fine-tuning, no server. It is off the verdict path and can be switched off by the `NARRATIVE` feature flag.
 - No paid API, no paid RPC. Local Hardhat chain only; registry data only from free public endpoints.
 - No personal data. Only public serial numbers and project names.
 - No judgement of project quality (additionality, permanence). We only check "retired? how many? twice?".
@@ -27,6 +30,9 @@ Hackathon track: Track 1, Carbon Markets & Emissions Transparency (double counti
 | SerialRange | Parsed serial: registry, batchKey, start, end, quantity |
 | RegistryRecord | One public registry row: serial, status, quantity, source URL, fetch date |
 | Ledger | Set of already registered ranges per batchKey (domain mirror of the contract) |
+| Narrative | The sentence with serials removed (what is left to say about the credit) |
+| RecordText | A registry record rendered as plain sentences (project, country, vintage, quantity, status) |
+| Receipt | The label of the narrative check: `BACKED` (record entails the narrative), `MAY_CONFLICT` (record contradicts it), `NO_RECEIPT` (neither, or no record) |
 | Verdict | `MATCH`, `MISMATCH`, `NOT_FOUND`, `DUPLICATE`, `NO_SERIAL` |
 | Attestor | Address allowed to register a range on chain |
 | BatchKey | `registry : project : vintage : batch`, hashed on chain |
@@ -46,6 +52,11 @@ Hackathon track: Track 1, Carbon Markets & Emissions Transparency (double counti
 - **G9 Many serials.** Given a claim with several serials, then the claim verdict is the worst one in the order DUPLICATE > NOT_FOUND > MISMATCH > MATCH and every serial keeps its own line.
 - **G10 Foreign format.** Given a Verra-style VCU serial, then it is parsed (registry VERRA) but, with no Verra record source, the verdict is NOT_FOUND with reason `registry_not_supported`.
 
+- **G11 Backed.** Given a record text and a narrative the record entails, then receipt BACKED; the verdict is unchanged.
+- **G12 May conflict.** Given a narrative that changes the project type, country or year of the record, when the NLI contradiction probability is >= 0.97, then receipt MAY_CONFLICT; wording says "may", never "fake".
+- **G13 No receipt.** Given no registry record (NOT_FOUND, NO_SERIAL, unsupported registry), or a narrative the record neither supports nor contradicts, then receipt NO_RECEIPT.
+- **G14 Isolation.** Given the same input with the narrative check on or off, then the verdict, reason and lines are identical (regression 0).
+
 ## 6. Numeric success conditions (성공 조건; measured, not promised)
 | # | Condition | Measured by |
 |---|---|---|
@@ -56,11 +67,22 @@ Hackathon track: Track 1, Carbon Markets & Emissions Transparency (double counti
 | S5 | Extraction check on >= 12 hand-written phrasings not used to build the parser: serial recall and quantity recall reported | `npm run eval` |
 | S6 | Live demo page opens with no wallet, no login; pasted sentence returns a verdict in < 2 s from bundled records | public URL, HTTP 200 |
 | S7 | Numbers shown in README equal numbers in `results.json` (checked by a test) | `npm run test:domain` |
+| S9 | Narrative eval set: >= 30 labelled (record text, narrative) pairs, built from real documents (the 24 real-certificate extraction samples) plus narratives with one fact changed, written before any model run and frozen | `data/narrative/pairs.json`, `npm run eval:narrative` |
+| S10 | On matching pairs, `MAY_CONFLICT` false alarms <= 10% | `docs/NARRATIVE_EVAL.md` |
+| S11 | On matching pairs, `BACKED` reproduced >= 70% | `docs/NARRATIVE_EVAL.md` |
+| S12 | One narrative checked in <= 2 s after the model is loaded (model load time reported separately) | `docs/NARRATIVE_EVAL.md`, headless browser run |
+| S13 | All existing tests still pass, plus new narrative tests (written first, seen failing) | `npm test` |
 | S8 | Cost per registration on chain reported in gas | contract test output |
+
+### Pre-registration for S9-S12 (2026-10-21, before any model run)
+- Thresholds are frozen from a different project's dev data (entail >= 0.70, contradict >= 0.97); they are not tuned on this set.
+- Kill: if S10-S12 are not met by 2026-10-22 18:00 KST, the `NARRATIVE` flag is switched off in the shipped page and every claim of a narrative check is removed from README and submission text. Only this task's own numbers are reported.
+- Numbers of the earlier project (Receipts) are not reused anywhere.
 
 ## 7. Limits stated up front
 - Only Gold Standard records are fetched. Verra's search is browser-only; no stable free API was found (see README).
 - Rule-based extraction misses unusual wordings; recall is reported, not hidden.
+- The narrative check is a small pre-trained model: it can miss a changed number and can be wrong on unusual wording. Its recall on changed facts is reported next to its false alarms. It needs a one-time model download (about 90 MB) from huggingface.co after a click; everything else works offline from the bundled files.
 - The chain part runs on a local Hardhat network; no public testnet address.
 - The bundled record sample is a small sample, not a mirror of the registry. Live lookup (one request per serial) is available when the viewer's browser can reach the registry.
 
@@ -75,5 +97,5 @@ Copied from the 10-point checklist and made concrete for the single page `docs/i
 7. Evidence folded: measured-results table is in a closed `<details>`; per-serial source URL and date sit under each result line.
 8. Microcopy: plain, active, positive; errors say cause and what to do ("The registry could not be reached. Untick live lookup to use the stored sample.").
 9. Colour: white/neutral background, one brand colour plus two state colours, text contrast >= 4.5:1 in light and dark, visible focus.
-10. No external fonts, scripts or CDN; loading and error states are shown.
+10. No external fonts, scripts or CDN; loading and error states are shown. The only external request is the opt-in model download for the narrative check (button "Check wording"), which states size and source before it starts.
 Checked with `python3 ui_audit.py docs/index.html` (0 fail, 0 warn) before release.

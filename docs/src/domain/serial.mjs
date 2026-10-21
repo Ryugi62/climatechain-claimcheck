@@ -53,3 +53,10 @@ export function stripSerials(text) {
   for (const re of [GS_RE, VCU_RE]) t = t.replace(new RegExp(re.source, 'gi'), ' ');
   return t;
 }
+
+/** Like stripSerials but keeps the original letter case (for text shown to a language model). */
+export function maskSerials(text) {
+  let t = String(text).replace(DASHES, '-').replace(/([A-Za-z0-9])[ \t]+-(?=\d)/g, '$1-');
+  for (const re of [GS_RE, VCU_RE]) t = t.replace(new RegExp(re.source, 'gi'), ' ');
+  return t;
+}
