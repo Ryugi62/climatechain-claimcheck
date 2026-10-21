@@ -76,6 +76,8 @@ const WHY = {
   no_serial: 'The sentence names no credit serial, so there is nothing to verify.',
 };
 
+const WHY_NO_SERIAL_COMPANY = 'No serial in the sentence, so it is checked by company name instead (below).';
+
 function chainNote(serial) {
   if (realFlow && realFlow.serial === serial) return `<br><span class="sub">On the Sepolia testnet this same serial range is registered: <a href="${EXPLORER}${realFlow.tx.hash}"><code>${shortTx(realFlow.tx.hash)}</code></a> (${realFlow.tx.gasUsed.toLocaleString()} gas).</span>`;
   if (!flow) return '';
@@ -120,7 +122,7 @@ function render(r) {
   const lines = r.lines.map((l) => `<div class="line"><span class="tag ${l.verdict}">${LABEL[l.verdict]}</span> <code>${esc(l.serial)}</code><br>${esc(WHY[l.reason] || l.reason)}${l.source === 'chain' ? ` Answer read from the Sepolia contract <code>${esc(flow.contract.slice(0, 8))}...</code> just now: this range is already registered (claim hash <code>${esc(l.chainClaimHash.slice(0, 12))}...</code>, by ${esc(l.firstClaimant)}); overlap ${l.overlap.toLocaleString()} credits.` : l.overlap ? ` Overlap: ${l.overlap.toLocaleString()} credits, first used by ${esc(l.firstClaimant)} (this page's own memory, not the chain).` : ''}${l.evidence ? `${chainNote(l.serial)}<br><span class="sub">registry status ${esc(l.evidence.status)}, ${Number(l.evidence.number_of_credits).toLocaleString()} credits &middot; source ${esc(l.evidence.source_url)} &middot; fetched ${esc(l.evidence.fetched_at)}</span>` : ''}</div>`).join('');
   const q = r.quantity.claimed != null ? `<p class="small">Claimed ${r.quantity.claimed.toLocaleString()} t &middot; registry ${r.quantity.registry == null ? 'n/a' : r.quantity.registry.toLocaleString()} t</p>` : '';
   const lim = r.verdict === 'MATCH' ? `<p class="small limit"><b>${MATCH_LIMIT}</b></p>` : '';
-  $('result').innerHTML = `<div class="verdict ${r.verdict}">${LABEL[r.verdict]}</div>${lim}<p>${esc(WHY[r.reason] || r.reason)}</p>${q}${lines}`;
+  $('result').innerHTML = `<div class="verdict ${r.verdict}">${LABEL[r.verdict]}</div>${lim}<p>${esc(r.verdict === 'NO_SERIAL' && $('live').checked ? WHY_NO_SERIAL_COMPANY : (WHY[r.reason] || r.reason))}</p>${q}${lines}`;
 }
 
 async function run() {

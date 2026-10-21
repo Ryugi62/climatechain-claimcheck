@@ -21,6 +21,8 @@ test('G28/G29 the page code uses both texts and the code copy equals src', () =>
   const app = read('docs/app.js');
   assert.ok(app.includes('MATCH_LIMIT') && app.includes('wordingErrorTitle'));
   assert.ok(read('docs/index.html').includes('changes caught 10/36'));
+  // r4 H7: with live lookup on, a no-serial sentence is said to be checked by company name, not "nothing to verify"
+  assert.match(app, /WHY_NO_SERIAL_COMPANY = 'No serial in the sentence, so it is checked by company name instead/);
   assert.equal(read('docs/src/domain/disclosure.mjs'), read('src/domain/disclosure.mjs'));
 });
 
